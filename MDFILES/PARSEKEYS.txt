@@ -1,0 +1,34 @@
+Connect
+https://parseapi.back4app.com
+
+MCP
+Connect your AI agent
+
+SDK
+Client libraries
+
+REST
+Server to server
+
+GraphQL
+Typed queries
+
+Keys
+Which key goes where
+App ID
+45V1BFalVXH8cn9K5dP8b9U5jldWSe3I7e2F8znL
+
+Client Key
+U7i0GTSeTNwMErQtkhqy5TkB9L3z9DBLcBGkT0dR
+
+Javascript Key
+FuPSqs58OL7wcPnQaJfNKlDlZ3gxt4Y0ypPix26P
+
+Master Key
+cRaoBxM8g3XfjN9IhPZBaNjFSSlAbj6iyJjVOV6b
+
+Rest Key
+8AqeCIdPT7mxdyEKsWjN71h9O3XW68h2RuBec9wV
+
+.NET Key
+pkGnAJ9dxX5CAaPdcGxFa9mVCU6PgGWOHMcBAD0C

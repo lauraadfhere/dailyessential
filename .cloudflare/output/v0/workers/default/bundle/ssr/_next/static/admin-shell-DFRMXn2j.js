@@ -1,0 +1,2 @@
+import{t as e}from"./console-shell-TTHgOkwd.js";import{t}from"./jsx-runtime-LKYXHABd.js";var n=t();function r({children:t,showSidebar:r=!1,greeting:i}){return(0,n.jsx)(e,{role:`admin`,showSidebar:r,greeting:i,children:t})}export{r as default};
+//# sourceMappingURL=admin-shell-DFRMXn2j.js.map

@@ -1,0 +1,145 @@
+'use client';
+
+import Image from 'next/image';
+import SiteHeader from '../components/site-header';
+import { useI18n } from '../components/language-provider';
+
+const content = {
+  en: { title: 'Daily Essential School Management Portal', description: 'Everything your school community needs, in one secure place. Access student information, learning resources, school services and support.', access: 'Explore school access', login: 'Student & teacher login', learn: 'Learn more' },
+  fr: { title: 'Portail de gestion Daily Essential School', description: 'Tout ce dont votre communauté scolaire a besoin, dans un espace sécurisé. Accédez aux informations des élèves, aux ressources pédagogiques, aux services scolaires et au support.', access: 'Accéder à l’école', login: 'Connexion élèves et enseignants', learn: 'En savoir plus' },
+  ar: { title: 'بوابة إدارة مدرسة Daily Essential', description: 'كل ما يحتاجه مجتمع مدرستك في مكان واحد وآمن. يمكنك الوصول إلى معلومات الطلاب وموارد التعلم والخدمات المدرسية والدعم.', access: 'الدخول إلى بوابة المدرسة', login: 'دخول الطلاب والمعلمين', learn: 'اعرف المزيد' },
+};
+
+export default function Home() {
+  const { locale, t } = useI18n();
+  const language = locale;
+  const text = content[language as keyof typeof content];
+
+  return (
+    <div className="min-h-screen bg-white">
+      <link rel="canonical" href="https://dailyessential.school/" />
+      <SiteHeader active="home" />
+
+      {/* Hero */}
+      <main className="mx-auto max-w-[1120px] px-5 py-10 sm:px-8 lg:py-12">
+        <section key={language} className="language-transition">
+          <div className="border-b-[4px] border-[#1738a8] bg-[#e9eef5] px-5 py-5 sm:px-6">
+            <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-[27px]">{text.title}</h1>
+          </div>
+          <div className="py-9">
+            <p className="max-w-4xl text-[17px] leading-8 text-slate-900 sm:text-[19px]">{text.description}</p>
+            <a href={`/login?lang=${language}`} className="mt-3 inline-block text-sm font-semibold text-[#1738a8] underline decoration-[#ffbb2c] decoration-2 underline-offset-4 transition hover:text-[#102b80]">{text.login} →</a>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a href={`/login?lang=${language}`} className="bg-[#1738a8] px-6 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-[#102b80]">{text.access}</a>
+              <a href="#school-highlights" className="border border-[#1738a8] px-6 py-3 text-sm font-bold text-[#1738a8] transition hover:bg-blue-50">{text.learn}</a>
+            </div>
+          </div>
+          <div id="school-highlights" className="grid border-y border-slate-200 sm:grid-cols-3">
+            <div className="border-b border-slate-200 px-5 py-5 sm:border-b-0 sm:border-r"><p className="text-2xl font-bold text-[#1738a8]">98%</p><p className="mt-1 text-sm text-slate-600">Student attendance this week</p></div>
+            <div className="border-b border-slate-200 px-5 py-5 sm:border-b-0 sm:border-r"><p className="text-2xl font-bold text-[#1738a8]">24</p><p className="mt-1 text-sm text-slate-600">Active classes and programmes</p></div>
+            <div className="px-5 py-5"><p className="text-2xl font-bold text-[#1738a8]">12</p><p className="mt-1 text-sm text-slate-600">Learning clubs and activities</p></div>
+          </div>
+        </section>
+      </main>
+
+      <section className="border-y border-slate-200 bg-white">
+        <nav aria-label="School quick links" className="mx-auto grid max-w-[900px] grid-cols-2 gap-y-6 px-6 py-8 sm:grid-cols-5 sm:py-9">
+          <a href={`/?lang=${language}`} className="group flex flex-col items-center gap-2 text-center text-slate-900"><svg className="h-8 w-8 text-[#1738a8] transition group-hover:-translate-y-1" fill="currentColor" viewBox="0 0 24 24"><path d="m12 3-9 8h2v9h5v-6h4v6h5v-9h2l-9-8Z" /></svg><span className="text-sm font-bold">Home</span></a>
+          <a href={`/courses?lang=${language}`} className="group flex flex-col items-center gap-2 text-center text-slate-900"><svg className="h-8 w-8 text-[#1738a8] transition group-hover:-translate-y-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z" /></svg><span className="text-sm font-bold">Learning</span></a>
+          <a href="#school-highlights" className="group flex flex-col items-center gap-2 text-center text-slate-900"><svg className="h-8 w-8 text-[#1738a8] transition group-hover:-translate-y-1" fill="currentColor" viewBox="0 0 24 24"><path d="M11 17h2v-6h-2v6Zm1-15a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm-1-11h2V7h-2v2Z" /></svg><span className="text-sm font-bold">School Info</span></a>
+          <a href="/news" className="group flex flex-col items-center gap-2 text-center text-slate-900"><svg className="h-8 w-8 text-[#1738a8] transition group-hover:-translate-y-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="15" rx="2" /><path d="M8 3v4M16 3v4M3 10h18M8 15h3M14 15h2" /></svg><span className="text-sm font-bold">Calendar</span></a>
+          <a href="/contact" className="group flex flex-col items-center gap-2 text-center text-slate-900"><svg className="h-8 w-8 text-[#1738a8] transition group-hover:-translate-y-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v8Z" /><path d="M8 10h8M8 14h5" /></svg><span className="text-sm font-bold">Contact</span></a>
+        </nav>
+      </section>
+
+      <section className="mx-auto grid max-w-[1120px] gap-x-12 gap-y-10 px-5 pb-16 sm:grid-cols-2 sm:px-8 lg:pb-20">
+        <article>
+          <h2 className="border-b border-slate-400 pb-5 text-[27px] font-bold text-[#1738a8]">School Hours</h2>
+          <p className="pt-5 text-[17px] leading-8 text-slate-900">Monday to Friday, 8:00 a.m. to 4:30 p.m.</p>
+        </article>
+        <article>
+          <h2 className="border-b border-slate-400 pb-5 text-[27px] font-bold text-[#1738a8]">Admissions</h2>
+          <p className="pt-5 text-[17px] leading-8 text-slate-900">Applications are open for the 2026/27 academic session.</p>
+        </article>
+        <article>
+          <h2 className="border-b border-slate-400 pb-5 text-[27px] font-bold text-[#1738a8]">Important Dates</h2>
+          <p className="pt-5 text-[17px] leading-8 text-slate-900">Stay up to date with term dates, school events, examinations and parent meetings. Please check the school calendar for the latest information.</p>
+        </article>
+        <article>
+          <h2 className="border-b border-slate-400 pb-5 text-[27px] font-bold text-[#1738a8]">Contact &amp; Access</h2>
+          <p className="pt-5 text-[17px] leading-8 text-slate-900">Visit the school office for admissions, records and support. Our team is here to help students, parents and visitors.</p>
+        </article>
+      </section>
+
+      <section className="border-t border-slate-200 bg-white py-16">
+        <div className="mx-auto max-w-[1100px] px-6">
+          <h2 className="text-center text-[26px] font-bold tracking-wide text-[#15133d] sm:text-[30px]">What sets Daily Essential School apart from other learning programmes?</h2>
+          <div className="mt-14 grid gap-12 sm:grid-cols-3 sm:gap-8">
+            {[
+              {
+                n: '1',
+                title: 'Daily Essential goes far beyond tutoring',
+                body: 'Daily Essential School builds lasting self-learning habits through guided practice, mentorship and real classroom pathways — not one-off homework help.',
+                ring: 'border-[#f7c48a]',
+                badge: 'bg-[#f08a24]',
+                text: 'text-[#e67a18]',
+              },
+              {
+                n: '2',
+                title: 'Learners progress at their own pace',
+                body: 'Every student advances through lessons, evaluations and subscriptions that match their level, so confidence grows before complexity increases.',
+                ring: 'border-[#9fd0a4]',
+                badge: 'bg-[#4caf50]',
+                text: 'text-[#3d8b40]',
+              },
+              {
+                n: '3',
+                title: 'Daily Essential delivers results in school and beyond',
+                body: 'From marks and evaluation tracking to lesson plans and news updates, our platform connects classroom effort with measurable progress at home and at school.',
+                ring: 'border-[#e7a8c8]',
+                badge: 'bg-[#c2185b]',
+                text: 'text-[#ad1457]',
+              },
+            ].map(item => (
+              <article key={item.n} className="flex justify-center">
+                <div className={`relative flex aspect-square w-full max-w-[280px] flex-col items-center justify-center rounded-full border-[10px] ${item.ring} bg-white px-8 text-center`}>
+                  <span className={`absolute -left-1 -top-1 grid h-14 w-14 place-items-center rounded-full ${item.badge} text-2xl font-bold text-white shadow-sm`}>{item.n}</span>
+                  <h3 className={`text-[17px] font-bold leading-snug ${item.text}`}>{item.title}</h3>
+                  <p className={`mt-3 text-[13px] leading-5 ${item.text}`}>{item.body}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden border-t border-slate-200 bg-[#f4f5fa] py-14">
+        <div aria-hidden="true" className="pointer-events-none absolute left-1/2 top-[-55px] -translate-x-1/2 text-[150px] font-black tracking-[-0.1em] text-[#e7e9f3]">SCHOOL</div>
+        <div className="relative mx-auto max-w-[1160px] px-6">
+          <div className="grid gap-6 lg:grid-cols-[245px_1fr] lg:items-start">
+            <h2 className="text-[26px] font-bold tracking-wide text-[#15133d]">School Network</h2>
+            <p className="max-w-4xl text-[15px] leading-8 tracking-wide text-[#2b2b4a]">Daily Essential School provides the learning, support and community services students need to flourish. Explore the people, programmes and opportunities that connect our school community.</p>
+          </div>
+          <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <a href={`/courses?lang=${language}`} className="group text-center"><div className="relative h-40 overflow-hidden bg-gradient-to-br from-[#182e4b] via-[#3d6489] to-[#b8c7d6]"><div className="absolute inset-0 bg-[linear-gradient(135deg,transparent_0%,rgba(255,255,255,0.15)_50%,transparent_51%)]" /><svg className="absolute bottom-5 left-1/2 h-20 w-20 -translate-x-1/2 text-white/90" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z" /><path d="M8 6h8M8 10h8" /></svg></div><h3 className="mt-5 text-[15px] font-bold tracking-wider text-[#15133d] group-hover:text-[#1738a8]">Learning Centre</h3></a>
+            <a href={`/access?lang=${language}`} className="group text-center"><div className="relative h-40 overflow-hidden bg-gradient-to-br from-[#1b57a5] via-[#3791ce] to-[#c9ebfa]"><div className="absolute -right-6 -top-8 h-44 w-44 rounded-full border-[18px] border-white/25" /><Image src="/brand/logo-white.png" alt="" width={170} height={70} className="absolute bottom-5 left-1/2 w-36 -translate-x-1/2 opacity-90" /></div><h3 className="mt-5 text-[15px] font-bold tracking-wider text-[#15133d] group-hover:text-[#1738a8]">School Community</h3></a>
+            <a href="/news" className="group text-center"><div className="relative h-40 overflow-hidden bg-gradient-to-br from-[#e7d5c5] via-[#f9f0e8] to-[#b8d3e6]"><svg className="absolute bottom-0 right-7 h-36 w-36 text-[#1738a8]/70" fill="none" stroke="currentColor" strokeWidth="1.2" viewBox="0 0 24 24"><path d="M12 18h.01M8 13h8M9 3h6l1 5H8l1-5ZM6 21h12l-2-8H8l-2 8Z" /></svg><div className="absolute left-5 top-5 h-9 w-24 rounded-full bg-white/65" /></div><h3 className="mt-5 text-[15px] font-bold tracking-wider text-[#15133d] group-hover:text-[#1738a8]">News &amp; Updates</h3></a>
+            <a href="/contact" className="group text-center"><div className="relative h-40 overflow-hidden bg-gradient-to-br from-[#7ca37a] via-[#c9d9b7] to-[#f5f2d4]"><div className="absolute bottom-0 left-0 right-0 h-12 bg-[#839a6c]" /><svg className="absolute bottom-5 left-1/2 h-24 w-24 -translate-x-1/2 text-white" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-6 7 6v12M9 21v-6h6v6M8 10h.01M16 10h.01" /></svg></div><h3 className="mt-5 text-[15px] font-bold tracking-wider text-[#15133d] group-hover:text-[#1738a8]">Visit Daily Essential</h3></a>
+          </div>
+        </div>
+      </section>
+      <footer className="border-t border-black bg-[#0d0e0f] text-[#c8d6e5]">
+        <div className="mx-auto max-w-[1160px] px-6 pt-5"><Image src="/brand/logo-white.png" alt="Daily Essential School" width={86} height={36} className="h-auto w-[86px] object-contain" /></div>
+        <div className="mx-auto grid max-w-[1160px] gap-8 px-6 py-6 sm:grid-cols-2 lg:grid-cols-5 [&>div>h2]:text-[12px] [&>div>h2]:font-bold [&>div>h2]:uppercase [&>div>h2]:text-white [&_a]:text-[#c8d6e5] [&_a:hover]:text-white">
+          <div><h2 className="mb-3 text-sm font-bold text-slate-800">School Life</h2><ul className="space-y-2 text-xs leading-4 text-[#1743b8]"><li><a href="/policies">Student handbook</a></li><li><a href="/news">School calendar</a></li><li><a href="/news">Clubs &amp; activities</a></li><li><a href="/contact">Meals &amp; transport</a></li></ul></div>
+          <div><h2 className="mb-3 text-sm font-bold text-slate-800">For Parents</h2><ul className="space-y-2 text-xs leading-4 text-[#1743b8]"><li><a href="/login">Parent portal</a></li><li><a href="/parent/fees">Fee payments</a></li><li><a href="/parent/meetings">Parent meetings</a></li><li><a href="/contact">Contact a teacher</a></li></ul></div>
+          <div><h2 className="mb-3 text-sm font-bold text-slate-800">Support</h2><ul className="space-y-2 text-xs leading-4 text-[#1743b8]"><li><a href="/contact">Help centre</a></li><li><a href="/pricing">Pricing</a></li><li><a href="/admissions">Admissions</a></li><li><a href="/policies">Policies &amp; forms</a></li><li><a href="/contact">Report an issue</a></li></ul></div>
+          <div><h2 className="mb-3 text-sm font-bold text-slate-800">About Daily Essential</h2><ul className="space-y-2 text-xs leading-4 text-[#1743b8]"><li><a href="/access">Our school</a></li><li><a href="/access">Leadership team</a></li><li><a href="/contact">Careers</a></li><li><a href="/news">News &amp; events</a></li></ul></div>
+          <div><h2 className="mb-3 text-sm font-bold text-slate-800">Follow us</h2><div className="flex gap-2"><a aria-label="LinkedIn" href="#" className="flex h-8 w-8 items-center justify-center rounded-full border border-white/70 text-xs font-bold text-white transition hover:bg-white hover:text-[#0d0e0f]">in</a><a aria-label="Facebook" href="#" className="flex h-8 w-8 items-center justify-center rounded-full border border-white/70 text-sm font-bold text-white transition hover:bg-white hover:text-[#0d0e0f]">f</a><a aria-label="Instagram" href="#" className="flex h-8 w-8 items-center justify-center rounded-full border border-white/70 text-base font-bold text-white transition hover:bg-white hover:text-[#0d0e0f]">◎</a><a aria-label="YouTube" href="#" className="flex h-8 w-8 items-center justify-center rounded-full border border-white/70 text-[10px] font-bold text-white transition hover:bg-white hover:text-[#0d0e0f]">▶</a></div></div>
+        </div>
+        <div className="border-t border-white/10 py-5 text-[11px] text-[#c8d6e5]"><div className="mx-auto flex max-w-[1160px] flex-col gap-3 px-6"><nav className="flex flex-wrap gap-x-4 gap-y-2"><a href="/news">Blog</a><a href="/pricing">Pricing</a><a href="/policies">Policies</a><a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a><a href="/contact">Contact us</a><a href="/access">Role access</a></nav><p className="text-[#8d9aaa]">© 2026 Daily Essential School. School community content and resources are protected by our terms of use.</p></div></div>
+        <button onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})} aria-label="Back to top" className="fixed bottom-5 right-5 border border-white/20 bg-[#202225] p-3 text-white shadow-sm hover:bg-[#303236]">↑</button>
+      </footer>
+    </div>
+  );
+}

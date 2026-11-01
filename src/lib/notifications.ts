@@ -1,0 +1,50 @@
+export type NotificationType = 'announcement' | 'assessment' | 'course' | 'schedule' | 'identity' | 'system';
+export type NotificationPriority = 'low' | 'normal' | 'high' | 'urgent';
+
+export type Notification = {
+  id: string;
+  type: NotificationType;
+  title: string;
+  message: string;
+  link?: string;
+  priority: NotificationPriority;
+  readAt?: string;
+  createdAt: string;
+  sourceType?: string;
+  sourceId?: string;
+};
+
+export const demoNotifications: Notification[] = [
+  {
+    id: 'demo-assessment',
+    type: 'assessment',
+    title: 'Assessment reminder',
+    message: 'Your Digital Literacy assessment is due tomorrow.',
+    link: '/workspace/student/assessments',
+    priority: 'high',
+    createdAt: '2026-10-13T08:15:00.000Z',
+  },
+  {
+    id: 'demo-schedule',
+    type: 'schedule',
+    title: 'Schedule updated',
+    message: 'Your next learning session starts at 10:30 AM.',
+    link: '/workspace/student/calendar',
+    priority: 'normal',
+    createdAt: '2026-10-12T15:30:00.000Z',
+  },
+  {
+    id: 'demo-profile',
+    type: 'identity',
+    title: 'Profile review complete',
+    message: 'Your student identity and enrollment details are verified.',
+    link: '/student/profile',
+    priority: 'normal',
+    createdAt: '2026-10-10T11:00:00.000Z',
+  },
+];
+
+export function unreadCount(items: Notification[]) {
+  return items.filter(item => !item.readAt).length;
+}
+

@@ -1,0 +1,2 @@
+import{t as e}from"./server-BOaS1fRw.js";var t=e(()=>{throw Error(`Unexpectedly client reference export 'default' is called on server`)},`c9532e891f4e`,`default`);export{t};
+//# sourceMappingURL=auth-form-D_xRDX37.js.map

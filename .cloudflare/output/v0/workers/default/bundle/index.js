@@ -1,0 +1,1 @@
+export{t as default}from"./_next/static/worker-entry-bvsFWUpa.js";

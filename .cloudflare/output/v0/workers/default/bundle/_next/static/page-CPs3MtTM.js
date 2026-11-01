@@ -1,0 +1,2 @@
+import{t as e}from"./information-page-nTar8Emo.js";import{t}from"./framework~index~page~page~page~page~page~page~page~page~page~page~page~page~page~page~page~~ap2swz0e-Bo48gSxV.js";var n=t(),r={title:`Privacy policy · Daily Essential School`,description:`How Daily Essential School collects, protects and retains personal information, including AI features and cookies.`,alternates:{canonical:`https://dailyessential.school/privacy`}};function i(){return(0,n.jsx)(e,{docKey:`privacy`})}export{i as default,r as metadata};
+//# sourceMappingURL=page-CPs3MtTM.js.map

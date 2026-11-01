@@ -1,0 +1,32 @@
+import Link from 'next/link';
+import AdminShell from '../../../components/admin-shell';
+
+const topics = [
+  ['Moderate evaluations', 'Open Evaluations, filter by Pending, then approve or mark spam.', '/admin/evaluations'],
+  ['Confirm lesson subscriptions', 'Review pending plans, check seats, then confirm payment-backed subscriptions.', '/admin/subscriptions'],
+  ['Publish latest news', 'Draft an update, pin important notices, and publish for the school community.', '/admin/news'],
+  ['School settings', 'Manage campuses, word filters, access rules, and CSV import/export.', '/admin/settings'],
+];
+
+export default function AdminHelpPage() {
+  return (
+    <AdminShell>
+      <div className="mx-auto max-w-2xl">
+        <p className="text-xs font-bold uppercase tracking-[.16em] text-[#2e9fff]">Daily Essential Admin 101</p>
+        <h1 className="mt-2 text-3xl font-semibold text-[#2f3338]">Help for school administrators</h1>
+        <p className="mt-3 text-sm leading-7 text-[#6b7380]">
+          This workspace mirrors a clean moderation-style admin console for school operations: evaluation requests, lesson subscriptions and news updates.
+        </p>
+        <div className="mt-8 space-y-3">
+          {topics.map(([title, body, href]) => (
+            <Link key={href} href={href} className="block rounded border border-[#e1e5eb] bg-white p-5 transition hover:border-[#2e9fff]/50 hover:shadow-sm">
+              <h2 className="text-base font-semibold text-[#2f3338]">{title}</h2>
+              <p className="mt-2 text-sm leading-6 text-[#6b7380]">{body}</p>
+            </Link>
+          ))}
+        </div>
+        <p className="mt-8 text-sm text-[#6b7380]">Need more support? Contact <a className="text-[#2e9fff] hover:underline" href="mailto:support@dailyessential.school">support@dailyessential.school</a>.</p>
+      </div>
+    </AdminShell>
+  );
+}

@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  --admin-header: #2e343b;
+  --admin-accent: #2e9fff;
+  --admin-sidebar: #f5f7f9;
+  --admin-border: #e6e9ee;
+  --admin-text: #2f3338;
+  --admin-muted: #6b7380;
+}
+
+.language-transition {
+  animation: language-content-in 180ms ease-out;
+}
+
+@keyframes language-content-in {
+  from { opacity: .45; transform: translateY(3px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.bifti-loader-bar {
+  width: 42%;
+  animation: bifti-loading 0.8s ease-in-out infinite alternate;
+}
+
+.bifti-grid-loader {
+  display: grid;
+  grid-template-columns: repeat(3, 10px);
+  gap: 4px;
+}
+
+.bifti-grid-loader i {
+  display: block;
+  height: 10px;
+  background: #1738a8;
+  animation: bifti-grid-pulse 0.9s ease-in-out infinite alternate;
+}
+
+.bifti-grid-loader i:nth-child(2), .bifti-grid-loader i:nth-child(4), .bifti-grid-loader i:nth-child(8) { background: #3971d5; animation-delay: .14s; }
+.bifti-grid-loader i:nth-child(3), .bifti-grid-loader i:nth-child(6) { background: #78a5f2; animation-delay: .28s; }
+.bifti-grid-loader i:nth-child(5), .bifti-grid-loader i:nth-child(7), .bifti-grid-loader i:nth-child(9) { background: #b8d2ff; animation-delay: .42s; }
+
+@keyframes bifti-grid-pulse { to { opacity: .28; transform: scale(.72); } }
+
+@keyframes bifti-loading {
+  to { transform: translateX(140%); }
+}

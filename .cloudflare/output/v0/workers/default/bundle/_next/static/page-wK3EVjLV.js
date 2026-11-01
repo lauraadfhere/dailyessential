@@ -1,0 +1,2 @@
+import{t as e}from"./portal-shell-C-m8N8G3.js";import{t}from"./server-BOaS1fRw.js";import{t as n}from"./framework~index~page~page~page~page~page~page~page~page~page~page~page~page~page~page~page~~ap2swz0e-Bo48gSxV.js";var r=t(()=>{throw Error(`Unexpectedly client reference export 'default' is called on server`)},`af54bf4b3930`,`default`),i=n();function a(){return(0,i.jsx)(e,{role:`student`,children:(0,i.jsx)(r,{})})}export{a as default};
+//# sourceMappingURL=page-wK3EVjLV.js.map

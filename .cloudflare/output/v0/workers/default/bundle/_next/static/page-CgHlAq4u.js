@@ -1,0 +1,2 @@
+import{t as e}from"./information-page-nTar8Emo.js";import{t}from"./framework~index~page~page~page~page~page~page~page~page~page~page~page~page~page~page~page~~ap2swz0e-Bo48gSxV.js";var n=t(),r={title:`Terms of use · Daily Essential School`,description:`The terms that govern use of the Daily Essential School website, portal, courses, enrolment and AI assistance.`,alternates:{canonical:`https://dailyessential.school/terms`}};function i(){return(0,n.jsx)(e,{docKey:`terms`})}export{i as default,r as metadata};
+//# sourceMappingURL=page-CgHlAq4u.js.map

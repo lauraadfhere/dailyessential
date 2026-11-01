@@ -1,0 +1,9837 @@
+[
+ {
+  "text": "Status",
+  "weight": 3,
+  "count": 26
+ },
+ {
+  "text": "Daily Essential School",
+  "weight": 3,
+  "count": 25
+ },
+ {
+  "text": "Courses",
+  "weight": 3,
+  "count": 17
+ },
+ {
+  "text": "Attendance",
+  "weight": 3,
+  "count": 15
+ },
+ {
+  "text": "Daily Essential School home",
+  "weight": 3,
+  "count": 15
+ },
+ {
+  "text": "Admissions",
+  "weight": 3,
+  "count": 14
+ },
+ {
+  "text": "Grade",
+  "weight": 3,
+  "count": 13
+ },
+ {
+  "text": "Action",
+  "weight": 3,
+  "count": 12
+ },
+ {
+  "text": "DAMMI AI",
+  "weight": 3,
+  "count": 12
+ },
+ {
+  "text": "Pricing",
+  "weight": 3,
+  "count": 12
+ },
+ {
+  "text": "Course",
+  "weight": 2,
+  "count": 11
+ },
+ {
+  "text": "Help",
+  "weight": 3,
+  "count": 10
+ },
+ {
+  "text": "All",
+  "weight": 3,
+  "count": 9
+ },
+ {
+  "text": "Learner",
+  "weight": 2,
+  "count": 9
+ },
+ {
+  "text": "Average",
+  "weight": 3,
+  "count": 8
+ },
+ {
+  "text": "Due",
+  "weight": 2,
+  "count": 8
+ },
+ {
+  "text": "Enrolled",
+  "weight": 3,
+  "count": 8
+ },
+ {
+  "text": "PDF library",
+  "weight": 3,
+  "count": 8
+ },
+ {
+  "text": "Section",
+  "weight": 3,
+  "count": 8
+ },
+ {
+  "text": "Assign marks",
+  "weight": 3,
+  "count": 7
+ },
+ {
+  "text": "Settings",
+  "weight": 3,
+  "count": 7
+ },
+ {
+  "text": "Teacher",
+  "weight": 3,
+  "count": 7
+ },
+ {
+  "text": "Academics",
+  "weight": 3,
+  "count": 6
+ },
+ {
+  "text": "Assessments",
+  "weight": 3,
+  "count": 6
+ },
+ {
+  "text": "Assignments",
+  "weight": 3,
+  "count": 6
+ },
+ {
+  "text": "Home",
+  "weight": 2,
+  "count": 6
+ },
+ {
+  "text": "Overview",
+  "weight": 3,
+  "count": 6
+ },
+ {
+  "text": "Privacy",
+  "weight": 3,
+  "count": 6
+ },
+ {
+  "text": "Search students",
+  "weight": 3,
+  "count": 6
+ },
+ {
+  "text": "© 2026 Daily Essential School",
+  "weight": 2,
+  "count": 5
+ },
+ {
+  "text": "Amount",
+  "weight": 2,
+  "count": 5
+ },
+ {
+  "text": "Assessment",
+  "weight": 3,
+  "count": 5
+ },
+ {
+  "text": "Campus",
+  "weight": 3,
+  "count": 5
+ },
+ {
+  "text": "Date",
+  "weight": 2,
+  "count": 5
+ },
+ {
+  "text": "Documents",
+  "weight": 3,
+  "count": 5
+ },
+ {
+  "text": "Gradebook",
+  "weight": 3,
+  "count": 5
+ },
+ {
+  "text": "Notifications",
+  "weight": 3,
+  "count": 5
+ },
+ {
+  "text": "of",
+  "weight": 1,
+  "count": 5
+ },
+ {
+  "text": "Open",
+  "weight": 2,
+  "count": 5
+ },
+ {
+  "text": "Parent meetings",
+  "weight": 3,
+  "count": 5
+ },
+ {
+  "text": "Pending",
+  "weight": 3,
+  "count": 5
+ },
+ {
+  "text": "Policies",
+  "weight": 3,
+  "count": 5
+ },
+ {
+  "text": "Quality control",
+  "weight": 3,
+  "count": 5
+ },
+ {
+  "text": "Reports",
+  "weight": 3,
+  "count": 5
+ },
+ {
+  "text": "student",
+  "weight": 3,
+  "count": 5
+ },
+ {
+  "text": "Student",
+  "weight": 3,
+  "count": 5
+ },
+ {
+  "text": "Support",
+  "weight": 3,
+  "count": 5
+ },
+ {
+  "text": "Type",
+  "weight": 2,
+  "count": 5
+ },
+ {
+  "text": "assistant",
+  "weight": 3,
+  "count": 4
+ },
+ {
+  "text": "Evaluation tracking",
+  "weight": 3,
+  "count": 4
+ },
+ {
+  "text": "Examiner",
+  "weight": 3,
+  "count": 4
+ },
+ {
+  "text": "Invoice",
+  "weight": 2,
+  "count": 4
+ },
+ {
+  "text": "Lesson planner",
+  "weight": 3,
+  "count": 4
+ },
+ {
+  "text": "Library",
+  "weight": 3,
+  "count": 4
+ },
+ {
+  "text": "Messages",
+  "weight": 3,
+  "count": 4
+ },
+ {
+  "text": "My classes",
+  "weight": 3,
+  "count": 4
+ },
+ {
+  "text": "News",
+  "weight": 3,
+  "count": 4
+ },
+ {
+  "text": "Programme",
+  "weight": 3,
+  "count": 4
+ },
+ {
+  "text": "Progress",
+  "weight": 3,
+  "count": 4
+ },
+ {
+  "text": "Question",
+  "weight": 2,
+  "count": 4
+ },
+ {
+  "text": "Results review",
+  "weight": 3,
+  "count": 4
+ },
+ {
+  "text": "Room",
+  "weight": 3,
+  "count": 4
+ },
+ {
+  "text": "Score",
+  "weight": 2,
+  "count": 4
+ },
+ {
+  "text": "Student ID",
+  "weight": 3,
+  "count": 4
+ },
+ {
+  "text": "Subject",
+  "weight": 2,
+  "count": 4
+ },
+ {
+  "text": "Submitted",
+  "weight": 3,
+  "count": 4
+ },
+ {
+  "text": "Terms",
+  "weight": 3,
+  "count": 4
+ },
+ {
+  "text": "Tools",
+  "weight": 3,
+  "count": 4
+ },
+ {
+  "text": "AI",
+  "weight": 2,
+  "count": 3
+ },
+ {
+  "text": "AI screening",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "Applications",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "Appraisal",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "Approved",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "Assignment",
+  "weight": 2,
+  "count": 3
+ },
+ {
+  "text": "block h-full rounded-full",
+  "weight": 1,
+  "count": 3
+ },
+ {
+  "text": "Class average",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "Contact",
+  "weight": 2,
+  "count": 3
+ },
+ {
+  "text": "Contact us",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "Course enrolments",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "Dashboard",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "Email address",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "Enrolment",
+  "weight": 2,
+  "count": 3
+ },
+ {
+  "text": "Features",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "Fee balance",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "Fees & payments",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "Finance",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "Forms & consent",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "General",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "Graded",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "Grades",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "Guardian",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "Guardian email",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "in",
+  "weight": 2,
+  "count": 3
+ },
+ {
+  "text": "Invoices",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "Late",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "Latest news",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "Learners",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "Lessons",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "Mathematics",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "Meetings",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "My courses",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "Open →",
+  "weight": 2,
+  "count": 3
+ },
+ {
+  "text": "Paid",
+  "weight": 2,
+  "count": 3
+ },
+ {
+  "text": "Password",
+  "weight": 2,
+  "count": 3
+ },
+ {
+  "text": "Portal access",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "Portal login",
+  "weight": 2,
+  "count": 3
+ },
+ {
+  "text": "Previous reply failed validation:",
+  "weight": 1,
+  "count": 3
+ },
+ {
+  "text": "Profile",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "Question bank",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "Recovery key",
+  "weight": 2,
+  "count": 3
+ },
+ {
+  "text": "Resources",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "Results",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "Role access",
+  "weight": 2,
+  "count": 3
+ },
+ {
+  "text": "Search courses",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "Status ·",
+  "weight": 2,
+  "count": 3
+ },
+ {
+  "text": "Student ID:",
+  "weight": 2,
+  "count": 3
+ },
+ {
+  "text": "Student records",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "Take attendance",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "Take register",
+  "weight": 3,
+  "count": 3
+ },
+ {
+  "text": "Time",
+  "weight": 2,
+  "count": 3
+ },
+ {
+  "text": "Title",
+  "weight": 2,
+  "count": 3
+ },
+ {
+  "text": "When",
+  "weight": 2,
+  "count": 3
+ },
+ {
+  "text": "› DAMMI AI",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "← Back to news",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Absent",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Academic details",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Access controls",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "account",
+  "weight": 1,
+  "count": 2
+ },
+ {
+  "text": "Account",
+  "weight": 1,
+  "count": 2
+ },
+ {
+  "text": "Action queue",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Active",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Add evidence",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "admin",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Admin",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "AI assistant",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Algorithms Unlocked",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "All courses",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Analytics",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Applicant",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Approve",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Archived",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Around",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Audit trail",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Barcode",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Bearer",
+  "weight": 1,
+  "count": 2
+ },
+ {
+  "text": "Behaviour incidents",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Calendar",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Category",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Class",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Class group",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Clear filters",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Close",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Computer Science",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "confidence",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Contact admissions",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Contact support",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Cookies and local storage",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "course cover",
+  "weight": 1,
+  "count": 2
+ },
+ {
+  "text": "Course results",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "courses →",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "DAILY ESSENTIAL SCHOOL",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Daily Essential School / Legal",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Daily Essential School / Légal",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "DAMMI",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Deleted",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Delivery",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Delivery mode",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Designing Interfaces",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Details →",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Digital Literacy Workbook",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Document",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Documentation on file",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "done",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Download",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "English Language",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Enter keyword",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Entity",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Evaluations",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Exam reports",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "examiner",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Examiner 101",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Examiner settings",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Export",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Family",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Focus",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Format",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Full day",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Full name",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Go to my courses",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "GPA",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Grade scale",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "High",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Homeroom",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "hours",
+  "weight": 1,
+  "count": 2
+ },
+ {
+  "text": "Import",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Import CSV",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Integrations",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Lesson subscriptions",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "lessons",
+  "weight": 1,
+  "count": 2
+ },
+ {
+  "text": "Low",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Marks",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Marks entered",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Mathematics for Junior Secondary",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Mode",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Moderate action queue",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Moderate evaluations",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "next",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Next lesson",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Our school",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Outstanding",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Papers to grade",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Parent–teacher conferences",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "PDF or clear photo",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Personal information",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Pinned",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Plan",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Preferences",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Present",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Priority",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "privacy policy",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Progress tracking",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Provider",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "questions ·",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Range",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Rate",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Reason",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Record",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Risk",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Roles & permissions",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Save draft",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "SCHOOL",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "School announcements",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Security",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Shared resources",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "star",
+  "weight": 1,
+  "count": 2
+ },
+ {
+  "text": "Status & identity",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Student ID & recovery key",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Student portal",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Student status",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Students",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Study",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "teacher",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Teacher 101",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Teacher settings",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Term 1 to date",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "The Daily Essential digital library has been updated with new resources and support materials.",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "This account is registered as a",
+  "weight": 1,
+  "count": 2
+ },
+ {
+  "text": "This week",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Timetable",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Timetable builder",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "unread",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "user",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Verify results",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Week",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Week grid",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "weight",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Welcome back,",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Wellbeing",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "Where",
+  "weight": 2,
+  "count": 2
+ },
+ {
+  "text": "Word filters",
+  "weight": 3,
+  "count": 2
+ },
+ {
+  "text": "- Class applied for:",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "- Entrance test score:",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "- Previous school type:",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "- Required documents complete:",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "— anonymous page performance. Optional.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "— Daily Essential School",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "— session, security and your cookie choice. Always on.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": ", check out what's been happening across your",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "? You can enrol again later.",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "· discrepancy",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "· Homeroom",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "· Last activity:",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "· mark",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "· next appointment",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "· Period 3",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "· records office",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "· Score",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "· Updated",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "· uploaded by",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "· your teacher has been notified.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "% · average",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "% · avg",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "% collection rate",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "% of arrears",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "© 2026 — Daily Essential School ·",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "© 2026 Daily Essential School. School community content and resources are protected by our terms of use.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "+ Add criterion",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "+ Add filter",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "▣ Continue with Facebook",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "● Continue with Apple",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "1 school day",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "1 USD ≈ 135.5 DZD",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "12 weeks in the digital library",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "14:00 – 16:00 · Main Hall",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "2 approved · 2 in draft",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "2 core · 4 elective pathways",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "2 Dec 2026 · 45 minutes",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "2 unauthorised, 3 excused",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "24 places remaining across five sections",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "3rd failed attempt, rate limit applied",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "4 assessments still open",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "4 November · 14:00 – 16:00",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "6 awaiting first review",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "A file is only marked complete once it is readable. Blurred uploads are returned for a clearer copy.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "A friendly placement check in English and mathematics.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "A mark query is a click away.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "A phone, tablet or laptop with internet access",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "A receipt has been emailed and added to your documents. Thank you.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "A teacher who is also a parent has two scopes.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "About Daily Essential",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Absence alerts queued",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Absence follow-up",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Absence reported for",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Absences",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "absolute bottom-1 right-1 h-3.5 w-3.5 rounded-full ring-2 ring-white",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "absolute z-10 rounded-full ring-2 ring-white",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Academic integrity",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Academic office",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Academic progress",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Academic setup",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Academic structure",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Academic year and terms",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Academic years",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Accept all",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Acceptable use",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Accès au portail",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Accessibility checklist",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Accommodations on file",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Account activated and first login complete",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Account profile",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Achievement points",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Across",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Across 12 staff accounts",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Across 5 sections this week",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Across all courses",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Across all published events",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Across your teaching groups",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Action items",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Active classes and programmes",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Active enrolments",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Active learners",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Activities",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Activity",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Actor",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Add another layer of protection.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Add any details that would help your tutor.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Add title",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Add to calendar",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Address",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Adjust search filters to find a learner profile from Parse.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Admin 101",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Admin email",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Admin login",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "admin@bifti.school",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "admin@bifti.school · BiftiAdmin!2026",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Administration / Academics",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Administrator access",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Admissions funnel",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Admissions pipeline",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "admissions@dailyessential.school · +234 800 000 0000",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Advance",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Advance stage",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "After login",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "After-hours classes for working learners.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Aging",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Agree one action at home before you leave.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "AI answers can be wrong — check with your tutor. Your questions are logged for safety and quality, and the assistant will not help with live tests.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "AI answers can be wrong. Check with your tutor before relying on them. Your questions are logged for safety and quality.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "AI assistance",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "AI cannot award a final grade.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "AI features and your data",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "AI feedback is a study aid. Your teacher remains the authority on your marks.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "AI marking is advisory. A teacher must confirm every score before publication.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "AI role",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "AI test builder",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Alerts sent",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Algorithms in practice",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Algorithms worksheet",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "All actions",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "All four periods",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "All learners",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "All published after moderation",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "All sections",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Allowed question types:",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Already enrolled?",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Analyze engagement",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Analyze progress",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "and",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Announcement title",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Anonymised summaries that support a human admission decision.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Answer",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Answers are sent as delimited data, never as instructions to the model.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Anything under 70% confidence lands in your review queue instead of being published.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Anything we should know?",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Application",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Application received —",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Application tracker",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Applications are open for the 2026/27 academic session.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Applications on file",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Applications shown here come from the public form once Parse is connected.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Applications this term",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Applications, enrolment, student records and transcripts.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Applies to",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Apply → Upload → Assess → Review → Decide",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Apply and upload your documents",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Apply for admission",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Apply online to Daily Essential School: upload the required documents, book the placement check and follow every stage of the admission decision.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Apply online, upload documents and track your application.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Appraisal cycle",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Approved by academic director",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Arabic",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Arrived 09:12 · transport delay",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Artificial Intelligence",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Ask",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Ask about",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Ask DAMMI AI about Daily Essential…",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Ask DAMMI, your study buddy",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Ask the class tutor for an alternative slot. Meetings can be held by phone or video if you cannot come to campus.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Assessment & academic integrity",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Assessment & results",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Assessment access",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Assessment Guidelines",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Assessment moderation workshop",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Assessment reminder",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Assessment review, gradebook verification and results.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Assessment schedule",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Assessment statistics",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Assessment weighting",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Assign reviewers, request documents and release decisions.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Assigned to record owners",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Assignment and document attachments",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Assignments and marks",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Assistance IA",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "At risk",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "At-risk learners",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Attach feedback comments for any learner below 50%.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Attach screenshot or PDF",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Attendance & participation",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Attendance check-in, library loans and cafeteria balance. The QR code refreshes every minute to prevent sharing.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Attendance heatmap",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Attendance history",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Attendance is recorded every period. If a register is wrong, ask your class tutor to correct it within 24 hours.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Attendance letter drafted",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Attendance or marks below threshold",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Attendance pattern",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Attendance register marked present",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Attendance today",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Attendance, academic, finance and more",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Attendance, marks, assignments and parent communication.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Audit",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Audit coverage is mandatory, not optional.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Audit log",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Author",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Authorised pick-up",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Authorizations granted to the examiner portal role.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Authorized capabilities",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Auto-expire, fully logged",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Availability",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Availability updates as copies are issued and returned.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "available",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Available courses",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Available Monday - Friday, 8:00 AM - 6:00 PM",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Available slots",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Average of your check-ins",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Avg. meeting",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Awaiting deposit or documents",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Awaiting marking",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Awaiting moderation",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Awaiting review",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Awaiting signature",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "awaiting you",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Awaiting your confirmation",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Back to dashboard",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Back to home",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Back to homepage",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Back to top",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Backup serial",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Backup serial:",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Bank transfer ₦18,500 allocated",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Base roles plus custom clones",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Before the lock period you can edit freely. After it, the correction requires a reason and an administrator approval, and both values are kept.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Before the meeting",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Before you publish",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Below 50%",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Below 80% this term",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Best course",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Billed this term",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Biology",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Birth certificate / passport page",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Birth certificate, last report and a passport photograph.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "block h-full",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Block spam phrases in evaluation and subscription forms.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Blog",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Body",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Book a meeting",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Book a tour",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Book office hours with",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Booked",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Bookings open for 4 November. Slots are released by class tutor.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Books, workbooks and licensed PDFs",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Borrower",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Both approved by the Principal",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Browse all",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Browse catalogue",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Browse courses",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Browse the catalogue and enrol on your first course — it appears here instantly.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Browse your pathway and related programmes.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Buddy / mentor assigned",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Build timetable",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Business English & Communication",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Business Fundamentals",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Campus front desk",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Campuses",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Campuses, buildings and rooms",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Cancel",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Cancel request",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Cancelled",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Candidates",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Capacity",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Capacity by section",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Capacity used",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Card · verified",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Card uses",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Card, transfer and USSD reconciliation",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Careers",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Carte numérique, confidentialité et données",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Catalogue",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Catalogue, loans, reservations and fines.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Certificates",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Ces conditions expliquent comment utiliser le site et le portail Daily Essential School de manière responsable, et ce que vous pouvez attendre de la plateforme.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Change check-in",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Change password",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Change tracking is automatic.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Changes record the author, time and previous value, so a grade query can be answered with evidence.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Changes saved",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Chat with DAMMI AI",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Cheap certificates available now.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Check-in recorded — thank you for sharing.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Chemistry",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Child’s full name",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Children covered",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Chloe Nwosu",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Choose file",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Choose how the student portal keeps you informed.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Choose portal role",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Choose when you book",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Chronic absence",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Cite every source.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Class assignments",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Class group:",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Class management",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Class quick facts",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Class rank",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Class tutor → HoD",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Class-scoped authorizations for the teacher portal.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Classes",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Classes, planner, marks and evaluations.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Clear monthly plans per learner, billed in DZD or USD, with annual saving and optional add-ons.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Clear search",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Clear structure. Add a summary row next time.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Click your photo to upload a new one",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Close help",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Close review form",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Closest due 2 November",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Cloud shell",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Cloudflare",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Cloudinary unsigned upload failed:",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Cloudinary upload failed:",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Clubs & teams",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Code",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Collected",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Comment",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Communication",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Communication language",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Community and peer support",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Company",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Complete inclusive-teaching PD pathway",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Completed",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Completed 15 Oct 2026",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Completion",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Completion outcome",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Computer Basics Evening",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Computer Basics evening seats are open for October enrolment.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Computing, data and digital craft",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Concern",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Conditions d’utilisation",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Conduite des élèves",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Conference slots",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Confidence flag.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Confidential by design.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Confidential payment plans are available. Contact the finance office and a plan can be agreed without affecting your child’s access to learning.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Confidentiality",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Configuration",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Configuration, not code.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Confirm",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Confirm seats, plans and learner subscriptions.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Confirmed",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Consent is recorded, versioned and revocable.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Consent outstanding",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Conservation et vos droits",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Contact & support",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Contact a teacher",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Contact Daily Essential School — portal support, academic office, finance desk and campus front desk, with a trackable support ticket form.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Contact school support",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Contact Support",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Contact the school",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Contactez l’équipe de support pour toute question sur vos informations, une mise à jour ou un signalement. Nous répondons sous deux jours ouvrés.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Content and updates",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Contenu et mises à jour",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Continue to sign in",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Conversation cleared. What would you like to learn or find today?",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Cookies et stockage local",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Copies",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Copies on loan",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Copy your student ID, scan the QR code for campus check-in and download a recovery key that restores portal access if you forget your password.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Core science and mathematics foundations",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Corrections after the lock period require a reason and approval.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Counselling caseload",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Counselling request sent",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Counsellor",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Country / region",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Cours et inscription",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Course average",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Course details",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Course not found — Daily Essential School",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Course review",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "courses",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Courses and enrolment",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Courses attached to",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Courses in the catalogue",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Courses with learners",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Courses, admissions, student portal and DAMMI AI study support.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Courses, assignments, grades, ID card and recovery key.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Cover needed Thursday 12:00",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Cover plans ready",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Cover teachers see the plan, not your private notes.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Create",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Create event",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Create modern websites by learning how the web works and how to structure, style, and add interaction to pages. Learners finish with a responsive multi-page website.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Create news update",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Create role",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Create your",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Credits",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Criterion",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Currency",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Current / previous school",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Current academic year",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Current year",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Curriculum coverage",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Cybersecurity",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Daily and term attendance rates with chronic-absence flags.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Daily Essential Admin 101",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Daily Essential delivers results in school and beyond",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Daily Essential goes far beyond tutoring",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Daily Essential Learner Handbook",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Daily Essential School — Learning, admissions and student portal",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Daily Essential School — twenty career-focused courses, online admissions, a student portal with digital ID and recovery access, and DAMMI AI study support.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Daily Essential School · Student ID",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Daily Essential School / Course catalogue",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Daily Essential School / Join us",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Daily Essential School / Policies",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Daily Essential School / Politiques",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Daily Essential School / Support",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Daily Essential School Admin",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Daily Essential School builds lasting self-learning habits through guided practice, mentorship and real classroom pathways — not one-off homework help.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Daily Essential School Management Portal",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Daily Essential School on LinkedIn",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Daily Essential School portal",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Daily Essential School pricing — DZD and USD",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Daily Essential.SCHOOL",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Daily registers, chronic absences and follow-ups.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "DAMMI AI · Daily Essential School",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "DAMMI AI is the Daily Essential School study buddy — guided answers on courses, portal access, student ID and support, powered by NVIDIA NIM.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "DAMMI AI study buddy",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "DAMMI is thinking…",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "DAMMI is typing…",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Daniel Osei",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Data freshness",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Data is filtered by organization, campus, academic year, relationship and policy. Every sensitive action is logged.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Data quality",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Data quality issues",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Data Science & Analytics",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Data source:",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Days present",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "DE-XXXX-XXXX-XXXX-XXXX",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Decision",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Dedicated admin login",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Dedicated console for evaluations, lesson subscriptions, marks oversight and school news.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Demandes, réclamations et recours",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Demo admin",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Demo credentials",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Department",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Deposit received and section assigned",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Descriptor",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Design showcase",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Design showcase volunteers",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Design sprint winner",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Design sprint, attendance, mentoring",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Designing effective rubrics",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Detail",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Differentiation notes",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Difficulty",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Digital card and account recovery",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Digital ID card issued",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Digital ID card, student number and account recovery.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Digital ID, privacy and data",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Digital Literacy",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Digital Literacy · D-302",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Digital Literacy Path",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Digital Marketing",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Digital student ID",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Directory",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Discuss with teacher",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Discussed design showcase and exam revision. Agreed a 20-minute daily study block.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "document",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Document vault",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Documents complete",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Documents review stage",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Documents to upload",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Download .txt",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Download CSV",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Download PDF",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Download recovery key",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Download recovery key file",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Download statement",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Download the key from your student ID page, then confirm it here to restore access.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Download your recovery key to sign in again if you forget your password.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Draft",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Draft an announcement for learners, families and staff.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Draft an update, pin important notices, and publish for the school community.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Draft generated with",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Draft only — review and edit every question before publishing to students.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Draft saved locally. Connect Parse NewsUpdate to persist.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Draft tests",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Draft v4 in preparation",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Draft, never final.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Drafted after the meeting",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Drafts are not visible to students until a teacher publishes them.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Drop-in Tuesday 14:00",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "due",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Due soon",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Duplicate as draft",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Duration",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Edit record",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Edit Settings",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Edit student records",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Edits after the lock period need a reason.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Electives and clubs selected",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Email",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Email Us",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Emergency contact",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Encrypted · restore drill passed",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "English",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Enrol",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Enrol from any course page — no application fee.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Enrol learner",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Enrol on",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Enrol on a course to unlock its modules, resources and final project.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "enrolled",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Enrolled at Daily Essential School",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Enrolling as",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Enrolling is free for admitted students. You will appear on the class roster and can start module 1 immediately.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Enrolment records",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Enter admin password",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Enter scores, submit for review, then publish results to learners.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Enter, submit and publish assessment scores.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Enterprise, money and markets",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Entrepreneurship & Startups",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Environmental Science",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Error 404",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Escalation",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Escalations",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Essential",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Essential only",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Estimated learning hours",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Évaluation et intégrité académique",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Evaluation requests submitted before Friday will be reviewed within five working days. Bring any prior certificates when you visit campus for in-person assessment.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Evaluation week opens Monday",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Evaluations ·",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Evening lesson subscriptions",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Event",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Event calendar",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Events",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Events & activities",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Events & calendar",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Events today",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Every AI call is recorded",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Every call logged.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Every cell keeps its history.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Every enrolment created from the course catalogue, with the course roster it feeds.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Every generated report records the requester, the filters used, the row count and the download link, so personal-data exports can be reviewed.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Every mark keeps its previous value, author, timestamp and reason, so moderation disputes are resolved from evidence.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Every message is logged and visible to authorised staff.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Every mutation calls",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Every portal and login the school offers.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Every student advances through lessons, evaluations and subscriptions that match their level, so confidence grows before complexity increases.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Everything due, submitted or graded.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Everything your school community needs, in one secure place. Access student information, learning resources, school services and support.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Evidence is private by default. You choose what to include in a shareable summary, and every share link expires.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Exam eligibility depends on attendance.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Exam fortnight adjustments · needs approval",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Exam officer leave",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Exam score",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Exam stress support",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Exam stress: a five-minute reset",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Exams",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Exams & deadlines",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Exams scheduled",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Excused",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Excused · medical appointment",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "excused · medical note",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Excused absences",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Expand",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Expires",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Expiring soon",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Explain the first module of",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Explore courses",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Export evaluation queues, subscriptions and published news.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Export ICS",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Export ledger",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Export log",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Export return",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Exports are permission-checked and audited.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Facebook",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Facilities",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Failed logins",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Fairness guardrails are on.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Families can book online",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Family overview",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "FAQs & Documentation",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Feature, model, latency and outcome go to the AILog class.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Fee payments",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Fee plans",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Fee plans and invoicing rules",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Feedback",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Feedback available",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Fees",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Fees & invoices",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Fees & receipts",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Fees and billing",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Fees are per term and exclude optional transport, meals and trips. Sibling and scholarship discounts are available.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Fees, receipts, subscriptions and payment confirmations.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "file",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Fill in the blank",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Fill the form and attach the three required documents. Nothing is sent until you submit.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Filter and open learner profiles for your classes.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Filter by ▾",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Filter by pathway, or search by course name.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Filters",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Finance & fees",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Finance desk",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Finance officers confirm paid lesson subscriptions.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Find learners",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Fines applied automatically",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Finish the practical project and receive a completion record.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "First name",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Fix →",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Flagged by attendance or marks",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "flex",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Follow placement and transfer evaluations from request through shared results.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Follow placement requests from review to shared results.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Follow us",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Follow-up notes shared after",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Fonctions IA et vos données",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "For Parents",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Form",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Forms are per child",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Forms awaiting your signature",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Foundational digital skills for learners and parents.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Four marked, two with gaps",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Four teaching groups plus mentor group",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Frais et facturation",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Free periods",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Freeze Term 3 marks and publish report cards.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "French",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "From marks and evaluation tracking to lesson plans and news updates, our platform connects classroom effort with measurable progress at home and at school.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "From the public admissions form",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "from the timetable, or ask DAMMI AI for a guided explanation of the current lesson.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "From your department",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Full configuration, publication and records access.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Gap",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Generate a draft test",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Generate draft",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Generated questions and marks are proposals until a teacher approves them.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Get instant support from our team. Choose how you'd like to reach us:",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Goals",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Goals on track",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Good",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Grade ·",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Grade applying for",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Grade B · above target",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Grade changes",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Grade level",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Grade levels",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Grade levels and sections",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Grade pending papers",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Grade published",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Grade scales",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Grading",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Grading scales and report templates",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Grading scales, attendance codes, report templates and subject rules are editable per school. Nothing in this page needs a deployment.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Grant",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Graphic Design",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Great",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "group relative",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Guardian and contacts",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Guardian contact confirmed",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Guardian conversations and class announcements.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Guardian notified",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Guardian phone number changed",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Guardrails",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Guided answers for learners and staff — courses, portal access, identity and support.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Guided modules",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Guides, audio and videos",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "h-1.5 w-1.5 rounded-full",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "h-3.5 w-3.5 rounded-full border",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "h-7 w-7 transition",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Habits, health and personal effectiveness",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Handbook and code of conduct acknowledged",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Hassan Ahmed",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Health & Wellness",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Health, counselling and safeguarding details are stored separately and restricted to authorised staff.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "help",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Help centre",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Help for examiners",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Help for school administrators",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Help for teachers",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Hey",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Hi — I am DAMMI AI. Ask me about portals, courses, PDFs, your student ID, grades, pricing or support.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Hints and explanations for school subjects — never a shortcut through a live test.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "HoD review before approval",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "home",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Homework 1",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Homework 2",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Hours",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "hours ·",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Hours / week",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "hours of study each week",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "hours over",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "House leaderboard",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "How a course runs",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "How are you today?",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "How Daily Essential School collects, protects and retains personal information, including AI features and cookies.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "How information is protected",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "How learner data is stored, used and protected.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "How marks, evaluations and appeals work at Daily Essential.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "How the school AI works",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "How this is calculated",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "How to use your ID",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "How your application moves",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Human approval required.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "I agree to the",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "I completed a foundation course and would like a skills placement evaluation before enrolling.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "I confirm I am the parent or legal guardian and I consent to the activity described above.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Identity",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Identity and enrolment",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Identity verified",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "If a teacher is absent, the cover lesson and any room change appear here and as a notification. Exam overlays are shown in a different colour so nothing is missed.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "If exam pressure, friendships or home life are affecting your focus, that is a normal reason to ask for support — not a sign of failure.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "If something looks wrong, open a structured query from the course page. Your teacher sees it with the assessment and the full change history.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "If you or someone else is in danger, tell a trusted adult immediately or call the school emergency line on +234 800 000 0000.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "If you save the wrong status, correct it now.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Impersonation requires a reason and is prominently audited.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Import learner lists, lesson seats or news drafts from CSV.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Import template",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Important Dates",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "in class",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "In progress",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "In review",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "in the catalogue",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Inactive",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Inbox",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Incident",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Incidents by type, location, time and resolution status.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Including one late item",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Inclusive teaching foundations",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Individual responses are never shown here — only aggregates above a minimum response threshold.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Information we use",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Informations utilisées",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Inline PDF preview is unavailable in this browser.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Inquiries",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Inquiry-to-enrolment conversion by grade and source.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Instagram",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Instalments",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Inter-house innovation day · Oct 2026",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Interpreters and accessibility.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Intervention flag automatic",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Interview",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Interview notes",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Interviews",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Invigilator",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "invoices across 3 campuses",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "invoices overdue",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Invoices, payments, waivers and reconciliation.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "is required",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Issue",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Item",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "JPG or PNG",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "JSS 3 Computer Science covered",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Keep me signed in",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Keep this key private. The school office can verify it to restore portal access.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Keep this private. Use it on the sign-in page if you forget your password.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Keep your contact details up to date.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Kwame Mensah",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Language Learning",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Last 12 weeks · visual trend",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Last backup",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Last name",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "late arrival logged",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Late arrivals",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Late fee",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "late or absent",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Late work can be submitted with a note after the deadline.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Late work flagged in red",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Latest enrolment",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Latest news & updates",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Latest News & Updates",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Latest results",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Launch checklist",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Lead ·",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Leadership team",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Learner · Section · Guardian · Attendance % · Average · Fee balance",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Learner access",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Learner level:",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Learner reviews",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "learners",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "learners · JSS 2 Blue · Mr. Eze",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Learners below 85% attendance in a subject may need an attendance review before sitting the exam. Talk to your tutor early — support is available.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "learners in the record set · homeroom",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "learners placed",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Learners progress at their own pace",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Learning",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Learning Centre",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Learning clubs and activities",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Learning pathways",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Learning support needs, siblings at the school, preferred campus…",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Legal name",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Lesson",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Lesson notes and past papers",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Lesson notes, past papers and school documents.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Lesson slides — week 9",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "lessons this term. Complete lessons in order to unlock the next checkpoint.",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Lessons today",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Lessons, pacing, tutor support…",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Level",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Library & resources",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Linear equations",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Linear equations set B",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Linear equations slides",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Linked to finance records",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Linked to Parse SupportTicket class.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "LinkedIn",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Live activity across Parse · source:",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Live AI:",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Live from Parse",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Loading applications…",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Loading Daily Essential School",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Loading documents…",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Loading enrolments…",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Loading notifications…",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Loading page",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Loading profile from Parse…",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Loading reviews…",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Loading your identity record…",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Loans",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Loans, returns, overdue items and popular titles.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Login failed",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Logins, role changes, mark publication, attendance corrections, fee adjustments, record changes, exports and impersonation sessions are always recorded.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Lost your key? Download it again here, or ask the school office to verify it for you.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Low confidence answers are flagged for review.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Low-confidence answers are flagged",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Main Campus visitors, guardian visits and facilities requests.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Main Campus, Daily Essential School",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Maintain secure item banks for assessments.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Manage",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Manage bank",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Manage campuses, word filters, access rules, and CSV import/export.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Manage fees",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Manage lessons",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Manage my courses →",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Manage roles & permissions",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Manage your personal information, learning details, identity card, security and portal preferences.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Managed through your portal login",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Manager review window opens",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "mark",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Mark",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Mark a long answer",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Mark all as read",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Mark all present",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Mark all read",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Mark as read",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Mark attendance",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Marking",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Marking note",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Marking note:",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "marks",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Marks can be released to families on a delay.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Marks per course, term and assessment.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Mathematics · 9 November",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Mathematics Paper 1",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Maths clinic · B-101",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Maths practice · 40 min",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "max",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Media consent renews yearly",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Median reply",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Medical and emergency details on file will be shared with trip staff.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Medical treatment authorisation",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Meeting length",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Message",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Message DAMMI AI",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Messaging guardrails protect everyone.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Method",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "MFA required for all staff",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Ministry return",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Mobile navigation",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Mobile student portal",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Moderate department marks",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Moderate pending scripts waiting for examiner review.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Moderate queue",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Moderation complete",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Moderation complete, no changes",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Moderation queue",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Module outline",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "modules",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Modules",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "modules ·",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "modules around your own week.",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "modules unlocked.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Mon 16:00",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Monday to Friday, 8:00 a.m. to 4:30 p.m.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Monitor completion, recent activity and learners who need attention.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Monthly fees in DZD and USD",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Monthly school pricing in Algerian dinar and US dollars.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "More in",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Most recent school report",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Move applicants from enquiry to enrolment.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Mrs. Adebayo · Design",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Ms. Ibrahim will contact you privately within one school day. You can cancel from this page.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Multiple choice",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Multiple roles per person are supported with an in-app role switcher.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "My attendance",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "My ID",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "My ID & key",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "My ID & recovery key",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "My marks",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "My timetable",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "name@example.com",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Need help now?",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Need help with this course?",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Need help with your portal, courses or school services? Open a support ticket — it is stored on Parse and attachments go to Cloudinary.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Need Help?",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Need more support? Contact",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Need more time? Ask before the due date.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "needs at least two options.",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Needs attention",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Needs rework",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Needs your attention",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Never share your recovery key or post a copy of it online.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "New",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "New academic year",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "New application",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "New learning resources available",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "New learning resources available.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "New lesson plan",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "New message",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "New report",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "New submission",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "New update",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Newest",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Newest first. Logs cannot be edited or deleted.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Newest record",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Next",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Next →",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Next action",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Next class",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Next conference",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Next delivery 30 Oct · 16:00",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Next review",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Next run",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Nightly CSV to the bursar’s ledger",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "No application fee. Your details are used only for admissions and are never sold.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "No applications match this view.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "No applications yet. Submit one from the public admissions page to test the flow.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "No assignments set for this course yet.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "No audit entries match this filter.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "No courses match that search.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "No courses yet",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "No decision is automated",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "No double bookings detected",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "No enrolments recorded yet. Students appear here as soon as they enrol from the catalogue.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "No identity record found.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "No invoices for this child.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "No invoices issued to this learner.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "No learners assigned to this section yet.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "No learners match these filters.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "No notifications yet.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "No open counselling cases. Support flags:",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "No open referrals",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "No PDF selected.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "No prior qualification — beginners are welcome",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "No published news in Parse yet. Seed data or create an update in Admin → News.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "No replies yet. Keep the message short and reference the learner by name.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "No reviews yet — be the first to review",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "No safeguarding flags this week",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "No students match these filters.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "No support flags in this section.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "No tickets yet.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "No titles match this search.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Normal",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Not enabled",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Note",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Note for your tutor",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Note one question about progress and one about wellbeing.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Notes",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Nothing in this view. Enjoy the clear runway.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Nothing needs your signature. Well done.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Nothing reaches students automatically",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Notification service returned",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Notification templates and channels",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Notifications, reminders and emergency broadcast",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Nous traitons les informations personnelles avec soin afin que nos services scolaires soient fournis de manière sûre, équitable et transparente.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "now",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "NVIDIA",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "NVIDIA returned an empty answer from",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Objective marking stays code.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Observation history",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Observations",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Observer",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "October marking progress — 64% complete",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Of 44 teaching days",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Of learners completed this week",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Offer",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Offer decisions require a human approval.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Offer, waitlist or guidance within five working days.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Offers",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Office",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Offline & kiosk capture",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Okay",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Oldest",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "on the topic \"",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "On-time rate",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "One award under committee review",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "One class still needs a plan",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "One due this week",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "One high-priority case",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "One login, every child.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "One offer expires 8 Nov",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "One peer observation this term",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "One studio double period",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "One-line summary",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Online ·",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Only if moving schools",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Only your counsellor sees requests",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Open account menu",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Open Admin login",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Open analytics",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Open assignments",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Open assignments →",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Open case log",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Open cases",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Open classes",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Open Evaluations, filter by Pending, then approve or mark spam.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Open events",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Open fees & receipts →",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Open finance",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Open full ID card →",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Open gradebook",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Open grading",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Open inbox",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Open learning PDFs inside Daily Essential — no popup reader.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Open login",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Open markbook",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Open markbook →",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Open my gradebook →",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Open navigation",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Open offers",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Open PDF in this tab",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Open PDF library",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Open portal tools menu",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Open QC",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Open queue",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Open records",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Open registers",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Open request",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Open rosters",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Open screening",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Open the student portal to pick up lessons, submit assignments and track your module progress. New students start at any term.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Open threads",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Open whenever you need it. Resources are checked by the counselling team.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Operational summaries for assessment cycles.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Operations",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "optional",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Optional",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Optional: paste the answers you are unsure about",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "or continue with",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Organization, access and import/export controls for the school admin workspace.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Our policies set clear expectations for a safe, respectful and successful learning community, and explain what learners and families can expect from us in return.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "out of 5 stars",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Outstanding fees",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Outstanding peer mentoring during the design sprint.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Overall readiness",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Overdue",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Overrides",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Owner",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Pacing",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "pages",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Paid to date",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Paper",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Parent · Amina",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Parent / guardian",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Parent alerts for absence and fees",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Parent contact outside the platform is discouraged so the school keeps one communication record.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Parent meeting due",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Parent messages",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Parent notified automatically",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Parent portal",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "parent SMS queued",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Parents confirmed for the showcase",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Parents, learners and colleagues",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Parse",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Passport photograph",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Past Year ▾",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Paste the student's typed answer…",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Pattern",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Paused",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Pay",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Pay fees",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Payment method",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Payment plan",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Payment received — receipt",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Payment recorded",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Payments are verified server-side. The school never sees or stores your card details.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "pb-5 sm:flex-row sm:items-end sm:justify-between",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "PD hours",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "PDF library →",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "PDF, JPG or PNG · up to 8 MB each. Files are stored securely and read only by admissions.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Peer mentor",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Pending enrolment",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Pending marks, evaluations and follow-ups requiring action.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "People",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Perfect attendance",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Period",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Permission",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Permission changed",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Permission changes",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "permission grants",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Permission matrix",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Person",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Personal Finance & Investing",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Personal notes you add to a learner are visible only to you unless you deliberately share them with the tutor or safeguarding lead.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Persuasive essay draft",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Phone",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Phone number",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Photo and media consent renewal",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Physical copies currently issued",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Physics",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Physics Practical Guide",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Pick a course and get what went well, what to fix and three practice questions.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Pick a course below and enrol in one click. Twenty courses are available across five pathways.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Pick an application from the list to prepare an anonymised summary.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Pin to top of latest news",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Placement and transfer evaluations can be requested from the school portal this week.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Placement tests scheduled",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Plan details",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Plan lessons",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Plan template",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Planner",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Plans this week",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Please evaluate my prior learning certificates for transfer into the Digital Literacy track.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Policies · Daily Essential School",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Policies →",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Policies, attendance and portal guidance for learners.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Politique de confidentialité",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Politiques et formulaires",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Portail de gestion Daily Essential School",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "portal",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Portal",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Portal page",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Portal support",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Portfolio",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Portfolio & achievements",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Portfolio defence scores released",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Powered by the school AI engine. Always review and edit before publishing.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Practice dataset",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Preferences saved.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Preferred language",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Premium reasoning model",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Présence et participation",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "present ·",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Preview columns",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Preview report",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "primary",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Primary guardian",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Primary navigation",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "priority",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Privacy policy",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Privacy Policy",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Privacy policy · Daily Essential School",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Private student text.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Private teacher notes are just that.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Productivity & Time Mastery",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Professional development",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Profile & settings",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Profile review complete",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Profile settings",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Profile, photo and emergency contacts added",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Programme / subject",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Programme overview",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Programmes",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Programmes & classes",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Programmes and fees",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Progress, attendance and fee information for guardians.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Project",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Projected term average",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Protect your account and manage sign-in preferences.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Protection des informations",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Protection et bien-être",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Public page",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Publication",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Publication readiness",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Publish",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Publish availability",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Publish marks",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Publish report cards",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Publish school announcements and keep families informed.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Publish updates",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Published",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Purpose",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Python Programming",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "QR code for student",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Quality",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Question 3 — I wrote…",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Question types",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Questions",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Questions about this course",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "questions for",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Quick access",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Quick links",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Quiet hours & expectations",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Quiz 1",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Quote your student ID when contacting the school office.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Raise JSS 2 digital literacy pass rate to 90%",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Rate limiting applied",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Rate this course",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Rating",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Reach the school office, admissions or technical support.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "read",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Read our",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Read the Daily Essential School PDF library in the in-app reader — course packs, revision guides and school documents.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Reading streak",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Ready for screening",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Ready to submit",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Reasons",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Receipt",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Receipts",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "received for",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Recent invoices",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Recent results",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Recent tickets",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Recipients",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Recognition and one concern",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Recommendation only. The admissions officer makes and records the final decision.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Recommended next",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Reconciled payments",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Record payment",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Record timeline",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Record today’s attendance and notify guardians of absences.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Records",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Recovery key:",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Register",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Register history and attendance rate.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Register saved",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Registers keep working without a connection and sync when the device reconnects. The ID-card kiosk can also capture arrivals automatically.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Registers lock 24 hours after a lesson. Corrections keep the original value, the new value, the reason and the approving staff member.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Registrar",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Registrations",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "relative",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "relative inline-block shrink-0",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Release holds for unpaid fees are optional and disabled for this school.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Release readiness checklist — pending QC sign-off",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Release scheduled 11 Dec 2026",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Released 26 Oct 2026 · used by all portals",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Renew",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Reply",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Reply expectation",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Reply sent",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Report",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Report an absence",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Report an absence →",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Report an issue",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Report another",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Report builder",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Report cards",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Report cards generated",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Report library",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Reporting",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Reports are published on 11 December. Please acknowledge receipt in the portal.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Request a short, private conversation. No reason is required, and your guardian is not contacted unless there is an immediate safety concern.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Request alternative",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Request an appointment",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Request another time",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Requesting an English readiness evaluation for the Computer Basics evening class.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Requests",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Requests, complaints and appeals",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "required",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Reservations",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Reserve",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Resolution",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Resources shared with learners",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Response target 24 hours",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Result",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Result locked",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Resume setup",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Retained for audit",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Retention and your rights",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Retry",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Returned",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Review",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Review applications",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Review attendance",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Review learner subscriptions and open lesson seats.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Review pending plans, check seats, then confirm payment-backed subscriptions.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Review placement and transfer evaluation requests.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Review the latest marks and teacher comments in Academics.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Review your student profile, avatar and verification status.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Reviewed",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Reviewed mid-year and year-end",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Reviews come from students enrolled on this course.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Revision guide",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Right-of-reply notes are stored alongside the observer’s record, and appraisal evidence is never shared beyond your evaluators without your consent.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Risk level",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Robotics club trip — consent",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Role workspaces",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Role-based access links and demo credentials for Daily Essential School portals.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Roles",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Roles, permissions and delegations",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Roll over sections, courses and fee plans.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Rollover is irreversible without a restore.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Room bookings",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Room changes reach you immediately.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Room conflicts",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "roster",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Roster by course",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Rosters, averages and today’s periods for each group.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Row-level security scopes queries to campus, section and relationship.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Rubric",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Rubric-based AI marking with a confidence flag. A teacher confirms every score.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Run →",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Run a dry run first. The preview lists every promotion, repeat and graduation decision for sign-off.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Run promotion rules and review the exception list.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Run three peer-observation cycles",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Safeguarding & wellbeing",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Safeguarding concerns",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Safeguarding refresher",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Same Disqus-style console as admin and teachers — with grading, results and quality authorizations only.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Sample",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Sample reviews and consistency checks across markers.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Sample reviews and consistency checks.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Save changes",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Save preferences",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Save register",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Scan ISBN",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Scan to verify",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Schedule classes, rooms and teacher assignments.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Schedule exam",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Schedule updated",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Scheduled",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Scheduled 18 Nov 2026",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Scheduled delivery",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Scheduled lessons",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Scholarships",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Scholarships & aid",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "School Admin",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "School administration, admissions review and publishing.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "School administrator?",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "School administrators can approve evaluations and publish news.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "School announcements, evaluations and lesson updates from Daily Essential School.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "School calendar",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "School Community",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "School Hours",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "School hours · 07:00 – 18:00",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "School Info",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "School Life",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "School management dashboard for evaluations, lessons and news.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "School Network",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "School news",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "School policies",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "School policies & forms",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "School portal",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "School portal login",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "School profile and branding",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "School quick links",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "School rules, safeguarding and downloadable forms.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "School setup",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Scope ·",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Score bands per course, section and teacher.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Scores per assessment, class averages and ungraded work.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Scores, sibling priority and capacity are advisory. The Registrar confirms every offer and the decision is written to the audit log.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Screen",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Screening summary",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Search",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Search actor, entity or ID…",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Search by course, topic or module",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Search child, guardian or ID…",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Search Daily Essential School courses, staff, portal pages, policies and support pages.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Search documents…",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Search enrolments",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Search learners, guardians and enrolment history.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Search name, ID or guardian…",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Search student email or course",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Search title, author or subject…",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Search your portal, courses and people",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Search, filter and open a complete learner record.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "seats",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "seats ·",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Second threshold triggers a tutor meeting",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "sections",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Sections",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Sections and homerooms",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Sections today",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Secure assessment items available to authorised examiners.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "See who enrolled on which course and track progress.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Segregation of duties is enforced.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Select",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Select a document to read.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Select all",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Self and teacher assessed",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Self-paced lessons, guided practice, and a final review or project.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Send reply",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Send ticket",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Sensitive records and high-impact decisions are never finalized by automation.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "September 2026",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Service",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Service hours",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Settled",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Setup & health",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Setup progress",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Severity",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Share announcements with the school community.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Shared console UI with teacher-only tools: action queue, student search, marks and evaluation tracking.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Shared only with you and your guardian",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Sharing a lesson for cover includes the plan, class list, accommodations and emergency contacts — but never your personal notes about learners.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Short answer",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Show the QR code at the campus gate, library desk and exam hall.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Sibling discount",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Sibling discount applied",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Sign →",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Sign and submit",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Sign in by role",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Sign in to Daily Essential Admin",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Sign in to your",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Sign in with a different account",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Sign in with a recovery key",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Sign out",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Sign-in, password resets, role access and student ID issues.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Sign-ups accepting participants",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Signed",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Signed and stored",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Signed by guardian in parent portal",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Simple explanation",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "simply",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Skills and competencies",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Skills that carry into real life",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Skills tracked",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Sleep and study balance",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Slot",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Slots available",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Smart Schedule",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "SMS / email delivered today",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Snapshot →",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Source IP",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Spam",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Spot backlog in evaluation requests, confirm lesson subscription uptake, track open support tickets, and measure how often families open the latest news updates.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Spreadsheet dashboard",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Spreadsheet practice dataset",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Spreadsheets and data",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Staff access",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Staff accounts",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Staff and student sign-in",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Stage",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Standard",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Standards assessed so far",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Start an application",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Start another application",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Start module 1 of",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "State",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Statutory returns",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Stay informed about evaluations, lesson subscriptions and school community announcements.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Stay up to date with term dates, school events, examinations and parent meetings. Please check the school calendar for the latest information.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "steps complete",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Stored with timestamp",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Strengths",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Strong argument. Tighten the conclusion.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Struggling",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Student · JSS 2",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Student account",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Student and contact",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Student answer",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Student attendance this week",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Student conduct",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Student conduct, safeguarding, attendance, academic integrity and support policies at Daily Essential School.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Student handbook",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Student ID card →",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Student ID, grade, QR code and backup serial from your school record.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Student Portal",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Student portal · Alerts, deadlines and identity updates",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Student progress",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Student progress & engagement",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Student record ·",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Student record updated",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Student space",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Student space / Courses",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Student, teacher or examiner?",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Study planner",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "study-buddy questions. Try again tomorrow.",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Subject catalogue",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Subject catalogue and course offerings",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Subject variance report — Digital Literacy",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Subjects",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Submission options",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Submission received —",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Submissions may be checked for similarity. If you used an AI assistant for drafting, declare it in the submission note — undeclared use is treated as misconduct.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Submit",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Submit a ticket",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Submit for approval",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Submit for HoD moderation if this is a common assessment.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Submit request",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Submitted · locked",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Subscribe for Lessons",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Substitute cover",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Substitutions today",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Summary",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Superseded 26 Oct 2026",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Supervised by Mr. Okafor and two parent volunteers.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Support and wellbeing",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Support inbox",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Support plans",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "support@dailyessential.school",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Supporting two JSS 1 learners",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Switch campus",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Switch viewer",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Talk to someone",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Talking to a trusted adult",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Target",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Target 20 hours per year",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Target term average",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Teacher · English",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Teacher feedback",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Teacher notes",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Teachers can review assigned evaluation requests only.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Tell the school in advance if you need an interpreter, a larger-print handout or step-free access. These are arranged at no cost to families.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Temporary attendance.edit grant",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Temporary delegations",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Temporary grants",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Temporary substitute grant",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Ten minutes: your child’s details, guardians and previous school.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Term 1",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Term 1 · week 9 of 14",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Term 1 marks",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Term 1 published results",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Term 1 report acknowledged",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Term 1 report acknowledgement",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Term 1 report cards",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Term 2",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Term 3",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Term average",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Term dates, announcements and school events.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Term exam",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Term to date",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Terms of Service",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "terms of use",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Terms of use",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Terms of use · Daily Essential School",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "The admissions officer reads every file and any AI summary.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "The agreement that covers platform use.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "The full catalogue of twenty courses with covers and modules.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "The learner is studying \"",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "The page you are looking for was moved, removed or might never existed.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "The school database is not configured.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "The school may show results to learners before guardians, so families can discuss them together. This is configured by the academic director.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "The terms that govern use of the Daily Essential School website, portal, courses, enrolment and AI assistance.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "The trip checklist requires an itinerary, emergency contacts, medical flags, payment status and signed guardian consent for every participant.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "The Writing Life",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "The Year 8 robotics trip visits the Innovation Hub on 14 November, leaving school at 08:00 and returning by 16:30.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Theory",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "These terms explain how to use the Daily Essential School website and portal responsibly, and what you can expect from the platform.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "This academic year",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "This course is in your student space with all",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "This family conversation",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "This month · all followed up",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "This term",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "This week's plans",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "This workspace mirrors a clean moderation-style admin console for school operations: evaluation requests, lesson subscriptions and news updates.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Threshold alerts",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Thu 12:00",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Thursday 12:00 JSS 2 Blue mentor group and Friday 12:00 clubs. The substitution engine suggests available staff by subject and workload.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Timestamp",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Timetable status",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Timetables, class changes, evaluations and programme placement.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Titles",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "To do",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "To reach",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "today",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Today",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Topic",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "total",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Total marks:",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Tours run every Tuesday at 10:00 and Thursday at 14:00 during term time.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Track engagement across campuses.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Track evaluations",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Track fee collection, invoices and balances.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Tracking summary",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Transfer letter",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Translate each numbered English interface string into",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Trend",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Trip participants missing signatures",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Trips need risk assessment and consent before departure.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "True / false",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Try these now",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Tuition",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Turn an idea into a tested business opportunity. Learners explore customer discovery, value propositions, business models, basic financial planning, and pitching.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Tutor check-in sent",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Twenty career-focused courses in academics, technology, business, design and wellbeing. Enrol online and learn at your own pace.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Twenty career-focused courses, online admissions, a verified student ID and DAMMI AI study support in one school platform.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Twenty courses in the catalogue",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Two awaiting credentials",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Two cover slots still need a teacher.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Two exam weeks remain in Term 1",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Two learners waiting for Design titles",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Two waiting for a reply",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Two-step verification",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Type your full name to sign",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "UI / UX Design Studio",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "UI / UX Studio Workshops",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Unassigned slots",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Unlocks after the current checkpoint",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Unpaid balances grouped by aging bucket and guardian.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Unread",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "unread notification",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Upcoming exams",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Updated",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Updates",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Upload a new profile photo",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Upload one or more files, or type your answer directly.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Upload the required documents before submitting:",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Uploaded ·",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Uploading to Cloudinary…",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Usability test prep · 45 min",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Usability test report",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Usability test report due",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Usability test script template",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Usability testing basics",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "USD",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Use",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Use AI marks as a first pass. Confirm or override every score in the gradebook — overrides are recorded and improve future prompts.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Use for independent study",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Use template",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Use the school portal",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Use this key on the sign-in page if you cannot remember your password. Keep it somewhere private.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Use your phone camera for handwritten work.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "users",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Uses the NVIDIA reasoning model · about 5–15 seconds.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Utilisation",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Utilisation acceptable",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Vaccination / medical record",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "verified",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Verify scored papers before official release.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Versions",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Video link sent",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "View account",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "View all",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "View all announcements →",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "View all grades",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "View assessments, exam schedules and results.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "View child's marks",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "View confidential wellbeing notes",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "View course →",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "view file",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "View own marks",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "View progress",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "View school attendance →",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Visit Daily Essential",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Visit the campus",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Visit the school office for admissions, records and support. Our team is here to help students, parents and visitors.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Visual and professional communication",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Volunteers",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Vos questions",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Waivers, refunds and discounts above ₦20,000 require a second approver. The creator can never approve their own adjustment.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Warehouse sync completed 09:38",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "was incomplete.",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Watch points",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "We handle personal information with care so that our school services can be delivered safely, fairly and transparently.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "We need four parents to help with the showcase on 14 November.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Web Development",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Wed 16:00",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Weekly check-in completion",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Weekly objectives, resources and homework checkpoints.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Weekly pattern",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Weekly studio sessions with critique and portfolio coaching.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "weeks",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Weighted",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Weighted across courses",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Weights: Homework 20% · Quiz 15% · Project 25% · Exam 40%",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Welcome back — opening",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Wellbeing & behaviour",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Wellbeing cases, appointments and confidential notes.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Wellbeing check-ins",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Wellbeing is part of learning.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Wellbeing pulse",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "What approval needs",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "What did the interview show? Strengths, support needs, questions…",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "What sets Daily Essential School apart from other learning programmes?",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "What the school can ask you to consent to",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "What was your experience?",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "What worked well? What should improve?",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "What would you like to do?",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "What you did well",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "What you need",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "What-if calculator",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "WhatsApp Support",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "When a friend is struggling",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Where marks went",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Wireframe critique response",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Withdraw",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Withdraw from",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Withdrawn",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Within the school-day target",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Work through",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Work through modules at your own pace with a tutor check-in.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "workspace",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Workspace",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Write a clear reply. Messages are visible to the tutor and safeguarding lead.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Write a review",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Write the full update...",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Year-end rollover",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "You · just now",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "You are on the roster. Open “My courses” to begin.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "You can respond to every observation.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "You can switch between children at any time. Access is limited to the children linked to your account, and separated-family rules are respected.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "You can withdraw non-essential consent at any time. The school keeps the version of the form you actually signed, so there is never ambiguity about what was agreed.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "You have not enrolled on a course yet",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "You have reached today's",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "you need about",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Your AI study feedback",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Your booking",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Your class tutor and guardian have been notified. You will see the approval in this page.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Your current learning programme and academic information.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Your details, photo and contact information.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Your Digital Literacy assessment is due tomorrow.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Your enrolled courses and module progress.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Your forms",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Your full name",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Your grade",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Your next learning session starts at 10:30 AM.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Your portfolio belongs to you.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Your previous reply failed validation:",
+  "weight": 1,
+  "count": 1
+ },
+ {
+  "text": "Your privacy",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Your profile photo is shown across the portal, on your ID card and in class lists. Use the circle at the top of this page to change it.",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Your question",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Your questions",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Your review",
+  "weight": 2,
+  "count": 1
+ },
+ {
+  "text": "Your student identity and enrollment details are verified.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Your study buddy",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Your study buddy for explanations, hints and revision.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "Your weekly lessons, rooms and tutors.",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "YouTube",
+  "weight": 3,
+  "count": 1
+ },
+ {
+  "text": "بوابة إدارة مدرسة Daily Essential",
+  "weight": 3,
+  "count": 1
+ }
+]

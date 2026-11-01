@@ -1,0 +1,2 @@
+import{n as e}from"./server-BUq0FRNC.js";import{t}from"./providers-BS6FRNDQ.js";var n=`nodejs`;async function r(){let n=t();return e.json({ok:n.nvidia||n.cloudflare,...n,features:[`study-buddy`,`generate-test`,`evaluate`,`feedback`,`admission-summary`].map(e=>({feature:e,ready:!!(n.nvidia||n.cloudflare)}))})}export{r as GET,n as runtime};
+//# sourceMappingURL=route-lcpez58d.js.map

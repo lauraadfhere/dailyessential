@@ -1,0 +1,46 @@
+export const roleCatalog = [
+  ['student', 'Student', 'Learners'], ['student-representative', 'Student Representative', 'Learners'], ['peer-tutor', 'Peer Tutor', 'Learners'],
+  ['parent', 'Parent', 'Family'], ['guardian', 'Guardian', 'Family'], ['family-contact', 'Authorized Family Contact', 'Family'],
+  ['teacher', 'Teacher', 'Teaching'], ['teaching-assistant', 'Teaching Assistant', 'Teaching'], ['substitute-teacher', 'Substitute Teacher', 'Teaching'], ['class-advisor', 'Class Advisor', 'Teaching'], ['mentor-teacher', 'Mentor Teacher', 'Teaching'],
+  ['department-head', 'Department Head', 'Academic leadership'], ['curriculum-coordinator', 'Curriculum Coordinator', 'Academic leadership'], ['academic-coordinator', 'Academic Coordinator', 'Academic leadership'], ['examination-officer', 'Examination Officer', 'Academic leadership'], ['academic-director', 'Academic Director', 'Academic leadership'], ['vice-principal', 'Vice Principal', 'Academic leadership'], ['principal', 'Principal', 'Academic leadership'],
+  ['counselor', 'Counselor', 'Student support'], ['inclusion-specialist', 'Inclusion Specialist', 'Student support'], ['safeguarding-officer', 'Safeguarding Officer', 'Student support'], ['health-officer', 'Health Officer', 'Student support'],
+  ['school-administrator', 'School Administrator', 'Operations'], ['admissions-officer', 'Admissions Officer', 'Operations'], ['registrar', 'Registrar', 'Operations'], ['finance-officer', 'Finance Officer', 'Operations'], ['hr-officer', 'HR Officer', 'Operations'], ['librarian', 'Librarian', 'Operations'], ['it-administrator', 'IT Administrator', 'Operations'], ['facilities-manager', 'Facilities Manager', 'Operations'], ['transport-manager', 'Transport Manager', 'Operations'], ['events-coordinator', 'Events Coordinator', 'Operations'],
+  ['compliance-officer', 'Compliance Officer', 'Governance'], ['privacy-officer', 'Privacy Officer', 'Governance'], ['internal-auditor', 'Internal Auditor', 'Governance'], ['ai-governance-officer', 'AI Governance Officer', 'Governance'], ['board-member', 'Board / Governance Member', 'Governance'],
+  ['organization-owner', 'Organization Owner', 'Platform'], ['super-administrator', 'Organization Super Administrator', 'Platform'], ['support-agent', 'Bitfi Support Agent', 'Platform'], ['security-administrator', 'Bitfi Security Administrator', 'Platform'], ['ai-operations-administrator', 'Bitfi AI Operations Administrator', 'Platform'], ['platform-administrator', 'Bitfi Platform Administrator', 'Platform'],
+] as const;
+
+export const modules = [
+  ['overview', 'Overview', 'Role-aware tasks, alerts and schedules'], ['academics', 'Academics', 'Academic years, terms, departments and classes'], ['people', 'People', 'Students, guardians, staff and enrolments'],
+  ['learning', 'Learning', 'Courses, lessons, resources and learning paths'], ['assignments', 'Assignments', 'Create, submit, review and grade work'], ['assessments', 'Assessments', 'Question banks, exams and results'],
+  ['attendance', 'Attendance', 'Registers, corrections and attendance insights'], ['gradebook', 'Gradebook', 'Scores, approval and official records'], ['communications', 'Communications', 'Announcements, messages and notifications'],
+  ['calendar', 'Calendar', 'School events, timetables and deadlines'], ['documents', 'Document Vault', 'Secure records, certificates and exports'], ['finance', 'Finance', 'Invoices, payments and finance controls'],
+  ['library', 'Library', 'Resources, loans and reading lists'], ['operations', 'Operations', 'Transport, facilities, HR and events'], ['reports', 'Reports', 'Operational, academic and compliance reporting'],
+  ['roles', 'Roles & Authorities', 'Scoped roles, permissions and delegations'], ['audit', 'Audit Log', 'Tamper-evident activity history'], ['ai', 'Bitfi AI', 'Human-reviewed learning and operational assistance'], ['settings', 'Settings', 'Organization, policy and integration configuration'],
+] as const;
+
+/** Shared Disqus-style consoles for staff roles (student portal stays separate). */
+export const consoleHomes = [
+  ['admin', '/admin'],
+  ['teacher', '/teacher'],
+  ['examiner', '/examiner'],
+] as const;
+
+export type RoleSlug = (typeof roleCatalog)[number][0];
+export type ModuleSlug = (typeof modules)[number][0];
+
+export const roleBySlug = (slug: string) => roleCatalog.find(([id]) => id === slug);
+export const moduleBySlug = (slug: string) => modules.find(([id]) => id === slug);
+
+export function permissionsFor(role: string) {
+  if (['student', 'parent', 'guardian'].includes(role)) return ['course.view', 'assignment.view', 'grade.view', 'ai.tutor.use'];
+  if (['teacher', 'teaching-assistant', 'class-advisor'].includes(role)) {
+    return ['course.view', 'assignment.create', 'assignment.grade', 'attendance.record', 'student.search', 'marks.assign', 'evaluation.track', 'progress.view', 'class.manage', 'ai.teacher_copilot.use'];
+  }
+  if (['examiner', 'examination-officer'].includes(role)) {
+    return ['assessment.review', 'grade.verify', 'question.bank', 'quality.control', 'results.publish', 'reports.view', 'audit.view'];
+  }
+  if (role === 'admin' || role.includes('administrator') || role === 'organization-owner') {
+    return ['evaluation.moderate', 'lesson.manage', 'news.publish', 'analytics.view', 'settings.manage', 'users.manage', 'import.export', 'student.view', 'roles.manage', 'permissions.manage', 'audit.view', 'ai.admin_copilot.use'];
+  }
+  return ['reports.view', 'approval.review', 'audit.view', 'ai.admin_copilot.use'];
+}

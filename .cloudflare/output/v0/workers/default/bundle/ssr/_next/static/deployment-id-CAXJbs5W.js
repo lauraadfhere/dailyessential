@@ -1,0 +1,2 @@
+function e(){}function t(e,t=void 0){if(!t)return e;let n=e.indexOf(`#`),r=n===-1?e:e.slice(0,n),i=n===-1?``:e.slice(n);return new URL(r,`http://vinext.local`).searchParams.has(`dpl`)?e:`${r}${r.includes(`?`)?`&`:`?`}dpl=${t}${i}`}function n(e,n=void 0){return new URL(e,`http://vinext.local`).pathname.includes(`/_next/static/`)?t(e,n):e}function r(e,t=void 0){t&&e.set(`x-deployment-id`,t)}export{r as n,e as r,n as t};
+//# sourceMappingURL=deployment-id-CAXJbs5W.js.map

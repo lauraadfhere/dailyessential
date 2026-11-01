@@ -1,0 +1,2 @@
+import{n as e}from"./server-BUq0FRNC.js";import{n as t,r as n,t as r}from"./cloudinary-Dd6_Yex-.js";var i=`nodejs`;async function a(i){try{if(!n())return e.json({error:`Cloudinary is not configured`,cloudinary:r},{status:503});let a=i.nextUrl.searchParams.get(`folder`)||`uploads`,o=i.nextUrl.searchParams.get(`publicId`)||void 0,s=t({folder:a,publicId:o});return e.json({ok:!0,...s,cloudinary:r})}catch(t){return e.json({error:t instanceof Error?t.message:`Sign failed`},{status:500})}}export{a as GET,i as runtime};
+//# sourceMappingURL=route-0Sh1LhiD.js.map
