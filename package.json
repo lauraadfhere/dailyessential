@@ -10,7 +10,7 @@
     "build": "vite build",
     "build:next": "next build",
     "start": "next start",
-    "deploy": "vinext-cloudflare deploy --prebuilt",
+    "deploy": "cf deploy --prebuilt",
     "lint": "eslint",
     "schema:apply": "node scripts/apply-parse-schema.mjs",
     "users:configure": "node scripts/configure-user-fields.mjs",
@@ -34,7 +34,7 @@
     "react-dom": "^19.3.1"
   },
   "devDependencies": {
-    "@cloudflare/vite-plugin": "^2.0.0-beta.v.8",
+    "@cloudflare/vite-plugin": "2.0.0-beta.v.8",
     "@mdx-js/rollup": "^3.1.1",
     "@types/node": "^20",
     "@types/qrcode": "^1.5.6",
@@ -44,7 +44,7 @@
     "@vitejs/plugin-react": "^5.2.0",
     "@vitejs/plugin-rsc": "^0.5.38",
     "autoprefixer": "^10.6.1",
-    "cf": "^1.0.0-beta.26",
+    "cf": "1.0.0-beta.26",
     "eslint": "^9",
     "eslint-config-next": "16.3.8",
     "postcss": "^8.5.32",
