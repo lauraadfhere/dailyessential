@@ -2,9 +2,9 @@ import { bindings, defineConfig, defineWorker } from "cf/config";
 
 export default defineConfig({
   worker: defineWorker({
-    name: "biftischool",
+    name: "dailyessential",
     entrypoint: "vinext/server/fetch-handler",
-    compatibilityDate: "2026-11-01",
+    compatibilityDate: "2026-10-30",
     compatibilityFlags: ["nodejs_compat"],
     assets: {
       htmlHandling: "none",
