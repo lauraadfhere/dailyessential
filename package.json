@@ -2,10 +2,15 @@
   "name": "biftischool",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=20.19.0"
+  },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "vite build",
+    "build:next": "next build",
     "start": "next start",
+    "deploy": "vinext-cloudflare deploy --prebuilt",
     "lint": "eslint",
     "schema:apply": "node scripts/apply-parse-schema.mjs",
     "users:configure": "node scripts/configure-user-fields.mjs",
@@ -17,7 +22,8 @@
     "dev:vinext": "vite dev --port 3001",
     "build:vinext": "vite build",
     "start:vinext": "vite preview",
-    "deploy:vinext": "vinext-cloudflare deploy"
+    "deploy:vinext": "vinext-cloudflare deploy",
+    "deploy:preview": "vinext-cloudflare previews deploy"
   },
   "dependencies": {
     "cloudinary": "^2.7.0",
@@ -41,6 +47,7 @@
     "cf": "^1.0.0-beta.26",
     "eslint": "^9",
     "eslint-config-next": "16.3.8",
+    "postcss": "^8.5.32",
     "react-server-dom-webpack": "^19.3.1",
     "tailwindcss": "^3.4.19",
     "typescript": "^5",
@@ -48,5 +55,6 @@
     "vite": "^8.3.5",
     "wrangler": "^4.156.0"
   },
-  "type": "module"
+  "type": "module",
+  "packageManager": "yarn@4.18.1"
 }
