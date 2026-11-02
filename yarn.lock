@@ -2654,39 +2654,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"biftischool@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "biftischool@workspace:."
-  dependencies:
-    "@cloudflare/vite-plugin": "npm:2.0.0-beta.v.8"
-    "@mdx-js/rollup": "npm:^3.1.1"
-    "@types/node": "npm:^20"
-    "@types/qrcode": "npm:^1.5.6"
-    "@types/react": "npm:^19"
-    "@types/react-dom": "npm:^19"
-    "@vinext/cloudflare": "npm:^1.3.0"
-    "@vitejs/plugin-react": "npm:^5.2.0"
-    "@vitejs/plugin-rsc": "npm:^0.5.38"
-    autoprefixer: "npm:^10.6.1"
-    cf: "npm:1.0.0-beta.26"
-    cloudinary: "npm:^2.7.0"
-    eslint: "npm:^9"
-    eslint-config-next: "npm:16.3.8"
-    next: "npm:16.3.8"
-    next-intl: "npm:^4.14.9"
-    postcss: "npm:^8.5.32"
-    qrcode: "npm:^1.5.4"
-    react: "npm:^19.3.1"
-    react-dom: "npm:^19.3.1"
-    react-server-dom-webpack: "npm:^19.3.1"
-    tailwindcss: "npm:^3.4.19"
-    typescript: "npm:^5"
-    vinext: "npm:^1.4.0"
-    vite: "npm:^8.3.5"
-    wrangler: "npm:^4.156.0"
-  languageName: unknown
-  linkType: soft
-
 "binary-extensions@npm:^2.0.0":
   version: 2.3.0
   resolution: "binary-extensions@npm:2.3.0"
@@ -3055,6 +3022,39 @@ __metadata:
   checksum: 10c0/cd29c51e70fa822f1cecd8641a1445bed7063697469d35633b516e60fe8c1bde04b08f6c5b6022136bb669b64c63d4173af54864510fbb4ee23281801841a3ce
   languageName: node
   linkType: hard
+
+"dailyessential@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "dailyessential@workspace:."
+  dependencies:
+    "@cloudflare/vite-plugin": "npm:2.0.0-beta.v.8"
+    "@mdx-js/rollup": "npm:^3.1.1"
+    "@types/node": "npm:^20"
+    "@types/qrcode": "npm:^1.5.6"
+    "@types/react": "npm:^19"
+    "@types/react-dom": "npm:^19"
+    "@vinext/cloudflare": "npm:^1.3.0"
+    "@vitejs/plugin-react": "npm:^5.2.0"
+    "@vitejs/plugin-rsc": "npm:^0.5.38"
+    autoprefixer: "npm:^10.6.1"
+    cf: "npm:1.0.0-beta.26"
+    cloudinary: "npm:^2.7.0"
+    eslint: "npm:^9"
+    eslint-config-next: "npm:16.3.8"
+    next: "npm:16.3.8"
+    next-intl: "npm:^4.14.9"
+    postcss: "npm:^8.5.32"
+    qrcode: "npm:^1.5.4"
+    react: "npm:^19.3.1"
+    react-dom: "npm:^19.3.1"
+    react-server-dom-webpack: "npm:^19.3.1"
+    tailwindcss: "npm:^3.4.19"
+    typescript: "npm:^5"
+    vinext: "npm:^1.4.0"
+    vite: "npm:^8.3.5"
+    wrangler: "npm:^4.156.0"
+  languageName: unknown
+  linkType: soft
 
 "damerau-levenshtein@npm:^1.0.8":
   version: 1.0.8
