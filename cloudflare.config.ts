@@ -37,7 +37,7 @@ const SERVER_SECRETS = [
 
 export default defineConfig({
   worker: defineWorker({
-    name: "biftischool",
+    name: "dailyessential",
     entrypoint: "vinext/server/fetch-handler",
     compatibilityDate: "2026-10-30",
     compatibilityFlags: ["nodejs_compat"],

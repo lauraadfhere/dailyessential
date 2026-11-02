@@ -8,7 +8,7 @@
  *
  *   node scripts/verify-stack.mjs                      # providers + local env
  *   node scripts/verify-stack.mjs --base http://localhost:3000
- *   node scripts/verify-stack.mjs --base https://biftischool.<sub>.workers.dev
+ *   node scripts/verify-stack.mjs --base https://dailyessential.<sub>.workers.dev
  *   node scripts/verify-stack.mjs --no-ai              # skip paid AI calls
  *   node scripts/verify-stack.mjs --deep               # also call the reasoning model
  *   node scripts/verify-stack.mjs --env .dev.vars      # read only that env file

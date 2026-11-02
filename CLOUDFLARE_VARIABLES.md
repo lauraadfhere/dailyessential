@@ -72,7 +72,7 @@ Only `NVIDIA_API_KEY` is mandatory. If it is missing, `/api/ai/status` reports
 
 ## Adding them on Cloudflare
 
-1. Open **Workers & Pages → biftischool → Settings → Variables and Secrets**.
+1. Open **Workers & Pages → dailyessential → Settings → Variables and Secrets**.
 2. Add each secret from section 1–3 and 5 as type **Secret** (encrypted), one per name.
 3. Add the `NEXT_PUBLIC_*` values in **Workers Builds → Settings → Build variables and secrets**
    so the Vite build can inline them, then redeploy.
@@ -97,7 +97,7 @@ one of them shows up as a `-` line in the diff, and the deploy aborts.
 
 Fix: make the Worker's variable list match what the config declares.
 
-1. Open **Workers & Pages → biftischool → Settings → Variables and Secrets**.
+1. Open **Workers & Pages → dailyessential → Settings → Variables and Secrets**.
 2. Re-add each server value from sections 1–3 and 5 as type **Secret** (encrypted), then
    delete its plain-text counterpart. The value stays the same; only the storage type changes.
 3. The `NEXT_PUBLIC_*` entries are inlined at build time and are not read by the Worker at
@@ -110,8 +110,6 @@ config schema), and it only affects how `vars` are sent during the upload — th
 runs before that and still reports the removals as destructive. Once a Worker has been
 deployed from the CLI once, Wrangler stops treating it as dashboard-managed, so this check
 no longer fires on later deploys.
-
-## Checking the deployed Worker
 
 ## Verifying every variable at once
 
@@ -132,6 +130,8 @@ node scripts/verify-stack.mjs --deep                  # also call the reasoning 
 It exits non-zero when a required check fails, prints only lengths (never secret values),
 and treats a value that is set locally but reported unconfigured by the server as a failure
 — that is the signature of a secret that never reached the Worker.
+
+## Checking the deployed Worker
 
 ```
 curl -s https://<your-worker-url>/api/ai/status
