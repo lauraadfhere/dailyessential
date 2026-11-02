@@ -81,7 +81,57 @@ Only `NVIDIA_API_KEY` is mandatory. If it is missing, `/api/ai/status` reports
 Secrets are per Worker, not per git branch — a preview deploy that shares the same Worker
 name sees the same values.
 
+## Deploy aborts with "Aborting the upload operation because of conflicts"
+
+`cf deploy` uploads with Wrangler's `--strict` flag. Before uploading, Wrangler compares the
+remote Worker config (whatever was last saved in the dashboard) with the config generated
+from `cloudflare.config.ts`, and refuses to continue when the upload would *remove* remote
+values. This project has no `wrangler.json`/`wrangler.toml` — `cf` builds that config in
+memory — so the only thing it can compare against is the bindings declared in
+`cloudflare.config.ts`.
+
+Concretely: `cloudflare.config.ts` declares the server values as **secret** bindings, which
+do not appear in the generated config. If the same names were added in the dashboard as
+plain-text **Variables**, the remote config has `vars` that the local config does not, every
+one of them shows up as a `-` line in the diff, and the deploy aborts.
+
+Fix: make the Worker's variable list match what the config declares.
+
+1. Open **Workers & Pages → biftischool → Settings → Variables and Secrets**.
+2. Re-add each server value from sections 1–3 and 5 as type **Secret** (encrypted), then
+   delete its plain-text counterpart. The value stays the same; only the storage type changes.
+3. The `NEXT_PUBLIC_*` entries are inlined at build time and are not read by the Worker at
+   runtime — delete them from the Worker; keep them in the build environment.
+4. Redeploy. With no plain-text `vars` left on the Worker, the diff is additive only and the
+   upload proceeds.
+
+`keep_vars: true` is **not** a fix here. It is a Wrangler-only field (not part of the `cf`
+config schema), and it only affects how `vars` are sent during the upload — the strict diff
+runs before that and still reports the removals as destructive. Once a Worker has been
+deployed from the CLI once, Wrangler stops treating it as dashboard-managed, so this check
+no longer fires on later deploys.
+
 ## Checking the deployed Worker
+
+## Verifying every variable at once
+
+`scripts/verify-stack.mjs` reads the same env files the app reads, validates the shape of
+every variable, and then makes one real call per service: Parse health + master key + REST
+key, a signed Cloudinary upload (deleted afterwards), the NVIDIA model list and a chat
+completion, Cloudflare Workers AI when configured, and — when given a server — this app's
+own endpoints.
+
+```
+npm run verify                                        # providers only, from .dev.vars
+node scripts/verify-stack.mjs --base http://localhost:3000
+node scripts/verify-stack.mjs --base https://<your-worker-url>
+node scripts/verify-stack.mjs --no-ai                 # skip paid AI calls
+node scripts/verify-stack.mjs --deep                  # also call the reasoning model
+```
+
+It exits non-zero when a required check fails, prints only lengths (never secret values),
+and treats a value that is set locally but reported unconfigured by the server as a failure
+— that is the signature of a secret that never reached the Worker.
 
 ```
 curl -s https://<your-worker-url>/api/ai/status
