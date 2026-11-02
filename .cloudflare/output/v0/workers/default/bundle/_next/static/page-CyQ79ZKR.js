@@ -1,2 +1,0 @@
-import{a as e,i as t}from"./navigation-errors-DAOpTDSc.js";import"./navigation.react-server-DEmpGpub.js";import{r as n}from"./school-model-C9aLl6LP.js";async function r({params:r}){let{role:i}=await r;n(i)||t(),e(`/workspace/${i}/overview`)}export{r as default};
-//# sourceMappingURL=page-CyQ79ZKR.js.map

@@ -1,2 +1,0 @@
-import{t as e}from"./server-BOaS1fRw.js";var t=e(()=>{throw Error(`Unexpectedly client reference export 'default' is called on server`)},`8765d2b402b2`,`default`);export{t as default};
-//# sourceMappingURL=page-CM1xFIKW.js.map

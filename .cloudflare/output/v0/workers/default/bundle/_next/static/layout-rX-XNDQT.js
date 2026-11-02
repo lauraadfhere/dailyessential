@@ -1,2 +1,0 @@
-var e={title:`Search`,description:`Search Daily Essential School courses, staff, portal pages, policies and support pages.`,alternates:{canonical:`https://dailyessential.school/search`},robots:{index:!1,follow:!0}};function t({children:e}){return e}export{t as default,e as metadata};
-//# sourceMappingURL=layout-rX-XNDQT.js.map

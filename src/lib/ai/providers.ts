@@ -8,7 +8,7 @@ export type AiMessage = { role: 'system' | 'user' | 'assistant'; content: string
 const nvidiaKey = process.env.NVIDIA_API_KEY || '';
 const nvidiaReasoning = process.env.NVIDIA_MODEL_REASONING || 'nvidia/nemotron-3-ultra-550b-a55b';
 const nvidiaFast = process.env.NVIDIA_MODEL_FAST || 'nvidia/nemotron-3.5-bolt-e4b';
-const nvidiaFallback = process.env.NVIDIA_MODEL_FALLBACK || 'openai/gpt-oss-20b';
+const nvidiaFallback = process.env.NVIDIA_MODEL_FALLBACK || nvidiaFast;
 const cfAccount = process.env.CF_ACCOUNT_ID || '';
 const cfToken = process.env.CF_API_TOKEN || '';
 const cfModel = process.env.CF_MODEL_FAST || '@cf/meta/llama-3.1-8b-instruct';
@@ -101,17 +101,28 @@ export async function nvidiaChat(messages: AiMessage[], opts: ChatOptions = {}) 
   }
 }
 
-/** Premium reasoning model first, then the configured fallback model. */
+/**
+ * Model used when the primary one fails. A fallback that repeats the primary
+ * model is useless, so we always land on the other live model instead of a
+ * retired name (retired NVIDIA models answer 410 Gone or stop responding).
+ */
+export function resolveFallbackModel(primary: string, preferred?: string) {
+  const candidate = preferred || nvidiaFallback;
+  if (candidate && candidate !== primary) return candidate;
+  return primary === nvidiaFast ? nvidiaReasoning : nvidiaFast;
+}
+
+/** Premium reasoning model first, then a different live model. */
 export async function nvidiaChatWithFallback(
   messages: AiMessage[],
   opts: ChatOptions & { fallbackModel?: string } = {},
 ) {
+  const primary = opts.model || nvidiaReasoning;
   try {
-    return await nvidiaChat(messages, { ...opts, model: opts.model || nvidiaReasoning });
+    return await nvidiaChat(messages, { ...opts, model: primary });
   } catch (primaryError) {
-    const fallback = opts.fallbackModel || nvidiaFallback;
-    if (fallback === (opts.model || nvidiaReasoning)) throw primaryError;
-    return nvidiaChat(messages, { ...opts, model: fallback });
+    const fallback = resolveFallbackModel(primary, opts.fallbackModel);
+    return nvidiaChat(messages, { ...opts, model: fallback, timeoutMs: opts.timeoutMs ?? 45_000 });
   }
 }
 

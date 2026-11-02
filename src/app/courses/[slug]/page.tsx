@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import CoursesAssistant from '../../../components/courses/courses-assistant';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import CourseDetailActions from '../../../components/courses/course-detail-actions';
@@ -92,7 +93,10 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
 
             <section className="mt-8">
               <h2 className="text-xl font-bold text-slate-900">Module outline</h2>
-              <p className="mt-1 text-sm text-slate-500">Self-paced lessons, guided practice, and a final review or project.</p>
+              <div className="mt-1 flex flex-wrap items-center justify-between gap-3">
+                <p className="text-sm text-slate-500">Self-paced lessons, guided practice, and a final review or project.</p>
+                <Link href={`/courses/${course.slug}/reader`} className="bg-[#1738a8] px-4 py-2 text-xs font-bold uppercase tracking-wide text-white hover:bg-[#102a80]">Open course reader &amp; grades</Link>
+              </div>
               <ol className="mt-4 divide-y divide-slate-100 border border-slate-200 bg-white shadow-sm">
                 {course.modules.map((module, index) => {
                   const totalWeeks = Number.parseInt(course.duration, 10) || course.modules.length;
@@ -104,7 +108,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
                       </span>
                       <span className="min-w-0 flex-1 text-[13px] leading-6 text-slate-700">
                         <Link href={`/courses/${course.slug}/lessons/${index}`} className="hover:text-[#1738a8] hover:underline">{module}</Link>
-                        {index === 0 ? <span className="ml-2 text-[10px] font-bold uppercase tracking-wide text-emerald-700">Preview</span> : <span aria-hidden="true" className="ml-2 text-[11px] text-slate-400">🔒</span>}
+                        
                       </span>
                       <span className="shrink-0 whitespace-nowrap pt-0.5 text-[10px] font-bold uppercase tracking-wide text-slate-400">Week {week}</span>
                     </li>
@@ -205,6 +209,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
           </nav>
         </div>
       </footer>
+      <CoursesAssistant />
     </main>
   );
 }

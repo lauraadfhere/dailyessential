@@ -17,7 +17,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
-      <link rel="canonical" href="https://dailyessential.school/" />
+      <link rel="canonical" href="https://dailyessential.ca/" />
       <SiteHeader active="home" />
 
       {/* Hero */}

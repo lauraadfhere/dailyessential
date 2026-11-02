@@ -12,7 +12,7 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://dailyessential.school";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://dailyessential.ca";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

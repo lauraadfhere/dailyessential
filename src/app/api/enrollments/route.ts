@@ -14,6 +14,7 @@ type EnrollmentRow = {
   progress?: number;
   completedLessons?: string;
   lastLesson?: number;
+  timeSpent?: number;
   enrolledAt?: string | { iso?: string };
   createdAt?: string | { iso?: string };
 };
@@ -43,6 +44,7 @@ function mapRow(row: EnrollmentRow) {
     progress: row.progress ?? 0,
     completedLessons: parseCompletedLessons(row.completedLessons),
     lastLesson: row.lastLesson ?? 0,
+    timeSpent: row.timeSpent ?? 0,
     enrolledAt: iso(row.enrolledAt) || iso(row.createdAt),
   };
 }
@@ -64,6 +66,7 @@ async function ensureSchema() {
           progress: { type: 'Number' },
           completedLessons: { type: 'String' },
           lastLesson: { type: 'Number' },
+          timeSpent: { type: 'Number' },
           enrolledAt: { type: 'String' },
         },
       }),
@@ -145,6 +148,7 @@ export async function POST(request: NextRequest) {
       progress: 0,
       completedLessons: '[]',
       lastLesson: 0,
+      timeSpent: 0,
       enrolledAt: new Date().toISOString(),
     };
 
@@ -174,11 +178,24 @@ export async function PATCH(request: NextRequest) {
     return NextResponse.json({ error: 'Progress is unavailable until the school database is configured.' }, { status: 503 });
   }
   try {
-    const body = (await request.json()) as { email?: string; courseSlug?: string; lessonIndex?: number; action?: 'complete' | 'uncomplete' | 'open' };
+    const body = (await request.json()) as { email?: string; courseSlug?: string; lessonIndex?: number; action?: 'complete' | 'uncomplete' | 'open' | 'time'; minutes?: number };
     const email = (body.email || '').trim().toLowerCase();
     const course = body.courseSlug ? getCourse(body.courseSlug) : undefined;
     const lessonIndex = Number(body.lessonIndex);
     if (!email || !course) return NextResponse.json({ error: 'email and courseSlug are required' }, { status: 400 });
+    if (body.action === 'time') {
+      // Time is added in small steps; one request can never add more than 30 minutes.
+      const minutes = Math.min(30, Math.max(0, Math.round(Number(body.minutes) || 0)));
+      if (!minutes) return NextResponse.json({ error: 'minutes must be a positive number.' }, { status: 400 });
+      const record = await parseQuery<EnrollmentRow>(CLASS_NAME, { where: JSON.stringify({ studentEmail: email, courseSlug: course.slug }), limit: 1 });
+      const found = record.results?.[0];
+      if (!found || !['active', 'completed'].includes(found.status || 'active')) {
+        return NextResponse.json({ error: 'You are not enrolled in this course.' }, { status: 403 });
+      }
+      const timeSpent = (found.timeSpent ?? 0) + minutes;
+      await parseUpdate(CLASS_NAME, found.objectId, { timeSpent });
+      return NextResponse.json({ enrollment: mapRow({ ...found, timeSpent }) });
+    }
     if (!Number.isInteger(lessonIndex) || lessonIndex < 0 || lessonIndex >= course.modules.length) {
       return NextResponse.json({ error: 'Unknown lesson.' }, { status: 400 });
     }

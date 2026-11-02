@@ -40,7 +40,7 @@ const portals = [
 export const metadata = {
   title: 'Portal access',
   description: 'Role-based access links and demo credentials for Daily Essential School portals.',
-  alternates: { canonical: 'https://dailyessential.school/access' },
+  alternates: { canonical: 'https://dailyessential.ca/access' },
 };
 
 export default function AccessPage() {

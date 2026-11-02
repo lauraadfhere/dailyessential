@@ -97,7 +97,7 @@ export async function POST(request: NextRequest) {
   ];
 
   try {
-    const result = await runAI('hint', messages, { temperature: 0.2, maxTokens: 1600, json: true });
+    const result = await runAI('translate', messages, { temperature: 0.2, maxTokens: 1600, json: true });
     const parsed = extractJson<Record<string, string>>(result.text);
 
     missing.forEach((text, index) => {

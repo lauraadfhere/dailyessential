@@ -1,1 +1,0 @@
-import{t as e}from"./CYwEWtW4.js";import{r as t}from"./B0PXqnjO.js";var n=t();function r({children:t,showSidebar:r=!1,greeting:i}){return(0,n.jsx)(e,{role:`admin`,showSidebar:r,greeting:i,children:t})}export{r as t};

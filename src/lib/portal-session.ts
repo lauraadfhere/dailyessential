@@ -75,6 +75,16 @@ export function writePortalIdentity(partial: Partial<PortalIdentity>) {
   }
 }
 
+/** Sign out: forget the stored identity so the next visit requires signing in again. */
+export function clearPortalIdentity() {
+  if (typeof window === 'undefined') return;
+  try {
+    Object.values(KEYS).forEach(key => sessionStorage.removeItem(key));
+  } catch {
+    /* ignore */
+  }
+}
+
 /** Default mark shown when a learner has not uploaded a photo yet. */
 export const defaultAvatar = '/brand/icon-512.png';
 

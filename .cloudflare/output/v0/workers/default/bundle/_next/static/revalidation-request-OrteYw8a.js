@@ -1,2 +1,0 @@
-function e(){return`6273cb5c2c635f2e7443f99d6702914d2f8e4eb3fec54234c2ac7897100166a6`}function t(e,t){if(e.length!==t.length)return!1;let n=0;for(let r=0;r<e.length;r++)n|=e.charCodeAt(r)^t.charCodeAt(r);return n===0}function n(n){return typeof n!=`string`||n.length===0?!1:t(n,e())}function r(e){return typeof e==`string`&&n(e)}export{t as n,r as t};
-//# sourceMappingURL=revalidation-request-OrteYw8a.js.map

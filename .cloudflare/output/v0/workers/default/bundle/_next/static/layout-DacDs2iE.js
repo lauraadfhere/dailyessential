@@ -1,2 +1,0 @@
-var e={title:`PDF library`,description:`Read the Daily Essential School PDF library in the in-app reader — course packs, revision guides and school documents.`,alternates:{canonical:`https://dailyessential.school/library`}};function t({children:e}){return e}export{t as default,e as metadata};
-//# sourceMappingURL=layout-DacDs2iE.js.map

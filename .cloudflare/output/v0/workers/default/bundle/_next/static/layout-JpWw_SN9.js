@@ -1,2 +1,0 @@
-var e={title:`Admissions`,description:`Apply online to Daily Essential School: upload the required documents, book the placement check and follow every stage of the admission decision.`,alternates:{canonical:`https://dailyessential.school/admissions`}};function t({children:e}){return e}export{t as default,e as metadata};
-//# sourceMappingURL=layout-JpWw_SN9.js.map

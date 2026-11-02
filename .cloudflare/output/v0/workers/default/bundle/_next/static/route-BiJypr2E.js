@@ -1,2 +1,0 @@
-import{n as e}from"./server-BUq0FRNC.js";import{t}from"./platform-data-C9kZYyPQ.js";import{r as n}from"./parse-server-BC6TprFy.js";async function r(r){try{let i=Math.min(Number(r.nextUrl.searchParams.get(`limit`)||50),100),a=await t(i);return e.json({count:a.length,courses:a,source:n()&&a.length?`parse`:`empty`})}catch(t){return e.json({error:t instanceof Error?t.message:`Failed to load courses`,courses:[]},{status:500})}}export{r as GET};
-//# sourceMappingURL=route-BiJypr2E.js.map

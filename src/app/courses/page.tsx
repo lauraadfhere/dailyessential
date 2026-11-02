@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import CoursesAssistant from '../../components/courses/courses-assistant';
 import Link from 'next/link';
 import CourseCatalog from '../../components/courses/course-catalog';
 import { courseCategories, courses, totalLearningHours, totalModules } from '../../lib/courses-data';
@@ -6,7 +7,7 @@ import { courseCategories, courses, totalLearningHours, totalModules } from '../
 export const metadata = {
   title: 'Courses',
   description: 'Twenty career-focused courses in academics, technology, business, design and wellbeing. Enrol online and learn at your own pace.',
-  alternates: { canonical: 'https://dailyessential.school/courses' },
+  alternates: { canonical: 'https://dailyessential.ca/courses' },
 };
 
 const stats = [
@@ -28,6 +29,9 @@ export default function CoursesAdvertPage() {
             <Link href="/admissions" className="hidden hover:text-white sm:inline">Admissions</Link>
             <Link href="/library" className="hidden hover:text-white md:inline">PDF library</Link>
             <Link href="/dummi-ai" className="hidden hover:text-white md:inline">DAMMI AI</Link>
+            <Link href="/courses/analytics" aria-label="Learning analytics" title="Learning analytics" className="inline-flex h-8 w-8 items-center justify-center border border-white/40 hover:bg-white/15">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2" /></svg>
+            </Link>
             <Link href="/login/student" className="border border-white/40 px-3 py-1.5 hover:bg-white/15">Portal login</Link>
           </div>
         </div>
@@ -116,6 +120,7 @@ export default function CoursesAdvertPage() {
           </nav>
         </div>
       </footer>
+  <CoursesAssistant />
     </main>
   );
 }

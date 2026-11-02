@@ -9,7 +9,7 @@ import LanguageSwitcher from './language-switcher';
 import NotificationMenu from './notification-menu';
 import UserAvatar from './user-avatar';
 import { usePortalIdentity } from '../hooks/use-portal-identity';
-import { readPortalIdentity } from '../lib/portal-session';
+import { clearPortalIdentity, readPortalIdentity } from '../lib/portal-session';
 import { homeForRole } from '../lib/role-routing';
 
 type Role = 'student' | 'teacher' | 'examiner' | 'parent';
@@ -167,7 +167,7 @@ function ProfileDropdown({ role }: { role: Role }) {
         <div className="absolute right-0 top-11 z-50 w-[min(360px,calc(100vw-1.5rem))] border border-slate-200 bg-white text-slate-900 shadow-2xl">
           <div className="flex items-center justify-between gap-3 px-4 py-4 text-sm sm:px-5">
             <p className="min-w-0 truncate font-medium text-slate-700">{account.org}</p>
-            <Link href={loginHref} className="shrink-0 text-slate-700 hover:underline">Sign out</Link>
+            <Link href={loginHref} onClick={() => clearPortalIdentity()} className="shrink-0 text-slate-700 hover:underline">Sign out</Link>
           </div>
 
           <div className="border-t border-slate-100 px-4 py-5 sm:px-5">

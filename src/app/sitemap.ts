@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { courses } from '../lib/courses-data';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dailyessential.school';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dailyessential.ca';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

@@ -1,0 +1,39 @@
+# Local-only values for `vite dev` / `vite preview` (workerd).
+# Copy to `.dev.vars` and fill in. `.dev.vars` is git-ignored — never commit it.
+# These names must also be declared in `cloudflare.config.ts` to be picked up.
+
+# --- Parse (database + auth) ---------------------------------------------
+PARSE_SERVER_URL=
+PARSE_APPLICATION_ID=
+PARSE_MASTER_KEY=
+PARSE_REST_KEY=
+
+# --- Cloudinary (media uploads + delivery) -------------------------------
+CLOUDINARY_CLOUD_NAME=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=
+CLOUDINARY_UPLOAD_PRESET=
+CLOUDINARY_KEY_NAME=BIFTISHCOOL
+
+# --- AI ------------------------------------------------------------------
+# Only NVIDIA_API_KEY is required. Model names have working defaults.
+NVIDIA_API_KEY=
+NVIDIA_MODEL_REASONING=nvidia/nemotron-3-ultra-550b-a55b
+NVIDIA_MODEL_FAST=nvidia/nemotron-3.5-bolt-e4b
+NVIDIA_MODEL_FALLBACK=nvidia/nemotron-3.5-bolt-e4b
+
+# Optional second provider (Cloudflare Workers AI)
+CF_ACCOUNT_ID=
+CF_API_TOKEN=
+CF_MODEL_FAST=@cf/meta/llama-3.1-8b-instruct
+
+# --- Student recovery keys ----------------------------------------------
+RECOVERY_KEY_SECRET=
+
+# --- Public values (safe to expose, inlined at build time) --------------
+NEXT_PUBLIC_SITE_URL=
+NEXT_PUBLIC_PARSE_SERVER_URL=
+NEXT_PUBLIC_PARSE_APPLICATION_ID=
+NEXT_PUBLIC_PARSE_REST_KEY=
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=
+NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET=

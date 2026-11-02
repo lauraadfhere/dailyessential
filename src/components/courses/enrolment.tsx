@@ -14,6 +14,7 @@ export type Enrollment = {
   progress: number;
   completedLessons: number[];
   lastLesson: number;
+  timeSpent?: number;
   enrolledAt: string;
 };
 

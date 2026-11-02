@@ -1,2 +1,0 @@
-import{t as e}from"./console-home-B6G4b0M7.js";import{t}from"./framework~index~page~page~page~page~page~page~page~page~page~page~page~page~page~page~page~~ap2swz0e-Bo48gSxV.js";var n=t();function r(){return(0,n.jsx)(e,{role:`examiner`})}export{r as default};
-//# sourceMappingURL=page-Dl8z3Uwa.js.map

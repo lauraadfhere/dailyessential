@@ -1,2 +1,0 @@
-import{t as e}from"./auth-form-D_xRDX37.js";import{t}from"./framework~index~page~page~page~page~page~page~page~page~page~page~page~page~page~page~page~~ap2swz0e-Bo48gSxV.js";var n=t();function r(){return(0,n.jsx)(e,{mode:`signup`,role:`student`})}export{r as default};
-//# sourceMappingURL=page-DM6ZKBue.js.map

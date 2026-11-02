@@ -1,2 +1,0 @@
-import{t as e}from"./request-context-Bp-MCFGj.js";function t(e){return typeof e==`object`&&!!e&&!Array.isArray(e)}function n(){}function r(t,r){return(typeof r?.waitUntil==`function`?r:e())?.waitUntil?.(t.then(n,n)),t}var i=Symbol.for(`vinext.shareIsolatePromise`);globalThis[i]??=r;export{t as n,r as t};
-//# sourceMappingURL=isolate-shared-promise-BAO9CNLX.js.map

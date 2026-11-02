@@ -1,2 +1,0 @@
-import{t as e}from"./rolldown-runtime-XKyaHtl9.js";import{t}from"../../index.js";var n=e((e=>{var n=t();e.version=n.version,e.prerender=n.prerender,e.resumeAndPrerender=n.resumeAndPrerender}));export default n();
-//# sourceMappingURL=static.edge-CQperz17.js.map

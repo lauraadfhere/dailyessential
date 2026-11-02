@@ -6,7 +6,7 @@ import { fetchNews } from '../../lib/platform-data';
 export const metadata = {
   title: 'Latest news',
   description: 'School announcements, evaluations and lesson updates from Daily Essential School.',
-  alternates: { canonical: 'https://dailyessential.school/news' },
+  alternates: { canonical: 'https://dailyessential.ca/news' },
 };
 
 export default async function PublicNewsPage() {

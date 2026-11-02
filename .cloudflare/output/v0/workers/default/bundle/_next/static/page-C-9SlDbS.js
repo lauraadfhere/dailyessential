@@ -1,2 +1,0 @@
-import{a as e,i as t}from"./navigation-errors-DAOpTDSc.js";import"./navigation.react-server-DEmpGpub.js";import{t as n}from"./auth-form-D_xRDX37.js";import{t as r}from"./framework~index~page~page~page~page~page~page~page~page~page~page~page~page~page~page~page~~ap2swz0e-Bo48gSxV.js";var i=r(),a=[`student`,`teacher`,`examiner`];async function o({params:r}){let{role:o}=await r;return o===`admin`&&e(`/admin/login`),a.includes(o)||t(),(0,i.jsx)(n,{mode:`login`,role:o})}export{o as default};
-//# sourceMappingURL=page-C-9SlDbS.js.map

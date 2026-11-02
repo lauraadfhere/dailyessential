@@ -1,2 +1,0 @@
-var e={title:`Daily Essential School Admin`,description:`School management dashboard for evaluations, lessons and news.`};function t({children:e}){return e}export{t as default,e as metadata};
-//# sourceMappingURL=layout-CuSTSrfA.js.map

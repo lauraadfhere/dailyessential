@@ -1,5 +1,6 @@
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import CoursesAssistant from '../../../../../components/courses/courses-assistant';
+import CourseHeader from '../../../../../components/courses/course-header';
 import LessonView from '../../../../../components/courses/lesson-view';
 import { getCourse } from '../../../../../lib/courses-data';
 
@@ -19,12 +20,9 @@ export default async function CourseLessonPage({ params }: { params: Promise<{ s
 
   return (
     <main className="min-h-screen bg-white text-slate-900">
-      <div className="border-b border-slate-200 bg-white px-4 py-3 text-sm sm:px-9">
-        <div className="mx-auto max-w-6xl">
-          <Link href={`/courses/${course.slug}`} className="font-semibold text-[#1738a8] hover:underline">← {course.title}</Link>
-        </div>
-      </div>
+      <CourseHeader courseTitle={course.title} courseSlug={course.slug} />
       <LessonView course={course} lessonIndex={lessonIndex} />
+      <CoursesAssistant />
     </main>
   );
 }
