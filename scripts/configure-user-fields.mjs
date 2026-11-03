@@ -19,7 +19,12 @@ if (!url || !appId || !masterKey) {
 const userFields = {
   fields: {
     displayName: { type: 'String' },
-    portalRole: { type: 'String' }
+    portalRole: { type: 'String' },
+    avatarUrl: { type: 'String' },
+    avatarPublicId: { type: 'String' },
+    phone: { type: 'String' },
+    bio: { type: 'String' },
+    department: { type: 'String' }
   }
 };
 

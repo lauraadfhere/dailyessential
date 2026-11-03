@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ProgressReport from './progress-report';
 
 /** Blue course header without a logo: a "Courses" tag, the course name and the page's section tabs. */
 export default function CourseHeader({ courseTitle, courseSlug, section }: { courseTitle: string; courseSlug: string; section?: string }) {
@@ -16,6 +17,7 @@ export default function CourseHeader({ courseTitle, courseSlug, section }: { cou
         <nav aria-label="Course sections" className="flex items-center gap-2 text-[12px] font-semibold sm:text-[13px]">
           <Link href={`/courses/${courseSlug}/reader`} className={`px-3 py-1.5 hover:bg-white/15 ${section === 'reader' ? 'bg-white/20' : 'border border-white/40'}`}>Reader</Link>
           <Link href={`/courses/${courseSlug}`} className={`px-3 py-1.5 hover:bg-white/15 ${section === 'overview' ? 'bg-white/20' : 'border border-white/40'}`}>Overview</Link>
+          <ProgressReport />
         </nav>
       </div>
     </header>

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { aiProviderStatus } from '../../../../lib/ai/providers';
+import { clientKey, getSession, rateLimit } from '../../../../lib/authz';
 import { checkRateLimit, runCached, runAI } from '../../../../lib/ai/engine';
 import { courses, getCourse } from '../../../../lib/courses-data';
 
@@ -86,12 +87,18 @@ export async function POST(request: NextRequest) {
     };
 
     const question = (body.question || '').trim();
-    const email = (body.email || '').trim().toLowerCase();
     const course = body.courseSlug ? getCourse(body.courseSlug) : undefined;
 
-    if (!email || !email.includes('@')) {
+    // Identity is the verified session. Only the public portal-help scope is open to visitors.
+    const session = await getSession(request);
+    const isVisitor = !session;
+    if (isVisitor && body.scope !== 'portal') {
       return NextResponse.json({ error: 'Sign in to use the study buddy.' }, { status: 401 });
     }
+    if (isVisitor && !rateLimit(`buddy:${clientKey(request)}`, 20, 60 * 60 * 1000)) {
+      return NextResponse.json({ error: 'Too many questions from this connection. Sign in or try again later.' }, { status: 429 });
+    }
+    const email = session?.email || `visitor:${clientKey(request)}`;
     if (question.length < 4) {
       return NextResponse.json({ error: 'Ask a slightly longer question.' }, { status: 400 });
     }
@@ -107,7 +114,6 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const isVisitor = email.endsWith('@visitor.dailyessential.school');
     if (isVisitor && !takeVisitorBudget()) {
       return NextResponse.json(
         { error: 'DAMMI AI is very busy with visitors today. Sign in or try again tomorrow.' },

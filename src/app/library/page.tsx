@@ -16,28 +16,6 @@ type Doc = {
   uploadedByName: string;
 };
 
-const fallbackDocs: Doc[] = [
-  {
-    id: 'sample-1',
-    title: 'Daily Essential Learner Handbook',
-    summary: 'Policies, attendance and portal guidance for learners.',
-    category: 'Handbook',
-    programme: 'General',
-    fileUrl: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
-    pages: 1,
-    uploadedByName: 'Daily Essential Library',
-  },
-  {
-    id: 'sample-2',
-    title: 'Assessment Guidelines',
-    summary: 'How marks, evaluations and appeals work at Daily Essential.',
-    category: 'Assessments',
-    programme: 'General',
-    fileUrl: 'https://mozilla.github.io/pdf.js/web/compressed.tracemonkey-pldi-09.pdf',
-    pages: 14,
-    uploadedByName: 'Examinations Office',
-  },
-];
 
 export default function LibraryPage() {
   const [docs, setDocs] = useState<Doc[]>([]);
@@ -51,14 +29,13 @@ export default function LibraryPage() {
     fetch(`/api/documents?${params.toString()}`)
       .then(res => res.json())
       .then(data => {
-        const rows = (data.documents as Doc[]) || [];
-        const list = rows.length ? rows : fallbackDocs;
+        const list = (data.documents as Doc[]) || [];
         setDocs(list);
-        setSelected(current => current || list[0] || null);
+        setSelected(current => (current && list.some(doc => doc.id === current.id) ? current : list[0] || null));
       })
       .catch(() => {
-        setDocs(fallbackDocs);
-        setSelected(fallbackDocs[0]);
+        setDocs([]);
+        setSelected(null);
       })
       .finally(() => setLoading(false));
   }, [q]);
@@ -98,6 +75,7 @@ export default function LibraryPage() {
         <div className="mt-5 grid gap-4 lg:mt-6 lg:grid-cols-[300px_1fr] lg:gap-5">
           <aside className="h-fit rounded-lg border border-slate-200 bg-white p-2 shadow-sm sm:p-3">
             {loading && <p className="p-3 text-sm text-slate-500">Loading documents…</p>}
+            {!loading && docs.length === 0 && <p className="p-3 text-sm text-slate-500">No documents have been published yet.</p>}
             <ul className="flex gap-2 overflow-x-auto pb-1 lg:block lg:space-y-1 lg:overflow-visible lg:pb-0">
               {docs.map(doc => (
                 <li key={doc.id} className="min-w-[200px] lg:min-w-0">

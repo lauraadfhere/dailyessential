@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import CoursesAssistant from '../../../../../components/courses/courses-assistant';
 import { notFound } from 'next/navigation';
+import { courseGuard } from '../../../../../components/courses/course-gate';
 import CourseHeader from '../../../../../components/courses/course-header';
 import CourseReader from '../../../../../components/courses/course-reader';
 import { getCourse } from '../../../../../lib/courses-data';
@@ -13,6 +14,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 
 export default async function CourseReaderPage({ params }: { params: Promise<{ slug: string; index: string }> }) {
+  const blocked = await courseGuard();
+  if (blocked) return blocked;
   const { slug, index } = await params;
   const course = getCourse(slug);
   const moduleIndex = Number(index);

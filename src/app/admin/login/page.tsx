@@ -37,7 +37,8 @@ export default function AdminLoginPage() {
       window.location.assign('/admin');
     } catch (err) {
       console.error('Admin login error:', err);
-      setError('We could not sign you in. Check your admin email and password.');
+      const message = err instanceof Error ? err.message : '';
+      setError(/server|configured|school database|too many/i.test(message) ? message : 'We could not sign you in. Check your admin email and password.');
       setIsSubmitting(false);
     }
   };

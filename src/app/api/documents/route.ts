@@ -1,8 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { fetchDocuments } from '../../../lib/platform-data';
+import { isResponse, requireRole, requireUser } from '../../../lib/authz';
 import { getOrganizationPointer, isParseConfigured, parseCreate, parseGet } from '../../../lib/parse-server';
 
 export async function GET(request: NextRequest) {
+  const session = await requireUser(request, { documents: [] });
+  if (isResponse(session)) return session;
   try {
     const { searchParams } = request.nextUrl;
     const documents = await fetchDocuments({
@@ -16,6 +19,9 @@ export async function GET(request: NextRequest) {
     if (id) {
       if (!isParseConfigured()) return NextResponse.json({ error: 'Parse not configured' }, { status: 503 });
       const row = await parseGet<Record<string, unknown>>('LearningDocument', id);
+      if (row.status !== 'published' && !['teacher', 'examiner', 'admin'].includes(session.portalRole || '')) {
+        return NextResponse.json({ error: 'Document not found' }, { status: 404 });
+      }
       return NextResponse.json({
         document: {
           id: row.objectId,
@@ -41,7 +47,10 @@ export async function GET(request: NextRequest) {
   }
 }
 
+/** Publishing library documents is a staff action. */
 export async function POST(request: NextRequest) {
+  const session = await requireRole(request, ['teacher', 'examiner', 'admin']);
+  if (isResponse(session)) return session;
   try {
     if (!isParseConfigured()) return NextResponse.json({ error: 'Parse not configured' }, { status: 503 });
     const body = await request.json();
@@ -60,9 +69,9 @@ export async function POST(request: NextRequest) {
       resourceType: String(body.resourceType || 'raw'),
       mimeType: String(body.mimeType || 'application/pdf'),
       pages: Number(body.pages || 0),
-      status: String(body.status || 'published'),
+      status: ['published', 'draft'].includes(String(body.status)) ? String(body.status) : 'published',
       visibility: String(body.visibility || 'students'),
-      uploadedByName: String(body.uploadedByName || 'Daily Essential Staff'),
+      uploadedByName: session.displayName || session.email || 'Daily Essential Staff',
     });
     return NextResponse.json({ ok: true, id: created.objectId });
   } catch (error) {

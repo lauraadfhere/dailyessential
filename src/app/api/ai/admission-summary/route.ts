@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { checkRateLimit, extractJson, runAI } from '../../../../lib/ai/engine';
 import { aiProviderStatus } from '../../../../lib/ai/providers';
+import { isResponse, requireRole } from '../../../../lib/authz';
 
 export const runtime = 'nodejs';
 export const maxDuration = 60;
@@ -48,11 +49,9 @@ export async function POST(request: NextRequest) {
       applicationCount?: number;
     };
 
-    const email = (body.email || '').trim().toLowerCase();
-    const role = (body.role || '').toLowerCase();
-    if (!email.includes('@') || !['admin', 'examiner'].includes(role)) {
-      return NextResponse.json({ error: 'Admission screening is limited to admissions staff.' }, { status: 403 });
-    }
+    const session = await requireRole(request, ['admin', 'examiner']);
+    if (isResponse(session)) return session;
+    const email = session.email;
 
     const grade = (body.grade || '').trim();
     if (!grade) return NextResponse.json({ error: 'The class applied for is required.' }, { status: 400 });

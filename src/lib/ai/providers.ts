@@ -5,25 +5,33 @@
 
 export type AiMessage = { role: 'system' | 'user' | 'assistant'; content: string };
 
-const nvidiaKey = process.env.NVIDIA_API_KEY || '';
-const nvidiaReasoning = process.env.NVIDIA_MODEL_REASONING || 'nvidia/nemotron-3-ultra-550b-a55b';
-const nvidiaFast = process.env.NVIDIA_MODEL_FAST || 'nvidia/nemotron-3.5-bolt-e4b';
-const nvidiaFallback = process.env.NVIDIA_MODEL_FALLBACK || nvidiaFast;
-const cfAccount = process.env.CF_ACCOUNT_ID || '';
-const cfToken = process.env.CF_API_TOKEN || '';
-const cfModel = process.env.CF_MODEL_FAST || '@cf/meta/llama-3.1-8b-instruct';
+/** Read lazily: on Workers, secrets are only on process.env while a request is being handled. */
+function cfg() {
+  const nvidiaFast = process.env.NVIDIA_MODEL_FAST || 'nvidia/nemotron-3.5-bolt-e4b';
+  return {
+    nvidiaKey: process.env.NVIDIA_API_KEY || '',
+    nvidiaReasoning: process.env.NVIDIA_MODEL_REASONING || 'nvidia/nemotron-3-ultra-550b-a55b',
+    nvidiaFast,
+    nvidiaFallback: process.env.NVIDIA_MODEL_FALLBACK || nvidiaFast,
+    cfAccount: process.env.CF_ACCOUNT_ID || '',
+    cfToken: process.env.CF_API_TOKEN || '',
+    cfModel: process.env.CF_MODEL_FAST || '@cf/meta/llama-3.1-8b-instruct',
+  };
+}
 
 const NVIDIA_URL = 'https://integrate.api.nvidia.com/v1/chat/completions';
 
 export function nvidiaConfigured() {
-  return Boolean(nvidiaKey);
+  return Boolean(cfg().nvidiaKey);
 }
 
 export function cloudflareConfigured() {
+  const { cfAccount, cfToken } = cfg();
   return Boolean(cfAccount && cfToken);
 }
 
 export function aiProviderStatus() {
+  const { nvidiaReasoning, nvidiaFast, nvidiaFallback, cfModel } = cfg();
   return {
     provider: 'nvidia',
     nvidia: nvidiaConfigured(),
@@ -45,7 +53,13 @@ type ChatOptions = {
   timeoutMs?: number;
 };
 
+/** Reasoning models may prefix answers with a <think> block. Learners must never see it. */
+export function cleanAnswer(text: string) {
+  return text.replace(/<think>[\s\S]*?<\/think>/gi, '').replace(/^\s*<\/think>/i, '').trim();
+}
+
 async function nvidiaRequest(model: string, messages: AiMessage[], opts: ChatOptions) {
+  const { nvidiaKey } = cfg();
   if (!nvidiaKey) throw new Error('NVIDIA is not configured. Add NVIDIA_API_KEY on the server.');
 
   const controller = new AbortController();
@@ -79,7 +93,8 @@ async function nvidiaRequest(model: string, messages: AiMessage[], opts: ChatOpt
     const data = (await response.json()) as {
       choices?: { message?: { content?: string | null }; finish_reason?: string }[];
     };
-    const content = data.choices?.[0]?.message?.content?.trim();
+    const raw = data.choices?.[0]?.message?.content?.trim();
+    const content = raw ? cleanAnswer(raw) : '';
     if (!content) throw new Error(`NVIDIA returned an empty answer from ${model}.`);
     return content;
   } finally {
@@ -89,7 +104,7 @@ async function nvidiaRequest(model: string, messages: AiMessage[], opts: ChatOpt
 
 /** Calls a specific NVIDIA model, retrying once on transient failures. */
 export async function nvidiaChat(messages: AiMessage[], opts: ChatOptions = {}) {
-  const model = opts.model || nvidiaReasoning;
+  const model = opts.model || cfg().nvidiaReasoning;
   try {
     return await nvidiaRequest(model, messages, opts);
   } catch (error) {
@@ -107,6 +122,7 @@ export async function nvidiaChat(messages: AiMessage[], opts: ChatOptions = {}) 
  * retired name (retired NVIDIA models answer 410 Gone or stop responding).
  */
 export function resolveFallbackModel(primary: string, preferred?: string) {
+  const { nvidiaFast, nvidiaReasoning, nvidiaFallback } = cfg();
   const candidate = preferred || nvidiaFallback;
   if (candidate && candidate !== primary) return candidate;
   return primary === nvidiaFast ? nvidiaReasoning : nvidiaFast;
@@ -117,16 +133,17 @@ export async function nvidiaChatWithFallback(
   messages: AiMessage[],
   opts: ChatOptions & { fallbackModel?: string } = {},
 ) {
-  const primary = opts.model || nvidiaReasoning;
+  const primary = opts.model || cfg().nvidiaReasoning;
   try {
     return await nvidiaChat(messages, { ...opts, model: primary });
-  } catch (primaryError) {
+  } catch {
     const fallback = resolveFallbackModel(primary, opts.fallbackModel);
     return nvidiaChat(messages, { ...opts, model: fallback, timeoutMs: opts.timeoutMs ?? 45_000 });
   }
 }
 
 export async function cloudflareChat(messages: AiMessage[], opts: ChatOptions = {}) {
+  const { cfAccount, cfToken, cfModel } = cfg();
   if (!cfAccount || !cfToken) throw new Error('Cloudflare Workers AI is not configured.');
   const response = await fetch(
     `https://api.cloudflare.com/client/v4/accounts/${cfAccount}/ai/run/${cfModel}`,
@@ -151,4 +168,9 @@ export async function cloudflareChat(messages: AiMessage[], opts: ChatOptions = 
   return content;
 }
 
-export const nvidiaModels = { reasoning: nvidiaReasoning, fast: nvidiaFast, fallback: nvidiaFallback };
+/** Current model names (resolved on every access so Worker secrets are always read at request time). */
+export const nvidiaModels = {
+  get reasoning() { return cfg().nvidiaReasoning; },
+  get fast() { return cfg().nvidiaFast; },
+  get fallback() { return cfg().nvidiaFallback; },
+};

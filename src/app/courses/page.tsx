@@ -2,6 +2,8 @@ import Image from 'next/image';
 import CoursesAssistant from '../../components/courses/courses-assistant';
 import Link from 'next/link';
 import CourseCatalog from '../../components/courses/course-catalog';
+import { courseGuard } from '../../components/courses/course-gate';
+import ProgressReport from '../../components/courses/progress-report';
 import { courseCategories, courses, totalLearningHours, totalModules } from '../../lib/courses-data';
 
 export const metadata = {
@@ -17,7 +19,9 @@ const stats = [
   { value: '5', label: 'Learning pathways' },
 ];
 
-export default function CoursesAdvertPage() {
+export default async function CoursesAdvertPage() {
+  const blocked = await courseGuard();
+  if (blocked) return blocked;
   return (
     <main className="min-h-screen bg-white text-slate-900">
       <header className="bg-[#1738a8] px-4 py-3 sm:px-9">
@@ -32,6 +36,7 @@ export default function CoursesAdvertPage() {
             <Link href="/courses/analytics" aria-label="Learning analytics" title="Learning analytics" className="inline-flex h-8 w-8 items-center justify-center border border-white/40 hover:bg-white/15">
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2" /></svg>
             </Link>
+            <ProgressReport />
             <Link href="/login/student" className="border border-white/40 px-3 py-1.5 hover:bg-white/15">Portal login</Link>
           </div>
         </div>

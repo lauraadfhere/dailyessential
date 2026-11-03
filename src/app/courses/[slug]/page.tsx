@@ -4,9 +4,22 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import CourseDetailActions from '../../../components/courses/course-detail-actions';
 import CourseReviews from '../../../components/courses/course-reviews';
+import { courseGuard } from '../../../components/courses/course-gate';
+import ProgressReport from '../../../components/courses/progress-report';
 import StudyBuddy from '../../../components/ai/study-buddy';
 import { CourseRow } from '../../../components/courses/course-card';
 import { courses, getCourse } from '../../../lib/courses-data';
+
+/** Short skill labels taken from the module titles, e.g. "Number systems", "Fractions". */
+function skillsFor(modules: string[]) {
+  const seen = new Set<string>();
+  modules.forEach(title => {
+    title.split(/,| and /i).map(part => part.trim().replace(/^and /i, '')).forEach(part => {
+      if (part.length >= 4 && part.length <= 38) seen.add(part.charAt(0).toUpperCase() + part.slice(1));
+    });
+  });
+  return [...seen].slice(0, 14);
+}
 
 export function generateStaticParams() {
   return courses.map(course => ({ slug: course.slug }));
@@ -23,6 +36,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 
 export default async function CourseDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const blocked = await courseGuard();
+  if (blocked) return blocked;
   const { slug } = await params;
   const course = getCourse(slug);
   if (!course) notFound();
@@ -40,6 +55,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
           </Link>
           <div className="flex items-center gap-3 text-[12px] font-semibold text-white/90 sm:gap-5 sm:text-[13px]">
             <Link href="/courses" className="hover:text-white">All courses</Link>
+            <ProgressReport />
             <Link href="/login/student" className="border border-white/40 px-3 py-1.5 hover:bg-white/15">Portal login</Link>
           </div>
         </div>
@@ -90,6 +106,41 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
                 </div>
               ))}
             </dl>
+
+            <section className="mt-8">
+              <h2 className="text-xl font-bold text-slate-900">What you&apos;ll learn</h2>
+              <ul className="mt-3 grid gap-x-6 gap-y-2 sm:grid-cols-2">
+                {course.modules.slice(0, 6).map(module => (
+                  <li key={module} className="flex gap-2 text-[13px] leading-6 text-slate-700"><span aria-hidden="true" className="font-bold text-[#1738a8]">✓</span>{module}</li>
+                ))}
+              </ul>
+            </section>
+
+            <section className="mt-8">
+              <h2 className="text-base font-bold text-slate-900">Skills you&apos;ll gain</h2>
+              <ul className="mt-3 flex flex-wrap gap-2">
+                {skillsFor(course.modules).map(skill => (
+                  <li key={skill} className="bg-[#e9eef5] px-3 py-1.5 text-[12px] font-medium text-slate-700">{skill}</li>
+                ))}
+              </ul>
+            </section>
+
+            <section className="mt-8">
+              <h2 className="text-base font-bold text-slate-900">Details to know</h2>
+              <div className="mt-3 grid gap-4 sm:grid-cols-2">
+                {[
+                  ['Completion record', 'Earned when you finish the modules, tasks and assessment threshold.'],
+                  ['Flexible schedule', `Learn at your own pace over about ${course.duration}.`],
+                  ['Marks and feedback', 'Quizzes are marked instantly; teachers grade your tasks and you can ask about any mark.'],
+                  ['AI study support', 'Summaries, key points and practice questions built from each module, in English, French or Arabic.'],
+                ].map(([title, detail]) => (
+                  <div key={title} className="flex gap-3">
+                    <span aria-hidden="true" className="mt-1 grid h-5 w-5 shrink-0 place-items-center bg-[#1738a8] text-[10px] font-bold text-white">✓</span>
+                    <div><p className="text-[13px] font-bold text-slate-900">{title}</p><p className="text-[12px] leading-5 text-slate-600">{detail}</p></div>
+                  </div>
+                ))}
+              </div>
+            </section>
 
             <section className="mt-8">
               <h2 className="text-xl font-bold text-slate-900">Module outline</h2>

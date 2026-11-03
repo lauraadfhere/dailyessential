@@ -68,6 +68,8 @@ const portalLinks: Record<Role, [string, string][]> = {
   student: [
     ['Dashboard', '/student/dashboard'],
     ['Courses', '/student/courses'],
+    ['Track progress', '/student/track'],
+    ['Messages', '/student/messages'],
     ['Assignments', '/student/assignments'],
     ['Grades', '/student/grades'],
     ['Timetable', '/student/timetable'],
@@ -131,7 +133,7 @@ function ProfileDropdown({ role }: { role: Role }) {
   const email = identity.email || account.email;
   const displayName = identity.displayName || account.displayName;
   const status = identity.status || 'active';
-  const profileHref = role === 'student' ? '/student/profile' : role === 'parent' ? '/parent' : `/${role}/dashboard`;
+  const profileHref = role === 'student' ? '/student/profile' : role === 'parent' ? '/parent' : `/${role}/profile`;
   const switchHref = role === 'student' ? '/workspace/student/settings' : role === 'parent' ? '/parent' : `/workspace/${role}/settings`;
   const loginHref = role === 'parent' ? '/access' : `/login/${role}`;
 

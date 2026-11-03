@@ -59,7 +59,10 @@ export default function AdminCoursesPage() {
             <h1 className="mt-1 text-xl font-bold text-slate-900 sm:text-2xl">Course enrolments</h1>
             <p className="mt-1 text-[13px] text-slate-500">Every enrolment created from the course catalogue, with the course roster it feeds.</p>
           </div>
-          <Link href="/admin/academics" className="rounded border border-slate-300 px-3 py-2 text-[12px] font-semibold text-slate-700 hover:bg-slate-50">Academic structure</Link>
+          <div className="flex flex-wrap gap-2">
+            <Link href="/admin/course-content" className="rounded bg-[#2e9fff] px-3 py-2 text-[12px] font-semibold text-white hover:bg-[#1f8eef]">Edit course content</Link>
+            <Link href="/admin/academics" className="rounded border border-slate-300 px-3 py-2 text-[12px] font-semibold text-slate-700 hover:bg-slate-50">Academic structure</Link>
+          </div>
         </div>
 
         <StatGrid

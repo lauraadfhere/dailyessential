@@ -1,5 +1,7 @@
-import { NextResponse } from 'next/server';
-import { demoNotifications, type Notification } from '../../../lib/notifications';
+import { NextRequest, NextResponse } from 'next/server';
+import { isResponse, requireUser } from '../../../lib/authz';
+import { isParseConfigured, parseServerRequest, parseUpdate } from '../../../lib/parse-server';
+import type { Notification } from '../../../lib/notifications';
 
 type ParseObject = {
   objectId: string;
@@ -13,36 +15,6 @@ type ParseObject = {
   sourceType?: string;
   sourceId?: string;
 };
-
-function parseConfig() {
-  return {
-    url: (process.env.PARSE_SERVER_URL || process.env.NEXT_PUBLIC_PARSE_SERVER_URL || '').replace(/\/$/, ''),
-    appId: process.env.PARSE_APPLICATION_ID || process.env.NEXT_PUBLIC_PARSE_APPLICATION_ID || '',
-    masterKey: process.env.PARSE_MASTER_KEY || '',
-  };
-}
-
-function sessionToken(request: Request) {
-  const authorization = request.headers.get('authorization');
-  return request.headers.get('x-parse-session-token') || (authorization?.startsWith('Bearer ') ? authorization.slice(7) : '');
-}
-
-async function parseFetch<T>(path: string, init: RequestInit = {}, token?: string) {
-  const config = parseConfig();
-  const response = await fetch(`${config.url}${path}`, {
-    ...init,
-    headers: {
-      'X-Parse-Application-Id': config.appId,
-      ...(config.masterKey ? { 'X-Parse-Master-Key': config.masterKey } : {}),
-      ...(token ? { 'X-Parse-Session-Token': token } : {}),
-      'Content-Type': 'application/json',
-      ...init.headers,
-    },
-    cache: 'no-store',
-  });
-  if (!response.ok) throw new Error(`Notification service returned ${response.status}`);
-  return response.json() as Promise<T>;
-}
 
 function normalize(item: ParseObject): Notification {
   return {
@@ -59,48 +31,32 @@ function normalize(item: ParseObject): Notification {
   };
 }
 
-async function getParseUser(token: string) {
-  return parseFetch<{ objectId: string }>('/users/me', { headers: { 'X-Parse-Session-Token': token } }, token);
-}
+const recipientOf = (objectId: string) => ({ __type: 'Pointer', className: '_User', objectId });
 
-export async function GET(request: Request) {
-  const token = sessionToken(request);
-  const config = parseConfig();
-  if (!config.url || !config.appId) {
-    return NextResponse.json({ notifications: demoNotifications, source: 'demo' });
-  }
+/** The signed-in user's own notifications only. */
+export async function GET(request: NextRequest) {
+  const session = await requireUser(request, { notifications: [] });
+  if (isResponse(session)) return session;
+  if (!isParseConfigured()) return NextResponse.json({ notifications: [], source: 'unconfigured' });
 
   try {
-    if (token) {
-      const user = await getParseUser(token);
-      const where = encodeURIComponent(JSON.stringify({
-        recipient: { __type: 'Pointer', className: '_User', objectId: user.objectId },
-        $or: [{ expiresAt: { $exists: false } }, { expiresAt: { $gt: { __type: 'Date', iso: new Date().toISOString() } } }],
-      }));
-      const result = await parseFetch<{ results: ParseObject[] }>(`/classes/Notification?where=${where}&order=-createdAt&limit=50`, {}, token);
-      return NextResponse.json({ notifications: result.results.map(normalize), source: 'parse' });
-    }
-
-    // Unauthenticated: still surface recent Parse notifications when master key is available.
-    if (config.masterKey) {
-      const result = await parseFetch<{ results: ParseObject[] }>('/classes/Notification?order=-createdAt&limit=20');
-      if (result.results?.length) {
-        return NextResponse.json({ notifications: result.results.map(normalize), source: 'parse' });
-      }
-    }
-
-    return NextResponse.json({ notifications: demoNotifications, source: 'demo' });
+    const where = {
+      recipient: recipientOf(session.objectId),
+      $or: [{ expiresAt: { $exists: false } }, { expiresAt: { $gt: { __type: 'Date', iso: new Date().toISOString() } } }],
+    };
+    const result = await parseServerRequest<{ results: ParseObject[] }>(
+      `classes/Notification?where=${encodeURIComponent(JSON.stringify(where))}&order=-createdAt&limit=50`,
+    );
+    return NextResponse.json({ notifications: result.results.map(normalize), source: 'parse' });
   } catch {
-    return NextResponse.json({ notifications: demoNotifications, source: 'demo' });
+    return NextResponse.json({ notifications: [], source: 'unavailable' }, { status: 503 });
   }
 }
 
-export async function PATCH(request: Request) {
-  const token = sessionToken(request);
-  const config = parseConfig();
-  if (!token || !config.url || !config.appId || !config.masterKey) {
-    return NextResponse.json({ notifications: demoNotifications, source: 'demo' });
-  }
+export async function PATCH(request: NextRequest) {
+  const session = await requireUser(request);
+  if (isResponse(session)) return session;
+  if (!isParseConfigured()) return NextResponse.json({ error: 'Notifications are unavailable.' }, { status: 503 });
 
   const body = await request.json().catch(() => ({})) as { id?: string; action?: 'read' | 'read-all' };
   if (body.action !== 'read' && body.action !== 'read-all') {
@@ -108,18 +64,19 @@ export async function PATCH(request: Request) {
   }
 
   try {
-    const user = await getParseUser(token);
     const readAt = { __type: 'Date', iso: new Date().toISOString() };
-    if (body.action === 'read' && body.id) {
-      await parseFetch(`/classes/Notification/${encodeURIComponent(body.id)}`, { method: 'PUT', body: JSON.stringify({ readAt }) }, token);
-    } else if (body.action === 'read-all') {
-      const where = encodeURIComponent(JSON.stringify({ recipient: { __type: 'Pointer', className: '_User', objectId: user.objectId }, readAt: { $exists: false } }));
-      const result = await parseFetch<{ results: ParseObject[] }>(`/classes/Notification?where=${where}&limit=100`, {}, token);
-      await Promise.all(result.results.map(item => parseFetch(`/classes/Notification/${item.objectId}`, { method: 'PUT', body: JSON.stringify({ readAt }) }, token)));
+    // Ownership is part of the query, so a user can never mark someone else's notification.
+    const where: Record<string, unknown> = { recipient: recipientOf(session.objectId), readAt: { $exists: false } };
+    if (body.action === 'read') {
+      if (!body.id) return NextResponse.json({ error: 'id is required.' }, { status: 400 });
+      where.objectId = body.id;
     }
-    return NextResponse.json({ ok: true });
+    const result = await parseServerRequest<{ results: { objectId: string }[] }>(
+      `classes/Notification?where=${encodeURIComponent(JSON.stringify(where))}&keys=objectId&limit=100`,
+    );
+    await Promise.all(result.results.map(item => parseUpdate('Notification', item.objectId, { readAt })));
+    return NextResponse.json({ ok: true, updated: result.results.length });
   } catch {
     return NextResponse.json({ error: 'Unable to update notification state.' }, { status: 503 });
   }
 }
-

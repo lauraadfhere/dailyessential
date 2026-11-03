@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { courseGuard } from '../../../../components/courses/course-gate';
 import PortalShell from '../../../../components/portal-shell';
 import { Badge, Callout, KeyValueGrid, PageFrame, Panel, Progress, StatGrid, statusTone, tableHead, Td, Th } from '../../../../components/platform/kit';
 import { assignmentRecords, courseCatalog } from '../../../../lib/atlas-data';
@@ -23,6 +24,8 @@ const resources = [
 ];
 
 export default async function StudentCoursePage({ params }: { params: Promise<{ id: string }> }) {
+  const blocked = await courseGuard();
+  if (blocked) return blocked;
   const { id } = await params;
   const course = courseCatalog.find(item => item.id === id);
   if (!course) notFound();

@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { aiProviderStatus } from '../../../../lib/ai/providers';
 import { checkRateLimit, extractJson, runAI } from '../../../../lib/ai/engine';
+import { clientKey } from '../../../../lib/authz';
+import { isParseConfigured, parseCreate, parseServerRequest } from '../../../../lib/parse-server';
 import type { Locale } from '../../../../lib/i18n/config';
 
 export const runtime = 'nodejs';
@@ -8,8 +10,36 @@ export const maxDuration = 60;
 
 const TARGETS: Locale[] = ['fr', 'ar'];
 const MAX_TEXTS = 40;
-const MAX_CHARS = 220;
-const MAX_TOTAL = 6000;
+const MAX_CHARS = 400;
+const MAX_TOTAL = 9000;
+
+/**
+ * Phrases are also stored in Parse (`TranslationCache`), so a translation survives Worker restarts
+ * and is shared by every isolate instead of being paid for again.
+ */
+const CACHE_CLASS = 'TranslationCache';
+
+async function loadStored(locale: string, texts: string[]) {
+  const found: Record<string, string> = {};
+  if (!isParseConfigured() || !texts.length) return found;
+  try {
+    const where = encodeURIComponent(JSON.stringify({ locale, source: { $in: texts } }));
+    const data = await parseServerRequest<{ results: { source: string; value: string }[] }>(
+      `classes/${CACHE_CLASS}?where=${where}&keys=source,value&limit=${texts.length}`,
+    );
+    data.results.forEach(row => { if (row.source && row.value) found[row.source] = row.value; });
+  } catch {
+    /* the class may not exist yet; it is created by the first write */
+  }
+  return found;
+}
+
+async function storeTranslations(locale: string, entries: Record<string, string>) {
+  if (!isParseConfigured()) return;
+  await Promise.all(Object.entries(entries).map(([source, value]) =>
+    parseCreate(CACHE_CLASS, { locale, source, value }).catch(() => undefined),
+  ));
+}
 
 /** Shared phrase cache: a phrase is translated once for every visitor. */
 const cache = new Map<string, { value: string; expires: number }>();
@@ -69,8 +99,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Too much text in one request.' }, { status: 413 });
   }
 
-  const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'local';
-  const limit = checkRateLimit(`translate:${ip}`, 'translate');
+  const limit = checkRateLimit(`translate:${clientKey(request)}`, 'translate');
   if (!limit.allowed) {
     return NextResponse.json({ error: 'Translation limit reached for today.' }, { status: 429 });
   }
@@ -84,6 +113,15 @@ export async function POST(request: NextRequest) {
     if (hit && hit.expires > Date.now()) translations[text] = hit.value;
     else missing.push(text);
   });
+
+  if (missing.length) {
+    const stored = await loadStored(locale, missing);
+    Object.entries(stored).forEach(([source, value]) => {
+      translations[source] = value;
+      cache.set(`${locale}:${source}`, { value, expires: Date.now() + CACHE_TTL });
+    });
+    missing.splice(0, missing.length, ...missing.filter(text => !stored[text]));
+  }
 
   if (!missing.length) return NextResponse.json({ translations, cached: true });
 
@@ -100,16 +138,19 @@ export async function POST(request: NextRequest) {
     const result = await runAI('translate', messages, { temperature: 0.2, maxTokens: 1600, json: true });
     const parsed = extractJson<Record<string, string>>(result.text);
 
+    const fresh: Record<string, string> = {};
     missing.forEach((text, index) => {
       const value = parsed[String(index)];
       if (typeof value !== 'string') return;
       const clean = value.replace(/\s+/g, ' ').trim();
       if (!clean) return;
       translations[text] = clean;
+      fresh[text] = clean;
       if (cache.size >= CACHE_LIMIT) cache.clear();
       cache.set(`${locale}:${text}`, { value: clean, expires: Date.now() + CACHE_TTL });
     });
 
+    await storeTranslations(locale, fresh);
     return NextResponse.json({ translations, provider: result.provider, model: result.model });
   } catch (error) {
     return NextResponse.json(

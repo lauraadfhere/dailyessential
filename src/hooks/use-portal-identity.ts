@@ -22,10 +22,9 @@ const defaultIdentity = (role?: string): PortalIdentity => ({
 });
 
 export function usePortalIdentity(role?: string) {
-  const [identity, setIdentity] = useState<PortalIdentity>(() => ({
-    ...defaultIdentity(role),
-    ...readPortalIdentity(),
-  }));
+  // Start from the same value on the server and in the browser. sessionStorage is only read after
+  // mount, otherwise the server HTML (default account) and the first client render differ and React reports a hydration mismatch.
+  const [identity, setIdentity] = useState<PortalIdentity>(() => defaultIdentity(role));
   const [loading, setLoading] = useState(true);
 
   const refresh = useCallback(async () => {
@@ -51,6 +50,8 @@ export function usePortalIdentity(role?: string) {
   }, [role]);
 
   useEffect(() => {
+    const cached = readPortalIdentity();
+    if (cached.email || cached.displayName) setIdentity(current => ({ ...current, ...cached }));
     void refresh();
   }, [refresh]);
 

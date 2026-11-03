@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { escapeRegex, isResponse, requireRole } from '../../../lib/authz';
 import { isParseConfigured, parseQuery } from '../../../lib/parse-server';
 
 export type StudentProfileRow = {
@@ -23,21 +24,24 @@ export type StudentProfileRow = {
   address?: string;
 };
 
+/** Student directory: staff only (it contains guardian and contact details). */
 export async function GET(request: NextRequest) {
+  const session = await requireRole(request, ['teacher', 'examiner', 'admin'], { students: [] });
+  if (isResponse(session)) return session;
   try {
     if (!isParseConfigured()) {
       return NextResponse.json({ error: 'Parse is not configured', students: [] }, { status: 503 });
     }
 
     const { searchParams } = new URL(request.url);
-    const q = (searchParams.get('q') || '').trim();
+    const q = escapeRegex((searchParams.get('q') || '').trim().slice(0, 80));
     const programme = searchParams.get('programme') || '';
     const gradeLevel = searchParams.get('gradeLevel') || '';
     const campus = searchParams.get('campus') || '';
     const status = searchParams.get('status') || '';
     const deliveryMode = searchParams.get('deliveryMode') || '';
     const classGroup = searchParams.get('classGroup') || searchParams.get('className') || '';
-    const limit = Math.min(Number(searchParams.get('limit') || 100), 200);
+    const limit = Math.min(Math.max(Number(searchParams.get('limit') || 100) || 100, 1), 200);
 
     const where: Record<string, unknown> = {};
     if (programme) where.programme = programme;
@@ -62,6 +66,7 @@ export async function GET(request: NextRequest) {
       where: JSON.stringify(where),
       limit,
       order: 'fullName',
+      keys: 'fullName,email,studentId,backupSerial,barcodeValue,classGroup,gradeLevel,programme,campus,status,deliveryMode,guardian,guardianEmail,attendance,avatarUrl,phone,country,address',
     });
 
     const students = (data.results || []).map(row => ({

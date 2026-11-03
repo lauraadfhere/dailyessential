@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next';
-import { courses } from '../lib/courses-data';
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dailyessential.ca';
 
@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticRoutes: { path: string; priority: number; changeFrequency: 'daily' | 'weekly' | 'monthly' | 'yearly' }[] = [
     { path: '/', priority: 1, changeFrequency: 'weekly' },
-    { path: '/courses', priority: 0.9, changeFrequency: 'weekly' },
+
     { path: '/pricing', priority: 0.9, changeFrequency: 'monthly' },
     { path: '/admissions', priority: 0.8, changeFrequency: 'weekly' },
     { path: '/library', priority: 0.6, changeFrequency: 'weekly' },
@@ -29,12 +29,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: route.changeFrequency,
       priority: route.priority,
-    })),
-    ...courses.map(course => ({
-      url: `${siteUrl}/courses/${course.slug}`,
-      lastModified: now,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
     })),
   ];
 }

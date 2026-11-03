@@ -1,15 +1,22 @@
 import { createHash } from 'crypto';
 
-const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME || process.env.CLOUDINARY_CLOUD_NAME || '';
-const apiKey = process.env.CLOUDINARY_API_KEY || '';
-const apiSecret = process.env.CLOUDINARY_API_SECRET || '';
-const uploadPreset = process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET || process.env.CLOUDINARY_UPLOAD_PRESET || '';
+/** Read lazily: on Workers, secrets are only on process.env while a request is being handled. */
+function env() {
+  return {
+    cloudName: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME || process.env.CLOUDINARY_CLOUD_NAME || '',
+    apiKey: process.env.CLOUDINARY_API_KEY || '',
+    apiSecret: process.env.CLOUDINARY_API_SECRET || '',
+    uploadPreset: process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET || process.env.CLOUDINARY_UPLOAD_PRESET || '',
+  };
+}
 
 export function isCloudinaryConfigured() {
+  const { cloudName, apiKey, apiSecret } = env();
   return Boolean(cloudName && apiKey && apiSecret);
 }
 
 export function cloudinaryUrl(publicId: string, options: { width?: number; height?: number; crop?: string; resourceType?: 'image' | 'raw' | 'auto' } = {}) {
+  const { cloudName } = env();
   if (!cloudName || !publicId) return '';
   const resourceType = options.resourceType || 'image';
   const transforms = [
@@ -33,6 +40,7 @@ export function mediaPlaceholder(kind: 'course' | 'avatar' | 'pdf', seed: string
 }
 
 export function resolveMediaUrl(storedUrl: string | undefined, kind: 'course' | 'avatar', seed: string, publicId?: string) {
+  const { cloudName } = env();
   if (storedUrl) return storedUrl;
   if (publicId && cloudName) {
     return cloudinaryUrl(publicId, kind === 'avatar' ? { width: 160, height: 160, crop: 'fill' } : { width: 800, height: 450, crop: 'fill' });
@@ -41,6 +49,7 @@ export function resolveMediaUrl(storedUrl: string | undefined, kind: 'course' | 
 }
 
 function signParams(params: Record<string, string | number>) {
+  const { apiSecret } = env();
   const toSign = Object.keys(params)
     .filter(key => params[key] !== undefined && params[key] !== '')
     .sort()
@@ -62,6 +71,7 @@ export async function uploadToCloudinary(
   file: Buffer | Blob,
   options: { folder?: string; publicId?: string; resourceType?: 'image' | 'raw' | 'auto'; filename?: string } = {},
 ): Promise<CloudinaryUploadResult> {
+  const { cloudName, apiKey, apiSecret } = env();
   if (!cloudName || !apiKey || !apiSecret) {
     throw new Error('Cloudinary is not configured. Set CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY and CLOUDINARY_API_SECRET.');
   }
@@ -92,6 +102,7 @@ export async function uploadToCloudinary(
 
 /** Unsigned upload when a browser preset is configured. */
 export async function uploadUnsigned(file: Blob, folder: string, filename?: string) {
+  const { cloudName, uploadPreset } = env();
   if (!cloudName || !uploadPreset) {
     throw new Error('Unsigned upload needs NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME and NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET.');
   }
@@ -113,6 +124,7 @@ export function pdfDeliveryUrl(publicIdOrUrl: string) {
 
 /** Signed params for direct browser uploads when needed. */
 export function createUploadSignature(options: { folder?: string; publicId?: string } = {}) {
+  const { cloudName, apiKey, apiSecret } = env();
   if (!apiSecret || !apiKey || !cloudName) throw new Error('Cloudinary is not configured.');
   const timestamp = Math.floor(Date.now() / 1000);
   const folder = options.folder
@@ -130,9 +142,3 @@ export function createUploadSignature(options: { folder?: string; publicId?: str
   };
 }
 
-export const cloudinaryConfigStatus = {
-  cloudName: cloudName || null,
-  keyName: process.env.CLOUDINARY_KEY_NAME || 'BIFTISHCOOL',
-  hasApiKey: Boolean(apiKey && apiSecret),
-  hasUploadPreset: Boolean(uploadPreset),
-};

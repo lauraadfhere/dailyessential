@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { checkRateLimit, extractJson, runAI } from '../../../../lib/ai/engine';
 import { aiProviderStatus } from '../../../../lib/ai/providers';
+import { getSession } from '../../../../lib/authz';
 
 export const runtime = 'nodejs';
 export const maxDuration = 60;
@@ -46,10 +47,9 @@ export async function POST(request: NextRequest) {
       answers?: string;
     };
 
-    const email = (body.email || '').trim().toLowerCase();
-    if (!email.includes('@')) {
-      return NextResponse.json({ error: 'Sign in to get feedback.' }, { status: 401 });
-    }
+    const session = await getSession(request);
+    if (!session) return NextResponse.json({ error: 'Sign in to get feedback.' }, { status: 401 });
+    const email = session.email;
 
     const course = (body.course || '').trim();
     const score = Math.max(0, Math.min(100, Number(body.score) || 0));

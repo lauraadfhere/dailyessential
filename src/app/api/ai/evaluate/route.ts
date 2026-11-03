@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { checkRateLimit, extractJson, runAI } from '../../../../lib/ai/engine';
 import { aiProviderStatus } from '../../../../lib/ai/providers';
+import { isResponse, requireRole } from '../../../../lib/authz';
 
 export const runtime = 'nodejs';
 export const maxDuration = 60;
@@ -50,11 +51,9 @@ export async function POST(request: NextRequest) {
       maxMarks?: number;
     };
 
-    const email = (body.email || '').trim().toLowerCase();
-    const role = (body.role || '').toLowerCase();
-    if (!email.includes('@') || !['teacher', 'examiner', 'admin'].includes(role)) {
-      return NextResponse.json({ error: 'Only teaching staff can run rubric marking.' }, { status: 403 });
-    }
+    const session = await requireRole(request, ['teacher', 'examiner', 'admin']);
+    if (isResponse(session)) return session;
+    const email = session.email;
 
     const question = (body.question || '').trim();
     const answer = (body.answer || '').trim();

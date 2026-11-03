@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getCourse } from '../../../lib/courses-data';
+import { enrolmentEmail } from '../../../lib/email/templates';
+import { notifyEmails } from '../../../lib/notify';
+import { getRequestSession, isStaffRole, type SessionUser } from '../../../lib/auth-server';
 import { hasParseMasterKey, isParseConfigured, parseCreate, parseQuery, parseServerRequest, parseUpdate } from '../../../lib/parse-server';
 
 const CLASS_NAME = 'CourseEnrollment';
@@ -15,6 +18,7 @@ type EnrollmentRow = {
   completedLessons?: string;
   lastLesson?: number;
   timeSpent?: number;
+  completionLog?: string;
   enrolledAt?: string | { iso?: string };
   createdAt?: string | { iso?: string };
 };
@@ -76,14 +80,26 @@ async function ensureSchema() {
   }
 }
 
+/** Every enrolment call acts on the signed-in account; an email sent by the browser is never trusted. */
+async function requireSession(request: NextRequest): Promise<SessionUser | NextResponse> {
+  const user = await getRequestSession(request);
+  if (!user?.email) return NextResponse.json({ error: 'Sign in to manage your courses.', enrollments: [] }, { status: 401 });
+  return user;
+}
+
 export async function GET(request: NextRequest) {
+  const session = await requireSession(request);
+  if (session instanceof NextResponse) return session;
   if (!isParseConfigured()) {
     return NextResponse.json({ enrollments: [], configured: false, source: 'unconfigured' });
   }
   try {
     const { searchParams } = request.nextUrl;
-    const email = (searchParams.get('email') || '').trim().toLowerCase();
+    const staff = isStaffRole(session.portalRole);
+    const requested = (searchParams.get('email') || '').trim().toLowerCase();
+    const email = staff && requested ? requested : session.email;
     const all = searchParams.get('all') === '1';
+    if (all && !staff) return NextResponse.json({ error: 'Staff access required.', enrollments: [] }, { status: 403 });
     const limit = Math.min(Number(searchParams.get('limit') || 200), 500);
 
     if (!all && !email) {
@@ -113,12 +129,14 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
+  const session = await requireSession(request);
+  if (session instanceof NextResponse) return session;
   if (!isParseConfigured()) {
     return NextResponse.json({ error: 'Enrolments are unavailable until the school database is configured.' }, { status: 503 });
   }
   try {
     const body = (await request.json()) as { email?: string; name?: string; courseSlug?: string };
-    const email = (body.email || '').trim().toLowerCase();
+    const email = session.email;
     const course = body.courseSlug ? getCourse(body.courseSlug) : undefined;
 
     if (!email || !email.includes('@')) return NextResponse.json({ error: 'A valid student email is required.' }, { status: 400 });
@@ -160,6 +178,15 @@ export async function POST(request: NextRequest) {
       created = await parseCreate(CLASS_NAME, payload);
     }
 
+    void notifyEmails([email], {
+      type: 'course',
+      title: `You are enrolled in ${course.title}`,
+      message: `Open the course to start module 1. Your marks are out of 20; track them any time.`,
+      link: `/courses/${course.slug}/reader/0`,
+      sourceType: CLASS_NAME,
+      sourceId: created.objectId,
+      email: ({ name }) => enrolmentEmail({ name, courseTitle: course.title, duration: course.duration, modules: course.modules.length, link: `/courses/${course.slug}/reader/0` }),
+    });
     return NextResponse.json({
       enrollment: mapRow({ ...payload, objectId: created.objectId, createdAt: created.createdAt }),
       alreadyEnrolled: false,
@@ -174,12 +201,14 @@ export async function POST(request: NextRequest) {
 
 /** Lesson progress for an enrolled student: mark a lesson complete/uncomplete, or record the last lesson opened. */
 export async function PATCH(request: NextRequest) {
+  const session = await requireSession(request);
+  if (session instanceof NextResponse) return session;
   if (!isParseConfigured()) {
     return NextResponse.json({ error: 'Progress is unavailable until the school database is configured.' }, { status: 503 });
   }
   try {
     const body = (await request.json()) as { email?: string; courseSlug?: string; lessonIndex?: number; action?: 'complete' | 'uncomplete' | 'open' | 'time'; minutes?: number };
-    const email = (body.email || '').trim().toLowerCase();
+    const email = session.email;
     const course = body.courseSlug ? getCourse(body.courseSlug) : undefined;
     const lessonIndex = Number(body.lessonIndex);
     if (!email || !course) return NextResponse.json({ error: 'email and courseSlug are required' }, { status: 400 });
@@ -218,7 +247,15 @@ export async function PATCH(request: NextRequest) {
     const lastLesson = body.action === 'complete' || body.action === 'uncomplete' ? (found.lastLesson ?? 0) : lessonIndex;
     const completedJson = JSON.stringify(completedList);
 
+    // When each module was finished, so the progress charts can show a real timeline.
+    let log: { i: number; at: string }[] = [];
+    try { log = JSON.parse(found.completionLog || '[]'); } catch { log = []; }
+    if (!Array.isArray(log)) log = [];
+    log = log.filter(entry => completedList.includes(entry.i));
+    if (body.action === 'complete' && !log.some(entry => entry.i === lessonIndex)) log.push({ i: lessonIndex, at: new Date().toISOString() });
+
     await parseUpdate(CLASS_NAME, found.objectId, {
+      completionLog: JSON.stringify(log),
       completedLessons: completedJson,
       progress,
       status,
@@ -237,14 +274,16 @@ export async function PATCH(request: NextRequest) {
 }
 
 export async function DELETE(request: NextRequest) {
+  const session = await requireSession(request);
+  if (session instanceof NextResponse) return session;
   if (!isParseConfigured()) {
     return NextResponse.json({ error: 'Enrolments are unavailable until the school database is configured.' }, { status: 503 });
   }
   try {
     const { searchParams } = request.nextUrl;
     const id = (searchParams.get('id') || '').trim();
-    const email = (searchParams.get('email') || '').trim().toLowerCase();
-    if (!id || !email) return NextResponse.json({ error: 'id and email are required' }, { status: 400 });
+    const email = session.email;
+    if (!id) return NextResponse.json({ error: 'id is required' }, { status: 400 });
 
     const record = await parseQuery<EnrollmentRow>(CLASS_NAME, {
       where: JSON.stringify({ objectId: id, studentEmail: email }),

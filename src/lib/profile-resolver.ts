@@ -140,6 +140,32 @@ export async function resolveProfile(key: string, role = ''): Promise<ResolvedPr
     };
   }
 
+  // A named account with no StudentProfile row gets an empty profile of its own. It must never
+  // inherit another learner's record (the old fallback exposed, and let PATCH edit, someone else's data).
+  if (key && lookup !== demoProfile.email && lookup !== demoProfile.studentId) {
+    const email = lookup.includes('@') ? lookup : '';
+    return {
+      profile: {
+        ...demoProfile,
+        id: 'none',
+        fullName: email ? email.split('@')[0] : 'Learner',
+        email,
+        studentId: '',
+        backupSerial: '',
+        barcodeValue: '',
+        classGroup: '',
+        gradeLevel: '',
+        programme: '',
+        guardian: '',
+        guardianEmail: '',
+        attendance: '—',
+        phone: '',
+        address: '',
+      },
+      source: 'demo',
+    };
+  }
+
   if (isParseConfigured()) {
     const first = await fetchStudentByIdOrEmail(demoProfile.studentId);
     if (first) {

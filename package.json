@@ -17,6 +17,8 @@
     "users:seed": "node scripts/seed-demo-users.mjs",
     "users:update": "node scripts/update-user-roles.mjs",
     "data:seed": "node scripts/seed-platform-data.mjs",
+    "test:flows": "node scripts/test-flows.mjs",
+    "db:indexes": "node scripts/apply-indexes.mjs",
     "schema:optimize": "npm run schema:apply && npm run users:configure && npm run users:seed && npm run data:seed",
     "cloudinary:verify": "node scripts/verify-cloudinary.mjs",
     "verify": "node scripts/verify-stack.mjs",

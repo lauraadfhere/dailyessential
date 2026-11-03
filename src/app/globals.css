@@ -57,3 +57,24 @@ body {
 @keyframes bifti-loading {
   to { transform: translateX(140%); }
 }
+
+/* Course reader: "Print / save as PDF" prints only the lesson document. */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .printable,
+  .printable * {
+    visibility: visible;
+  }
+  .printable {
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    border: 0 !important;
+    padding: 0 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

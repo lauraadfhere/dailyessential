@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { isResponse, requireUser } from '../../../lib/authz';
 import { getCourse } from '../../../lib/courses-data';
 import { hasParseMasterKey, isParseConfigured, parseCreate, parseQuery, parseServerRequest, parseUpdate } from '../../../lib/parse-server';
 
@@ -56,6 +57,8 @@ async function ensureSchema() {
 }
 
 export async function GET(request: NextRequest) {
+  const session = await requireUser(request, { reviews: [] });
+  if (isResponse(session)) return session;
   if (!isParseConfigured()) return NextResponse.json({ reviews: [], summary: { average: 0, count: 0, distribution: [0, 0, 0, 0, 0] }, configured: false });
 
   try {
@@ -92,12 +95,14 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
+  const session = await requireUser(request);
+  if (isResponse(session)) return session;
   if (!isParseConfigured()) return NextResponse.json({ error: 'Reviews are unavailable until the school database is configured.' }, { status: 503 });
 
   try {
     const body = (await request.json()) as { courseSlug?: string; email?: string; name?: string; rating?: number; comment?: string };
     const course = body.courseSlug ? getCourse(body.courseSlug) : undefined;
-    const email = (body.email || '').trim().toLowerCase();
+    const email = session.email;
     const rating = Number(body.rating);
     const comment = (body.comment || '').trim();
 
@@ -106,6 +111,14 @@ export async function POST(request: NextRequest) {
     if (!Number.isFinite(rating) || rating < 1 || rating > 5) return NextResponse.json({ error: 'Choose a rating from 1 to 5 stars.' }, { status: 400 });
     if (comment.length < 3) return NextResponse.json({ error: 'Write at least a few words about the course.' }, { status: 400 });
     if (comment.length > 1000) return NextResponse.json({ error: 'Keep the review under 1000 characters.' }, { status: 400 });
+
+    // Only learners who are (or were) enrolled can review a course.
+    const enrolment = await parseQuery<{ objectId: string }>('CourseEnrollment', {
+      where: JSON.stringify({ courseSlug: course.slug, studentEmail: email }),
+      limit: 1,
+      keys: 'objectId',
+    }).catch(() => ({ results: [] as { objectId: string }[] }));
+    if (!enrolment.results.length) return NextResponse.json({ error: 'Enrol in this course before reviewing it.' }, { status: 403 });
 
     const existing = await parseQuery<ReviewRow>(CLASS_NAME, {
       where: JSON.stringify({ courseSlug: course.slug, studentEmail: email }),
@@ -116,7 +129,7 @@ export async function POST(request: NextRequest) {
       courseSlug: course.slug,
       courseTitle: course.title,
       studentEmail: email,
-      studentName: (body.name || 'Student').trim(),
+      studentName: (session.displayName || body.name || 'Student').trim().slice(0, 80),
       rating,
       comment,
     };

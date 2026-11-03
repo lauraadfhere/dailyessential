@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useMemo, useState } from 'react';
 import { CourseCard } from './course-card';
 import { EnrolButton, EnrolmentProvider, useEnrolments } from './enrolment';
+import ProgressReport from './progress-report';
 import ReviewDialog from './review-dialog';
 import { courseCategories, courses, getCourse, type CourseCategory } from '../../lib/courses-data';
 
@@ -36,9 +37,12 @@ function StudentCoursesInner() {
             <h2 className="text-xl font-bold text-[#15133d] sm:text-2xl">My courses</h2>
             <p className="mt-1 text-sm text-slate-500">Enrol on a course to unlock its modules, resources and final project.</p>
           </div>
-          <Link href="/courses" className="self-start bg-[#1738a8] px-3 py-2 text-[12px] font-semibold text-white hover:bg-[#102d88] sm:self-auto">
-            Browse catalogue
-          </Link>
+          <div className="flex items-center gap-2 self-start sm:self-auto">
+            <ProgressReport tone="on-light" className="!h-9 !w-9" />
+            <Link href="/courses" className="bg-[#1738a8] px-3 py-2 text-[12px] font-semibold text-white hover:bg-[#102d88]">
+              Browse catalogue
+            </Link>
+          </div>
         </div>
       </section>
 

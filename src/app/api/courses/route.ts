@@ -1,8 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { isResponse, requireUser } from '../../../lib/authz';
 import { fetchCourses } from '../../../lib/platform-data';
 import { isParseConfigured } from '../../../lib/parse-server';
 
 export async function GET(request: NextRequest) {
+  const session = await requireUser(request, { courses: [] });
+  if (isResponse(session)) return session;
   try {
     const limit = Math.min(Number(request.nextUrl.searchParams.get('limit') || 50), 100);
     const courses = await fetchCourses(limit);

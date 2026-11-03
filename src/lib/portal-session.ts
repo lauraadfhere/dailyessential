@@ -80,9 +80,13 @@ export function clearPortalIdentity() {
   if (typeof window === 'undefined') return;
   try {
     Object.values(KEYS).forEach(key => sessionStorage.removeItem(key));
+    sessionStorage.removeItem('bifti.session');
+    sessionStorage.removeItem('bifti.userId');
   } catch {
     /* ignore */
   }
+  // Also drop the server-side session cookie that guards /courses.
+  fetch('/api/auth/logout', { method: 'POST', keepalive: true }).catch(() => undefined);
 }
 
 /** Default mark shown when a learner has not uploaded a photo yet. */

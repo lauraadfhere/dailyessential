@@ -37,3 +37,12 @@ NEXT_PUBLIC_PARSE_APPLICATION_ID=
 NEXT_PUBLIC_PARSE_REST_KEY=
 NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=
 NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET=
+
+# E-mail (sender mail@dailyessential.ca). Nothing is sent until these are filled in.
+# Also run: yarn add nodemailer
+SMTP_HOST=
+SMTP_PORT=465
+SMTP_USER=mail@dailyessential.ca
+SMTP_PASS=
+SMTP_SECURE=true
+MAIL_FROM=mail@dailyessential.ca

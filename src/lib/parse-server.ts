@@ -1,19 +1,29 @@
 /** Server-only Parse REST helpers (master key when available). */
 
-const serverUrl = process.env.PARSE_SERVER_URL || process.env.NEXT_PUBLIC_PARSE_SERVER_URL;
-const appId = process.env.PARSE_APPLICATION_ID || process.env.NEXT_PUBLIC_PARSE_APPLICATION_ID;
-const masterKey = process.env.PARSE_MASTER_KEY;
-const restKey = process.env.PARSE_REST_KEY || process.env.NEXT_PUBLIC_PARSE_REST_KEY;
+/**
+ * Config is read lazily (per call) instead of at module load. On Cloudflare Workers,
+ * secrets are only guaranteed to be on `process.env` once a request is being handled.
+ */
+function parseConfig() {
+  return {
+    serverUrl: process.env.PARSE_SERVER_URL || process.env.NEXT_PUBLIC_PARSE_SERVER_URL,
+    appId: process.env.PARSE_APPLICATION_ID || process.env.NEXT_PUBLIC_PARSE_APPLICATION_ID,
+    masterKey: process.env.PARSE_MASTER_KEY,
+    restKey: process.env.PARSE_REST_KEY || process.env.NEXT_PUBLIC_PARSE_REST_KEY,
+  };
+}
 
 export function isParseConfigured() {
+  const { serverUrl, appId } = parseConfig();
   return Boolean(serverUrl && appId);
 }
 
 export function hasParseMasterKey() {
-  return Boolean(masterKey);
+  return Boolean(parseConfig().masterKey);
 }
 
 export async function parseServerRequest<T>(path: string, init: RequestInit = {}, useMaster = true): Promise<T> {
+  const { serverUrl, appId, masterKey, restKey } = parseConfig();
   if (!serverUrl || !appId) throw new Error('Parse is not configured.');
   const headers: Record<string, string> = {
     'X-Parse-Application-Id': appId,
@@ -57,6 +67,26 @@ export async function parseUpdate(className: string, objectId: string, body: Rec
     method: 'PUT',
     body: JSON.stringify(body),
   });
+}
+
+/** Create a class with the given fields if it does not exist yet (no-op when it does or no master key). */
+export async function parseEnsureClass(className: string, fields: Record<string, { type: string }>) {
+  if (!hasParseMasterKey()) return;
+  try {
+    await parseServerRequest(`schemas/${className}`, { method: 'POST', body: JSON.stringify({ className, fields }) });
+  } catch {
+    /* already exists */
+  }
+}
+
+/** Create an object, creating its class on first use and retrying once. */
+export async function parseCreateEnsured<T extends object>(className: string, fields: Record<string, { type: string }>, body: T) {
+  try {
+    return await parseCreate(className, body);
+  } catch {
+    await parseEnsureClass(className, fields);
+    return parseCreate(className, body);
+  }
 }
 
 export async function getOrganizationPointer() {

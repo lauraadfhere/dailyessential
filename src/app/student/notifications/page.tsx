@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useEffect, useMemo, useState } from 'react';
 import UserAvatar from '../../../components/user-avatar';
 import { usePortalIdentity } from '../../../hooks/use-portal-identity';
-import { demoNotifications, type Notification } from '../../../lib/notifications';
+import { type Notification } from '../../../lib/notifications';
 
 function iconFor(type: Notification['type']) {
   return type === 'assessment' ? '✓' : type === 'schedule' ? '◷' : type === 'identity' ? '◌' : 'i';
@@ -22,10 +22,10 @@ export default function StudentNotificationsPage() {
   useEffect(() => {
     fetch('/api/notifications')
       .then(response => (response.ok ? response.json() : Promise.reject(new Error('Unable to load notifications'))))
-      .then(data => setItems(data.notifications || demoNotifications))
+      .then(data => setItems(Array.isArray(data.notifications) ? data.notifications : []))
       .catch(() => {
-        setItems(demoNotifications);
-        setError('Showing recent portal notifications. Connect your account to sync read status.');
+        setItems([]);
+        setError('Your notifications could not be loaded. Sign in again or try later.');
       })
       .finally(() => setLoading(false));
   }, []);

@@ -33,6 +33,13 @@ const SERVER_SECRETS = [
   "CF_MODEL_FAST",
   // Student recovery keys
   "RECOVERY_KEY_SECRET",
+  // E-mail (sender mail@dailyessential.ca). Optional: nothing is sent until these are set.
+  "SMTP_HOST",
+  "SMTP_PORT",
+  "SMTP_USER",
+  "SMTP_PASS",
+  "SMTP_SECURE",
+  "MAIL_FROM",
 ] as const;
 
 export default defineConfig({

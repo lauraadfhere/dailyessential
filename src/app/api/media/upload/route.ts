@@ -1,31 +1,53 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { cloudinaryConfigStatus, isCloudinaryConfigured, pdfDeliveryUrl, uploadToCloudinary } from '../../../../lib/cloudinary';
+import { clientKey, getSession, isStaff, rateLimit } from '../../../../lib/authz';
+import { isCloudinaryConfigured, pdfDeliveryUrl, uploadToCloudinary } from '../../../../lib/cloudinary';
 
 export const runtime = 'nodejs';
 
+const MAX_BYTES = 8 * 1024 * 1024;
+const ALLOWED_TYPES = ['application/pdf', 'image/jpeg', 'image/png', 'image/webp', 'image/gif'];
+
+/** Folders anyone can upload to because the page that uses them is public (admission forms, contact desk). */
+const PUBLIC_FOLDERS = ['admissions', 'tickets'];
+/** Folders any signed-in user may write to. */
+const MEMBER_FOLDERS = ['avatars', 'assignments'];
+/** Folders reserved for staff. */
+const STAFF_FOLDERS = ['courses', 'docs', 'uploads'];
+
 export async function GET() {
-  return NextResponse.json({
-    ok: true,
-    configured: isCloudinaryConfigured(),
-    cloudinary: cloudinaryConfigStatus,
-    folders: ['bifti/avatars', 'bifti/courses', 'bifti/tickets', 'bifti/docs'],
-    endpoints: {
-      upload: '/api/media/upload',
-      sign: '/api/media/sign',
-      documents: '/api/documents',
-    },
-  });
+  return NextResponse.json({ ok: true, configured: isCloudinaryConfigured() });
 }
 
 export async function POST(request: NextRequest) {
   try {
+    const folder = String((await request.clone().formData()).get('folder') || 'uploads');
+    const session = await getSession(request);
+
+    const allowed = PUBLIC_FOLDERS.includes(folder)
+      || (Boolean(session) && MEMBER_FOLDERS.includes(folder))
+      || (isStaff(session) && STAFF_FOLDERS.includes(folder));
+    if (!allowed) {
+      return NextResponse.json(
+        { error: session ? 'You cannot upload to this location.' : 'Sign in to upload files.' },
+        { status: session ? 403 : 401 },
+      );
+    }
+    if (!rateLimit(`upload:${session?.objectId || clientKey(request)}`, 20, 10 * 60 * 1000)) {
+      return NextResponse.json({ error: 'Too many uploads. Please wait a few minutes.' }, { status: 429 });
+    }
+
     const form = await request.formData();
     const file = form.get('file');
-    const folder = String(form.get('folder') || 'uploads');
     const resourceType = String(form.get('resourceType') || 'auto') as 'image' | 'raw' | 'auto';
 
     if (!(file instanceof File)) {
       return NextResponse.json({ error: 'file is required' }, { status: 400 });
+    }
+    if (file.size > MAX_BYTES) {
+      return NextResponse.json({ error: 'Files must be 8 MB or smaller.' }, { status: 413 });
+    }
+    if (!ALLOWED_TYPES.includes(file.type)) {
+      return NextResponse.json({ error: 'Only PDF and image files (JPG, PNG, WebP, GIF) are accepted.' }, { status: 415 });
     }
 
     const buffer = Buffer.from(await file.arrayBuffer());
@@ -33,7 +55,8 @@ export async function POST(request: NextRequest) {
       folder,
       resourceType,
       filename: file.name,
-      publicId: form.get('publicId') ? String(form.get('publicId')) : undefined,
+      // Only staff may choose the stored name; everyone else gets a generated one.
+      publicId: isStaff(session) && form.get('publicId') ? String(form.get('publicId')) : undefined,
     });
 
     const isPdf = (result.format || file.name.split('.').pop() || '').toLowerCase() === 'pdf'

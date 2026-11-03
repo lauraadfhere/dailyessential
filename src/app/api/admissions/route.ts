@@ -1,23 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { sendMail } from '../../../lib/email/mailer';
+import { admissionUpdateEmail } from '../../../lib/email/templates';
+import { clientKey, getSession, rateLimit, roleOf } from '../../../lib/authz';
 import { hasParseMasterKey, isParseConfigured, parseCreate, parseQuery, parseServerRequest, parseUpdate } from '../../../lib/parse-server';
 
-const PARSE_URL = (process.env.NEXT_PUBLIC_PARSE_SERVER_URL || '').replace(/\/$/, '');
-const PARSE_APP_ID = process.env.NEXT_PUBLIC_PARSE_APPLICATION_ID || '';
-
+/** Administrators are identified by a verified server session (cookie or session-token header). */
 async function isAdminRequest(request: NextRequest) {
-  const token = request.headers.get('x-parse-session-token') || '';
-  if (!token || !PARSE_URL) return false;
-  try {
-    const response = await fetch(`${PARSE_URL}/users/me`, {
-      headers: { 'X-Parse-Application-Id': PARSE_APP_ID, 'X-Parse-Session-Token': token },
-      cache: 'no-store',
-    });
-    if (!response.ok) return false;
-    const user = (await response.json()) as { portalRole?: string };
-    return user.portalRole === 'admin';
-  } catch {
-    return false;
-  }
+  return roleOf(await getSession(request)) === 'admin';
 }
 
 const CLASS_NAME = 'AdmissionApplication';
@@ -103,6 +92,13 @@ export async function GET(request: NextRequest) {
   if (all && !(await isAdminRequest(request))) {
     return NextResponse.json({ error: 'Administrator sign-in required.' }, { status: 403 });
   }
+  // Looking up by email would let anyone enumerate other families' applications; only the owner or an admin may.
+  if (!all && !reference) {
+    const session = await getSession(request);
+    if (!session || (session.email !== email && roleOf(session) !== 'admin')) {
+      return NextResponse.json({ error: 'Sign in with that email address to see its applications.', applications: [] }, { status: 403 });
+    }
+  }
 
   try {
     const where = all ? {} : reference ? { reference } : { guardianEmail: email };
@@ -161,6 +157,7 @@ export async function PATCH(request: NextRequest) {
       ...(body.note ? { adminNote: String(body.note).slice(0, 1000) } : {}),
     });
     if (existing.status !== status) {
+      await sendMail(existing.guardianEmail, admissionUpdateEmail({ guardianName: 'parent or guardian', childName: existing.childName, reference: existing.reference, status }));
       const { results: guardians } = await parseQuery<{ objectId: string }>('_User', {
         where: JSON.stringify({ email: existing.guardianEmail }),
         limit: 1,
@@ -187,6 +184,9 @@ export async function PATCH(request: NextRequest) {
 export async function POST(request: NextRequest) {
   if (!isParseConfigured()) {
     return NextResponse.json({ error: 'Applications are unavailable until the school database is configured.' }, { status: 503 });
+  }
+  if (!rateLimit(`admission:${clientKey(request)}`, 6, 30 * 60 * 1000)) {
+    return NextResponse.json({ error: 'Too many submissions from this connection. Please try again later.' }, { status: 429 });
   }
 
   try {
@@ -243,7 +243,8 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const reference = `DE-${new Date().getFullYear()}-${Math.floor(1000 + Math.random() * 9000)}`;
+    const suffix = Array.from(crypto.getRandomValues(new Uint8Array(4)), byte => (byte % 36).toString(36)).join('').toUpperCase();
+    const reference = `DE-${new Date().getFullYear()}-${suffix}`;
 
     const payload = {
       reference,

@@ -42,8 +42,17 @@ export async function parseRequest<T>(path: string, init: RequestInit = {}): Pro
   return response.json() as Promise<T>;
 }
 
-export async function signInWithParse(username: string, password: string) {
-  return parseRequest<ParseUser>(`login?username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`);
+/** Logs in through the Worker (`/api/auth/login`) so Parse keys stay server-side and work in production. */
+export async function signInWithParse(username: string, password: string): Promise<ParseUser> {
+  const response = await fetch('/api/auth/login', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ username, password }),
+    cache: 'no-store',
+  });
+  const data = await response.json().catch(() => ({})) as ParseUser & { error?: string };
+  if (!response.ok) throw new Error(data.error || `Login failed (${response.status})`);
+  return data;
 }
 
 export async function getUserWithSession(sessionToken: string) {

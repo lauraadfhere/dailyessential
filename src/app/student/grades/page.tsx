@@ -1,37 +1,49 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import FeedbackPanel from '../../../components/ai/feedback-panel';
 import PortalShell from '../../../components/portal-shell';
-import { Badge, Callout, PageFrame, Panel, Progress, StatGrid, statusTone, tableHead, Td, Th } from '../../../components/platform/kit';
-import { gradeBands, gradeCategories } from '../../../lib/atlas-data';
+import { Badge, Callout, PageFrame, Panel, Progress, StatGrid, tableHead, Td, Th } from '../../../components/platform/kit';
+import { GRADE_SCALE, PASS_MARK, toTwenty } from '../../../lib/grading';
 
-const courses = [
-  { name: 'UI / UX Design Studio', average: 86, target: 90 },
-  { name: 'Digital Literacy', average: 84, target: 85 },
-  { name: 'Computer Science', average: 79, target: 85 },
-  { name: 'Mathematics', average: 74, target: 80 },
-  { name: 'English Language', average: 91, target: 90 },
-];
+type Report = {
+  overall: { percent: number; mark: number; label: string; passed: boolean } | null;
+  courses: {
+    slug: string; title: string; completion: number; quizPercent: number | null; taskPercent: number | null;
+    grade: { percent: number; mark: number; label: string; passed: boolean };
+  }[];
+};
 
-function bandFor(percent: number) {
-  return gradeBands.find(band => {
-    const [low, high] = band.range.split('–').map(value => Number(value.trim()));
-    return percent >= low && percent <= high;
-  }) || gradeBands[gradeBands.length - 1];
-}
+type Assignment = {
+  id: string; title: string; courseTitle: string; maxMarks: number;
+  mine: { status: string; marks: number | null; maxMarks: number | null; feedback: string; gradedBy: string } | null;
+};
+
+const mark = (percent: number | null) => (percent === null ? '—' : `${toTwenty(percent)}/20`);
 
 export default function StudentGradesPage() {
-  const [examScore, setExamScore] = useState(81);
-  const [target, setTarget] = useState(80);
+  const [report, setReport] = useState<Report | null>(null);
+  const [assignments, setAssignments] = useState<Assignment[]>([]);
+  const [error, setError] = useState('');
 
-  const otherWeight = gradeCategories.filter(category => category.name !== 'Exam').reduce((total, category) => total + category.weight, 0);
-  const current = Math.round(gradeCategories.reduce((total, category) => total + (category.name === 'Exam' ? examScore : category.average) * category.weight, 0) / 100);
-  const remainingWeight = 100 - otherWeight;
-  const required = Math.ceil(((target * 100) - gradeCategories.filter(category => category.name !== 'Exam').reduce((total, category) => total + category.average * category.weight, 0)) / remainingWeight);
-  const requiredClamped = Math.max(0, Math.min(100, required));
-  const band = bandFor(current);
+  useEffect(() => {
+    fetch('/api/progress/report', { cache: 'no-store' })
+      .then(async response => {
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok) throw new Error(data.error || 'Could not load your marks.');
+        setReport(data as Report);
+      })
+      .catch(err => setError(err instanceof Error ? err.message : 'Could not load your marks.'));
+    fetch('/api/assignments', { cache: 'no-store' })
+      .then(response => (response.ok ? response.json() : { assignments: [] }))
+      .then(data => setAssignments(((data.assignments || []) as Assignment[]).filter(item => item.mine?.status === 'graded')))
+      .catch(() => undefined);
+  }, []);
+
+  const courses = report?.courses ?? [];
+  const best = [...courses].sort((a, b) => b.grade.mark - a.grade.mark)[0];
+  const weakest = [...courses].sort((a, b) => a.grade.mark - b.grade.mark)[0];
 
   return (
     <PortalShell role="student">
@@ -39,105 +51,88 @@ export default function StudentGradesPage() {
         variant="portal"
         eyebrow="Student space"
         title="My marks"
-        description="Published results only. Use the what-if calculator to see the exam score needed for your target grade."
-        actions={<Link href="/student/courses" className="rounded border border-[#1738a8] px-3 py-2 text-[13px] font-semibold text-[#1738a8] hover:bg-[#e8eefc]">Courses</Link>}
+        description="Marks are out of 20, the Algerian system: your score out of 100 in a course is divided by 5, and 10/20 is the pass mark."
+        actions={<Link href="/student/track" className="rounded border border-[#1738a8] px-3 py-2 text-[13px] font-semibold text-[#1738a8] hover:bg-[#e8eefc]">Track progress</Link>}
       >
+        {error && <p role="alert" className="border border-rose-200 bg-rose-50 px-4 py-3 text-sm font-semibold text-rose-700">{error}</p>}
+
         <StatGrid
           items={[
-            { label: 'Term average', value: `${current}%`, detail: `Grade ${band.letter} · ${band.descriptor}` },
-            { label: 'Best course', value: '91%', detail: 'English Language' },
-            { label: 'Needs attention', value: '74%', detail: 'Mathematics', tone: 'warn' },
-            { label: 'Class rank', value: '6 / 26', detail: 'Shared only with you and your guardian' },
+            { label: 'Overall mark', value: report?.overall ? `${report.overall.mark}/20` : '—', detail: report?.overall ? `${report.overall.label}${report.overall.passed ? '' : ' · below 10'}` : 'No graded work yet', tone: report?.overall && !report.overall.passed ? 'warn' : undefined },
+            { label: 'Best course', value: best ? `${best.grade.mark}/20` : '—', detail: best?.title || 'Enrol in a course' },
+            { label: 'Needs attention', value: weakest && courses.length > 1 ? `${weakest.grade.mark}/20` : '—', detail: courses.length > 1 ? weakest?.title : 'Needs two or more courses', tone: weakest && weakest.grade.mark < PASS_MARK ? 'warn' : undefined },
+            { label: 'Graded assignments', value: String(assignments.length), detail: 'With teacher notes' },
           ]}
         />
 
-        <div className="grid gap-5 lg:grid-cols-[1.3fr_1fr]">
-          <Panel title="Course results" description="Term 1 · published 27 Oct 2026." className="overflow-hidden" bodyClassName="p-0">
+        <div className="grid gap-5 lg:grid-cols-[1.4fr_1fr]">
+          <Panel title="Course marks" description="Live from your modules, quizzes, tasks and assignments." className="overflow-hidden" bodyClassName="p-0">
             <div className="overflow-x-auto">
               <table className="min-w-full text-sm">
-                <thead className={tableHead}><tr><Th>Course</Th><Th>Average</Th><Th>Grade</Th><Th>Target</Th><Th>Gap</Th></tr></thead>
+                <thead className={tableHead}><tr><Th>Course</Th><Th>Modules</Th><Th>Quizzes</Th><Th>Tasks</Th><Th>Course mark</Th></tr></thead>
                 <tbody className="divide-y divide-slate-100">
-                  {courses.map(course => {
-                    const courseBand = bandFor(course.average);
-                    const gap = course.average - course.target;
-                    return (
-                      <tr key={course.name}>
-                        <Td className="font-semibold text-[#15133d]">{course.name}</Td>
-                        <Td><Progress value={course.average} tone={course.average < 80 ? 'warn' : 'brand'} label={`${course.average}%`} /></Td>
-                        <Td><Badge tone={statusTone(courseBand.letter === 'A' || courseBand.letter === 'B' ? 'success' : courseBand.letter === 'F' ? 'danger' : 'info')}>{courseBand.letter}</Badge></Td>
-                        <Td>{course.target}%</Td>
-                        <Td className={gap < 0 ? 'font-semibold text-rose-600' : 'font-semibold text-emerald-700'}>{gap > 0 ? `+${gap}` : gap}</Td>
-                      </tr>
-                    );
-                  })}
+                  {courses.map(course => (
+                    <tr key={course.slug}>
+                      <Td className="font-semibold text-[#15133d]"><Link href={`/courses/${course.slug}/reader/0`} className="hover:underline">{course.title}</Link></Td>
+                      <Td><Progress value={course.completion} tone="brand" label={`${course.completion}%`} /></Td>
+                      <Td>{mark(course.quizPercent)}</Td>
+                      <Td>{mark(course.taskPercent)}</Td>
+                      <Td><span className="font-bold text-[#1738a8]">{course.grade.mark}/20</span> <Badge tone={course.grade.passed ? 'success' : 'warn'}>{course.grade.label}</Badge></Td>
+                    </tr>
+                  ))}
+                  {report && courses.length === 0 && <tr><Td className="py-6 text-slate-500">You are not enrolled in a course yet.</Td><Td>{null}</Td><Td>{null}</Td><Td>{null}</Td><Td>{null}</Td></tr>}
+                  {!report && !error && <tr><Td className="py-6 text-slate-500">Loading…</Td><Td>{null}</Td><Td>{null}</Td><Td>{null}</Td><Td>{null}</Td></tr>}
                 </tbody>
               </table>
             </div>
           </Panel>
 
-          <Panel title="Grade scale" description="Daily Essential senior school scale." className="overflow-hidden" bodyClassName="p-0">
+          <Panel title="Marking scale" description="Algerian system, out of 20." className="overflow-hidden" bodyClassName="p-0">
             <table className="min-w-full text-sm">
-              <thead className={tableHead}><tr><Th>Grade</Th><Th>Range</Th><Th>GPA</Th></tr></thead>
+              <thead className={tableHead}><tr><Th>Mark</Th><Th>Appreciation</Th></tr></thead>
               <tbody className="divide-y divide-slate-100">
-                {gradeBands.map(item => (
-                  <tr key={item.letter} className={item.letter === band.letter ? 'bg-[#f4f7ff]' : ''}>
-                    <Td className="font-bold text-[#1738a8]">{item.letter}</Td>
-                    <Td>{item.range}</Td>
-                    <Td>{item.gpa.toFixed(1)}</Td>
-                  </tr>
-                ))}
+                {GRADE_SCALE.map((row, index) => {
+                  const upper = index === 0 ? 20 : GRADE_SCALE[index - 1].min - 0.1;
+                  const active = report?.overall && report.overall.mark >= row.min && report.overall.mark <= upper + 0.05;
+                  return (
+                    <tr key={row.label} className={active ? 'bg-[#f4f7ff]' : ''}>
+                      <Td className="font-bold text-[#1738a8]">{row.min === 0 ? `0 – ${upper.toFixed(1)}` : `${row.min} – ${index === 0 ? '20' : upper.toFixed(1)}`}</Td>
+                      <Td>{row.label}</Td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
           </Panel>
         </div>
 
-        <div className="grid gap-5 lg:grid-cols-[1fr_1.1fr]">
-          <Panel title="What-if calculator" description="Change the exam score and target to plan your revision.">
-            <label className="block text-[13px]">
-              <span className="flex items-center justify-between gap-3 text-[#15133d]"><span className="font-semibold">Exam score</span><span className="font-bold text-[#1738a8]">{examScore}%</span></span>
-              <input type="range" min={0} max={100} value={examScore} onChange={event => setExamScore(Number(event.target.value))} className="mt-2 w-full accent-[#1738a8]" />
-            </label>
-            <label className="mt-5 block text-[13px]">
-              <span className="font-semibold text-[#15133d]">Target term average</span>
-              <select value={target} onChange={event => setTarget(Number(event.target.value))} className="mt-2 w-full rounded border border-slate-300 px-3 py-2 text-[13px] outline-none focus:border-[#1738a8]">
-                {[70, 75, 80, 85, 90].map(value => <option key={value} value={value}>{value}%</option>)}
-              </select>
-            </label>
-            <div className="mt-5 rounded border border-slate-200 bg-slate-50 p-4">
-              <p className="text-[11px] font-bold uppercase tracking-[.12em] text-slate-400">Projected term average</p>
-              <p className="mt-1 text-3xl font-bold text-[#15133d]">{current}%</p>
-              <p className="mt-1 text-[12px] text-slate-500">Grade {band.letter} · {band.descriptor}</p>
-              <p className="mt-3 border-t border-slate-200 pt-3 text-[12px] leading-5 text-slate-600">
-                To reach <b>{target}%</b> you need about <b>{requiredClamped}%</b> in the exam (weighted at {remainingWeight}%).
-              </p>
-            </div>
-          </Panel>
-
-          <Panel title="How this is calculated" description="Weights are set by the teacher and visible before you submit.">
-            <ul className="space-y-3">
-              {gradeCategories.map(category => (
-                <li key={category.name}>
-                  <div className="mb-1 flex items-center justify-between gap-3 text-[13px]">
-                    <span className="font-medium text-[#15133d]">{category.name}</span>
-                    <span className="text-slate-500">weight {category.weight}% · avg {category.average}%</span>
+        <Panel title="Graded assignments" description="Your teacher's mark and notes for each assignment you handed in.">
+          {assignments.length === 0 ? (
+            <p className="py-4 text-[13px] text-slate-500">Nothing graded yet. <Link href="/student/assignments" className="font-bold text-[#1738a8] underline">Open assignments</Link></p>
+          ) : (
+            <ul className="divide-y divide-slate-100">
+              {assignments.map(item => (
+                <li key={item.id} className="py-3 text-[13px]">
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <span className="font-semibold text-[#15133d]">{item.title}<span className="ml-2 font-normal text-slate-400">{item.courseTitle}</span></span>
+                    <b className="text-[#1738a8]">{item.mine?.marks}/{item.mine?.maxMarks}</b>
                   </div>
-                  <Progress value={category.average} tone="brand" />
+                  {item.mine?.feedback && <p className="mt-1 whitespace-pre-line text-slate-600">{item.mine.gradedBy ? `${item.mine.gradedBy}: ` : ''}{item.mine.feedback}</p>}
                 </li>
               ))}
             </ul>
-            <div className="mt-5">
-              <Callout tone="info" title="A mark query is a click away.">
-                If something looks wrong, open a structured query from the course page. Your teacher sees it with the assessment and the full change history.
-              </Callout>
-            </div>
-          </Panel>
-        </div>
+          )}
+        </Panel>
 
-        <FeedbackPanel results={courses.map(course => ({ name: course.name, average: course.average }))} />
+        <Callout tone="info" title="Think a mark is wrong?">
+          Open the graded task in its module and choose “Report this mark”, or write to your teacher from <Link href="/student/messages" className="font-bold underline">Messages</Link>. They see the task and your note together.
+        </Callout>
+
+        {courses.length > 0 && <FeedbackPanel results={courses.map(course => ({ name: course.title, average: course.grade.percent }))} />}
 
         <div className="flex flex-wrap gap-3">
           <Link href="/student/wellbeing" className="rounded border border-[#1738a8] px-4 py-2.5 text-[13px] font-bold text-[#1738a8] hover:bg-[#e8eefc]">Exam stress support</Link>
-          <Link href="/workspace/student/assessments" className="rounded border border-slate-300 px-4 py-2.5 text-[13px] font-bold text-slate-700 hover:bg-slate-50">Assessment schedule</Link>
+          <Link href="/student/assignments" className="rounded border border-slate-300 px-4 py-2.5 text-[13px] font-bold text-slate-700 hover:bg-slate-50">Assignments</Link>
         </div>
       </PageFrame>
     </PortalShell>

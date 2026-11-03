@@ -11,9 +11,19 @@ type AttrState = Record<string, { original: string; applied?: string }>;
 const textState = new WeakMap<Text, NodeState>();
 const attrState = new WeakMap<Element, AttrState>();
 
-const ATTRIBUTES = ['placeholder', 'aria-label', 'title', 'alt'];
+const ATTRIBUTES = ['placeholder', 'aria-label', 'title', 'alt', 'aria-description'];
+/** Text inside these is never translated (typed values, code). */
 const SKIP_TAGS = new Set(['SCRIPT', 'STYLE', 'TEXTAREA', 'INPUT', 'CODE', 'PRE', 'KBD', 'SAMP']);
-const MAX_PHRASE = 160;
+/** Attributes on these are left alone. Inputs and textareas are NOT here: their placeholders must translate. */
+const SKIP_ATTR_TAGS = new Set(['SCRIPT', 'STYLE', 'CODE', 'PRE', 'KBD', 'SAMP']);
+const MAX_PHRASE = 400;
+
+/** Button-like inputs carry their label in `value`. */
+function isButtonInput(element: Element) {
+  return element.tagName === 'INPUT' && ['submit', 'button', 'reset'].includes((element.getAttribute('type') || '').toLowerCase());
+}
+
+const titleState = { original: '', applied: '' };
 
 /** Phrases already sent for translation, so a page never asks twice. */
 const requested = new Set<string>();
@@ -80,10 +90,10 @@ function localiseTextNode(node: Text, locale: Locale, misses: string[]) {
 }
 
 function localiseElement(element: Element, locale: Locale, misses: string[]) {
-  if (SKIP_TAGS.has(element.tagName)) return;
+  if (SKIP_ATTR_TAGS.has(element.tagName)) return;
   const saved = attrState.get(element) || {};
 
-  ATTRIBUTES.forEach(attribute => {
+  [...ATTRIBUTES, ...(isButtonInput(element) ? ['value'] : [])].forEach(attribute => {
     const current = element.getAttribute(attribute);
     if (!current || !current.trim() || current.trim().length > MAX_PHRASE) return;
 
@@ -147,6 +157,17 @@ export default function AutoTranslate() {
         if (!element.closest('[data-no-i18n]')) localiseElement(element, locale, misses);
       });
 
+      // The browser tab title is part of the page too.
+      if (document.title !== titleState.applied) titleState.original = document.title;
+      if (titleState.original) {
+        const translatedTitle = locale === 'en' ? titleState.original : translateFromDictionary(titleState.original, locale);
+        titleState.applied = translatedTitle;
+        if (document.title !== translatedTitle) document.title = translatedTitle;
+        if (locale !== 'en' && !hasTranslation(titleState.original, locale) && looksTranslatable(titleState.original.trim())) {
+          misses.push(titleState.original.trim());
+        }
+      }
+
       if (locale === 'en' || inFlight.current) return;
       if (Date.now() < pausedUntil) return;
 
@@ -203,7 +224,7 @@ export default function AutoTranslate() {
     schedule();
 
     const observer = new MutationObserver(schedule);
-    observer.observe(document.body, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ATTRIBUTES });
+    observer.observe(document.body, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: [...ATTRIBUTES, 'value'] });
 
     return () => {
       observer.disconnect();

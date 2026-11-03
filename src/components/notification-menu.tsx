@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { demoNotifications, unreadCount, type Notification } from '../lib/notifications';
+import { unreadCount, type Notification } from '../lib/notifications';
 import { useI18n } from './language-provider';
 
 const iconFor = (type: Notification['type']) => {
@@ -29,7 +29,7 @@ function relativeTime(iso: string, locale: string) {
 }
 
 type Props = {
-  role: 'student' | 'teacher' | 'examiner' | 'parent';
+  role: 'student' | 'teacher' | 'examiner' | 'parent' | 'admin';
 };
 
 /** Bell with a triangle-anchored dropdown listing the latest notifications. */
@@ -40,21 +40,40 @@ export default function NotificationMenu({ role }: Props) {
   const [loaded, setLoaded] = useState(false);
   const wrapperRef = useRef<HTMLDivElement | null>(null);
 
-  const allHref = role === 'parent' ? '/parent' : role === 'teacher' ? '/teacher' : role === 'examiner' ? '/examiner' : '/student/notifications';
+  const allHref = role === 'student' ? '/student/notifications' : '/notifications';
 
+  // Near real time: load now, then every 30 s while the tab is visible and when you return to it.
   useEffect(() => {
     let active = true;
-    fetch('/api/notifications')
-      .then(response => response.json())
-      .then(data => {
-        if (!active) return;
-        const rows: Notification[] = data.notifications?.length ? data.notifications : demoNotifications;
-        setItems(rows);
-      })
-      .catch(() => setItems(demoNotifications))
-      .finally(() => { if (active) setLoaded(true); });
-    return () => { active = false; };
+    const load = () => {
+      fetch('/api/notifications', { cache: 'no-store' })
+        .then(response => response.json())
+        .then(data => {
+          if (!active) return;
+          setItems(Array.isArray(data.notifications) ? data.notifications : []);
+        })
+        .catch(() => undefined)
+        .finally(() => { if (active) setLoaded(true); });
+    };
+    const tick = () => { if (document.visibilityState === 'visible') load(); };
+    load();
+    const timer = window.setInterval(tick, 30_000);
+    document.addEventListener('visibilitychange', tick);
+    return () => { active = false; window.clearInterval(timer); document.removeEventListener('visibilitychange', tick); };
   }, []);
+
+  // Opening a notification marks it as read.
+  const openItem = (item: Notification) => {
+    setOpen(false);
+    if (item.readAt) return;
+    setItems(current => current.map(row => (row.id === item.id ? { ...row, readAt: new Date().toISOString() } : row)));
+    fetch('/api/notifications', {
+      method: 'PATCH',
+      keepalive: true,
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id: item.id, action: 'read' }),
+    }).catch(() => undefined);
+  };
 
   useEffect(() => {
     if (!open) return;
@@ -137,7 +156,7 @@ export default function NotificationMenu({ role }: Props) {
               <li key={item.id}>
                 <Link
                   href={item.link || allHref}
-                  onClick={() => setOpen(false)}
+                  onClick={() => openItem(item)}
                   className={`flex gap-3 px-4 py-3 transition hover:bg-slate-50 ${item.readAt ? 'opacity-70' : ''}`}
                 >
                   <span aria-hidden="true" className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-full bg-[#e8eefc] text-sm">

@@ -6,6 +6,7 @@ import {
   type LessonSubscriptionItem,
   type NewsUpdateItem,
 } from './admin-data';
+import { escapeRegex } from './authz';
 import { resolveMediaUrl } from './cloudinary';
 import { isParseConfigured, parseQuery } from './parse-server';
 
@@ -87,9 +88,9 @@ export async function fetchDocuments(params: { q?: string; category?: string; pr
     if (params.programme) where.programme = params.programme;
     if (params.q) {
       where.$or = [
-        { title: { $regex: params.q, $options: 'i' } },
-        { summary: { $regex: params.q, $options: 'i' } },
-        { category: { $regex: params.q, $options: 'i' } },
+        { title: { $regex: escapeRegex(params.q.slice(0, 80)), $options: 'i' } },
+        { summary: { $regex: escapeRegex(params.q.slice(0, 80)), $options: 'i' } },
+        { category: { $regex: escapeRegex(params.q.slice(0, 80)), $options: 'i' } },
       ];
     }
     const data = await parseQuery<DocumentRow>('LearningDocument', {
@@ -196,11 +197,12 @@ type ParseEval = {
   createdAt: string;
 };
 
-export async function fetchEvaluations(): Promise<EvaluationRequestItem[]> {
-  if (!isParseConfigured()) return evaluationRequests;
+export async function fetchEvaluations(options: { demo?: boolean } = {}): Promise<EvaluationRequestItem[]> {
+  const demo = options.demo !== false;
+  if (!isParseConfigured()) return demo ? evaluationRequests : [];
   try {
     const data = await parseQuery<ParseEval>('EvaluationRequest', { limit: 100, order: '-createdAt' });
-    if (!data.results?.length) return evaluationRequests;
+    if (!data.results?.length) return demo ? evaluationRequests : [];
     return data.results.map(row => ({
       id: row.objectId,
       requesterName: row.requesterName,
@@ -213,7 +215,7 @@ export async function fetchEvaluations(): Promise<EvaluationRequestItem[]> {
       createdAt: isoDate(row.createdAt),
     }));
   } catch {
-    return evaluationRequests;
+    return demo ? evaluationRequests : [];
   }
 }
 
@@ -229,11 +231,12 @@ type ParseNews = {
   pinned?: boolean;
 };
 
-export async function fetchNews(): Promise<NewsUpdateItem[]> {
-  if (!isParseConfigured()) return newsUpdates;
+export async function fetchNews(options: { demo?: boolean } = {}): Promise<NewsUpdateItem[]> {
+  const demo = options.demo !== false;
+  if (!isParseConfigured()) return demo ? newsUpdates : [];
   try {
     const data = await parseQuery<ParseNews>('NewsUpdate', { limit: 100, order: '-publishedAt' });
-    if (!data.results?.length) return newsUpdates;
+    if (!data.results?.length) return demo ? newsUpdates : [];
     return data.results.map(row => ({
       id: row.objectId,
       title: row.title,
@@ -246,7 +249,7 @@ export async function fetchNews(): Promise<NewsUpdateItem[]> {
       pinned: Boolean(row.pinned),
     }));
   } catch {
-    return newsUpdates;
+    return demo ? newsUpdates : [];
   }
 }
 
@@ -261,11 +264,12 @@ type ParseSub = {
   lesson?: { objectId?: string };
 };
 
-export async function fetchSubscriptions(): Promise<LessonSubscriptionItem[]> {
-  if (!isParseConfigured()) return lessonSubscriptions;
+export async function fetchSubscriptions(options: { demo?: boolean } = {}): Promise<LessonSubscriptionItem[]> {
+  const demo = options.demo !== false;
+  if (!isParseConfigured()) return demo ? lessonSubscriptions : [];
   try {
     const data = await parseQuery<ParseSub>('LessonSubscription', { limit: 100, order: '-createdAt' });
-    if (!data.results?.length) return lessonSubscriptions;
+    if (!data.results?.length) return demo ? lessonSubscriptions : [];
     return data.results.map(row => ({
       id: row.objectId,
       subscriberName: row.subscriberName,
@@ -277,6 +281,6 @@ export async function fetchSubscriptions(): Promise<LessonSubscriptionItem[]> {
       createdAt: isoDate(row.createdAt),
     }));
   } catch {
-    return lessonSubscriptions;
+    return demo ? lessonSubscriptions : [];
   }
 }

@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { clientKey, isResponse, rateLimit, requireUser } from '../../../lib/authz';
 import { resolveProfile } from '../../../lib/profile-resolver';
 import {
   buildRecoveryKey,
@@ -12,10 +13,11 @@ export const runtime = 'nodejs';
 
 /** Issue (or re-derive) the learner's recovery key and the downloadable recovery file. */
 export async function GET(request: NextRequest) {
-  const key = request.nextUrl.searchParams.get('email')
-    || request.nextUrl.searchParams.get('studentId')
-    || '';
-  const role = (request.nextUrl.searchParams.get('role') || 'student').toLowerCase();
+  // A recovery key restores account access, so it is only ever issued to its owner.
+  const session = await requireUser(request);
+  if (isResponse(session)) return session;
+  const key = session.email;
+  const role = (session.portalRole || 'student').toLowerCase();
 
   try {
     const { profile, source } = await resolveProfile(key, role);
@@ -59,6 +61,10 @@ export async function GET(request: NextRequest) {
 
 /** Verify a recovery key so a learner can regain access without their password. */
 export async function POST(request: NextRequest) {
+  // Keys are guessable by brute force without a limit.
+  if (!rateLimit(`recovery:${clientKey(request)}`, 8, 15 * 60 * 1000)) {
+    return NextResponse.json({ verified: false, error: 'Too many attempts. Try again in a few minutes.' }, { status: 429 });
+  }
   try {
     const body = await request.json() as { studentId?: string; email?: string; key?: string };
     const studentId = (body.studentId || '').trim();

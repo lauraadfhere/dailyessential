@@ -1,17 +1,23 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { cloudinaryConfigStatus, createUploadSignature, isCloudinaryConfigured } from '../../../../lib/cloudinary';
+import { isResponse, requireRole } from '../../../../lib/authz';
+import { createUploadSignature, isCloudinaryConfigured } from '../../../../lib/cloudinary';
 
 export const runtime = 'nodejs';
 
+const FOLDERS = ['courses', 'docs', 'uploads'];
+
+/** Browser-direct upload signatures are issued to staff only, for staff folders. */
 export async function GET(request: NextRequest) {
+  const session = await requireRole(request, ['teacher', 'examiner', 'admin']);
+  if (isResponse(session)) return session;
   try {
     if (!isCloudinaryConfigured()) {
-      return NextResponse.json({ error: 'Cloudinary is not configured', cloudinary: cloudinaryConfigStatus }, { status: 503 });
+      return NextResponse.json({ error: 'Cloudinary is not configured' }, { status: 503 });
     }
     const folder = request.nextUrl.searchParams.get('folder') || 'uploads';
-    const publicId = request.nextUrl.searchParams.get('publicId') || undefined;
-    const signed = createUploadSignature({ folder, publicId });
-    return NextResponse.json({ ok: true, ...signed, cloudinary: cloudinaryConfigStatus });
+    if (!FOLDERS.includes(folder)) return NextResponse.json({ error: 'Unknown upload folder.' }, { status: 400 });
+    const signed = createUploadSignature({ folder });
+    return NextResponse.json({ ok: true, ...signed });
   } catch (error) {
     return NextResponse.json({ error: error instanceof Error ? error.message : 'Sign failed' }, { status: 500 });
   }

@@ -5,7 +5,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
-const manualPath = join(root, 'public/courses/Daily_Essential_School_Complete_20_Courses_Expanded_Modules.md');
+const manualPath = join(root, 'private-content/Daily_Essential_School_Complete_20_Courses_Expanded_Modules.md');
 const outPath = join(root, 'src/lib/courses-lessons.json');
 
 const text = readFileSync(manualPath, 'utf8').replace(/\r\n/g, '\n');

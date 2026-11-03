@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, type ReactNode } from 'react';
+import NotificationMenu from './notification-menu';
 import UserAvatar from './user-avatar';
 import { usePortalIdentity } from '../hooks/use-portal-identity';
 import { readPortalIdentity } from '../lib/portal-session';
@@ -83,11 +84,7 @@ export default function ConsoleShell({
             <Link href="/dummi-ai" className="hidden rounded bg-black/40 px-2.5 py-1 text-[10px] font-bold text-white hover:bg-black/55 sm:inline">
               DAMMI AI
             </Link>
-            <Link href={config.helpHref} aria-label="Notifications" className="grid h-9 w-9 place-items-center rounded text-white/85 transition hover:bg-white/10 hover:text-white">
-              <svg aria-hidden="true" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.7" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M18 8a6 6 0 1 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4" />
-              </svg>
-            </Link>
+            <NotificationMenu role={role} />
             <Link href={config.accountHref} aria-label={`${config.label} account`} className="inline-flex">
               <UserAvatar src={avatarUrl} name={identity.displayName || config.label} status={identity.status || 'active'} size="sm" />
             </Link>

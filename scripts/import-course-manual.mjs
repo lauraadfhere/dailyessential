@@ -11,7 +11,7 @@ const appId = process.env.PARSE_APPLICATION_ID;
 const masterKey = process.env.PARSE_MASTER_KEY;
 if (!url || !appId || !masterKey) throw new Error('Set PARSE_SERVER_URL, PARSE_APPLICATION_ID and PARSE_MASTER_KEY in .env.local');
 
-const manualPath = new URL('../public/courses/Daily_Essential_School_Complete_20_Courses_Expanded_Modules.md', import.meta.url);
+const manualPath = new URL('../private-content/Daily_Essential_School_Complete_20_Courses_Expanded_Modules.md', import.meta.url);
 const markdown = (await readFile(manualPath, 'utf8')).replace(/\r\n/g, '\n');
 
 const base = url.replace(/\/$/, '');

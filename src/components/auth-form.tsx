@@ -81,7 +81,8 @@ export default function AuthForm({ mode, role }: { mode: AuthMode; role: PortalR
       window.location.assign(localUrl(landingFor(nextRole, requested)));
     } catch (err) {
       console.error('Login error:', err);
-      setError("We could not sign you in. Check your email and password.");
+      const message = err instanceof Error ? err.message : "";
+      setError(/server|configured|school database|too many/i.test(message) ? message : "We could not sign you in. Check your email and password.");
       setIsSubmitting(false);
     }
   };

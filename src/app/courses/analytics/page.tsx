@@ -1,3 +1,4 @@
+import { courseGuard } from '../../../components/courses/course-gate';
 import CourseAnalytics from '../../../components/courses/course-analytics';
 
 export const metadata = {
@@ -6,6 +7,8 @@ export const metadata = {
   robots: { index: false, follow: false },
 };
 
-export default function CourseAnalyticsPage() {
+export default async function CourseAnalyticsPage() {
+  const blocked = await courseGuard();
+  if (blocked) return blocked;
   return <CourseAnalytics />;
 }

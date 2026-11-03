@@ -71,6 +71,7 @@ export const consoleConfigs: Record<ConsoleRole, ConsoleConfig> = {
           { href: '/admin/evaluations', label: 'Moderate evaluations', permission: 'evaluation.moderate' },
           { href: '/admin/subscriptions', label: 'Lesson subscriptions', permission: 'lesson.manage' },
           { href: '/admin/admissions', label: 'Admissions', permission: 'admissions.manage' },
+          { href: '/admin/profile', label: 'My profile' },
         ],
       },
       {
@@ -85,6 +86,8 @@ export const consoleConfigs: Record<ConsoleRole, ConsoleConfig> = {
         items: [
           { href: '/admin/academics', label: 'Programmes & classes', permission: 'academics.manage' },
           { href: '/admin/courses', label: 'Course enrolments', permission: 'academics.manage' },
+          { href: '/admin/course-content', label: 'Course content', permission: 'academics.manage' },
+          { href: '/admin/assignments', label: 'Assignments', permission: 'academics.manage' },
           { href: '/admin/timetable', label: 'Timetable builder', permission: 'timetable.manage' },
           { href: '/admin/attendance', label: 'Attendance', permission: 'attendance.manage' },
           { href: '/admin/assessment', label: 'Assessment & results', permission: 'assessment.manage' },
@@ -137,7 +140,7 @@ export const consoleConfigs: Record<ConsoleRole, ConsoleConfig> = {
     ],
     helpHref: '/admin/help',
     settingsHref: '/admin/settings',
-    accountHref: '/admin/login',
+    accountHref: '/admin/profile',
     homeCards: [
       { href: '/admin/admissions', title: 'Admissions pipeline', action: 'Review applications', description: 'Move applicants from enquiry to enrolment.', permission: 'admissions.manage' },
       { href: '/admin/ai', title: 'AI screening', action: 'Open screening', description: 'Anonymised summaries that support a human admission decision.', permission: 'admissions.manage' },
@@ -176,6 +179,7 @@ export const consoleConfigs: Record<ConsoleRole, ConsoleConfig> = {
         items: [
           { href: '/teacher/queue', label: 'Moderate action queue', permission: 'marks.assign' },
           { href: '/teacher/search', label: 'Search students', permission: 'student.search' },
+          { href: '/teacher/profile', label: 'My profile' },
         ],
       },
       {
@@ -183,6 +187,7 @@ export const consoleConfigs: Record<ConsoleRole, ConsoleConfig> = {
         items: [
           { href: '/teacher/classes', label: 'My classes', permission: 'class.manage' },
           { href: '/teacher/marks', label: 'Assign marks', permission: 'marks.assign' },
+          { href: '/teacher/assignments', label: 'Assignments', permission: 'marks.assign' },
           { href: '/teacher/gradebook', label: 'Gradebook', permission: 'marks.assign' },
           { href: '/teacher/evaluations', label: 'Evaluation tracking', permission: 'evaluation.track' },
           { href: '/teacher/tracking', label: 'Progress tracking', permission: 'progress.view' },
@@ -222,7 +227,7 @@ export const consoleConfigs: Record<ConsoleRole, ConsoleConfig> = {
     ],
     helpHref: '/teacher/help',
     settingsHref: '/teacher/settings',
-    accountHref: '/login/teacher',
+    accountHref: '/teacher/profile',
     homeCards: [
       { href: '/teacher/classes', title: 'My classes', action: 'Open classes', description: 'Rosters, averages and today’s periods for each group.', permission: 'class.manage' },
       { href: '/teacher/attendance', title: 'Take register', action: 'Mark attendance', description: 'Record today’s attendance and notify guardians of absences.', permission: 'attendance.record' },
@@ -259,6 +264,8 @@ export const consoleConfigs: Record<ConsoleRole, ConsoleConfig> = {
         items: [
           { href: '/examiner/grading', label: 'Papers to grade', permission: 'assessment.review' },
           { href: '/examiner/results', label: 'Results review', permission: 'grade.verify' },
+          { href: '/examiner/assignments', label: 'Assignments' },
+          { href: '/examiner/profile', label: 'My profile' },
         ],
       },
       {
@@ -291,7 +298,7 @@ export const consoleConfigs: Record<ConsoleRole, ConsoleConfig> = {
     ],
     helpHref: '/examiner/help',
     settingsHref: '/examiner/settings',
-    accountHref: '/login/examiner',
+    accountHref: '/examiner/profile',
     homeCards: [
       { href: '/examiner/grading', title: 'Papers to grade', action: 'Open grading', description: 'Moderate pending scripts waiting for examiner review.', permission: 'assessment.review' },
       { href: '/examiner/results', title: 'Results review', action: 'Verify results', description: 'Approve or return scored papers before release.', permission: 'grade.verify' },
